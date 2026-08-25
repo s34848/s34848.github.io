@@ -8,7 +8,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Portfolio | Palada Sansri</title>
+    <title>Portfolio | อิงฟ้า</title>
 
     <style>
 
@@ -34,19 +34,21 @@
 
                 135deg,
 
-                #FFF7F9 0%,
+                #FFF7F9,
 
-                #FCE8ED 45%,
+                #FCE8ED,
 
-                #F8D0D9 100%
+                #F8D0D9
 
             );
 
         }
 
+        /* Navigation */
+
         nav {
 
-            height: 90px;
+            height: 80px;
 
             padding: 0 7%;
 
@@ -60,7 +62,7 @@
 
         .logo {
 
-            font-size: 27px;
+            font-size: 25px;
 
             font-weight: bold;
 
@@ -74,7 +76,7 @@
 
             display: flex;
 
-            gap: 35px;
+            gap: 30px;
 
             list-style: none;
 
@@ -88,8 +90,6 @@
 
             font-weight: bold;
 
-            transition: 0.3s;
-
         }
 
         nav ul li a:hover {
@@ -98,39 +98,29 @@
 
         }
 
+        /* Main */
+
         .hero {
 
-            min-height: calc(100vh - 90px);
-
-            padding: 40px 8%;
+            min-height: calc(100vh - 80px);
 
             display: flex;
-
-            align-items: center;
 
             justify-content: center;
 
+            align-items: center;
+
+            text-align: center;
+
+            padding: 30px 20px;
+
         }
 
-        .hero-content {
+        .content {
 
             width: 100%;
 
-            max-width: 1100px;
-
-            display: flex;
-
-            align-items: center;
-
-            justify-content: space-between;
-
-            gap: 60px;
-
-        }
-
-        .text {
-
-            flex: 1;
+            max-width: 900px;
 
         }
 
@@ -138,91 +128,25 @@
 
             color: #C9788C;
 
-            font-size: 20px;
+            font-size: 18px;
 
             font-weight: bold;
 
-            margin-bottom: 18px;
-
-            letter-spacing: 1px;
-
-        }
-
-        h1 {
-
-            font-size: 55px;
-
-            line-height: 1.25;
-
-            color: #5A3A40;
-
-            margin-bottom: 18px;
-
-        }
-
-        h1 span {
-
-            color: #C9788C;
-
-        }
-
-        .subtitle {
-
-            font-size: 24px;
-
-            font-weight: bold;
+            letter-spacing: 2px;
 
             margin-bottom: 15px;
 
         }
 
-        .description {
+        /* รูปตรงกลาง */
 
-            font-size: 18px;
+        .profile-circle {
 
-            line-height: 1.8;
+            width: 230px;
 
-            max-width: 650px;
+            height: 230px;
 
-            margin-bottom: 30px;
-
-        }
-
-        .btn {
-
-            display: inline-block;
-
-            padding: 14px 32px;
-
-            border-radius: 30px;
-
-            background: #E7A7B6;
-
-            color: white;
-
-            text-decoration: none;
-
-            font-weight: bold;
-
-            box-shadow: 0 8px 20px rgba(201, 120, 140, 0.20);
-
-            transition: 0.3s;
-
-        }
-
-        .btn:hover {
-
-            transform: translateY(-3px);
-
-            background: #C9788C;
-
-        }
-
-        .decoration {
-
-            width: 330px;
-
-            height: 330px;
+            margin: 0 auto 25px;
 
             border-radius: 50%;
 
@@ -236,51 +160,85 @@
 
             );
 
+            border: 8px solid rgba(255, 255, 255, 0.75);
+
             box-shadow:
 
-                0 20px 45px rgba(201, 120, 140, 0.18);
+                0 15px 35px rgba(201, 120, 140, 0.20);
 
             display: flex;
 
-            align-items: center;
-
             justify-content: center;
 
-            flex-shrink: 0;
-
-        }
-
-        .decoration-inner {
-
-            width: 250px;
-
-            height: 250px;
-
-            border-radius: 50%;
-
-            background: rgba(255, 255, 255, 0.55);
-
-            display: flex;
-
             align-items: center;
-
-            justify-content: center;
-
-            text-align: center;
-
-            padding: 30px;
 
             color: #C9788C;
 
-            font-size: 22px;
+            font-size: 20px;
 
             font-weight: bold;
 
-            line-height: 1.6;
+        }
+
+        h1 {
+
+            font-size: 45px;
+
+            color: #5A3A40;
+
+            margin-bottom: 8px;
 
         }
 
-        @media (max-width: 800px) {
+        h1 span {
+
+            color: #C9788C;
+
+        }
+
+        .nickname {
+
+            font-size: 23px;
+
+            margin-bottom: 8px;
+
+        }
+
+        .school {
+
+            font-size: 18px;
+
+            margin-bottom: 25px;
+
+        }
+
+        .purpose-title {
+
+            color: #C9788C;
+
+            font-size: 20px;
+
+            font-weight: bold;
+
+            margin-bottom: 8px;
+
+        }
+
+        .purpose {
+
+            max-width: 700px;
+
+            margin: 0 auto;
+
+            font-size: 16px;
+
+            line-height: 1.8;
+
+        }
+
+        /* Responsive */
+
+        @media (max-width: 700px) {
 
             nav {
 
@@ -302,53 +260,33 @@
 
             .hero {
 
-                padding: 40px 25px;
+                padding: 30px 20px;
 
             }
 
-            .hero-content {
+            .profile-circle {
 
-                flex-direction: column-reverse;
+                width: 190px;
 
-                text-align: center;
-
-            }
-
-            .description {
-
-                margin-left: auto;
-
-                margin-right: auto;
+                height: 190px;
 
             }
 
             h1 {
 
-                font-size: 40px;
+                font-size: 34px;
 
             }
 
-            .subtitle {
+            .nickname {
 
                 font-size: 20px;
 
             }
 
-            .decoration {
+            .school {
 
-                width: 240px;
-
-                height: 240px;
-
-            }
-
-            .decoration-inner {
-
-                width: 180px;
-
-                height: 180px;
-
-                font-size: 17px;
+                font-size: 16px;
 
             }
 
@@ -360,11 +298,13 @@
 
 <body>
 
+    <!-- Navigation -->
+
     <nav>
 
         <div class="logo">
 
-            PALADA
+            PORTFOLIO
 
         </div>
 
@@ -378,7 +318,7 @@
 
             <li>
 
-                <a href="portfolio.html">Portfolio</a>
+                <a href="portfolio.html">แฟ้มผลงาน</a>
 
             </li>
 
@@ -386,65 +326,65 @@
 
     </nav>
 
+    <!-- Main -->
+
     <section class="hero">
 
-        <div class="hero-content">
+        <div class="content">
 
-            <div class="text">
+            <div class="welcome">
 
-                <div class="welcome">
-
-                    WELCOME TO MY PORTFOLIO
-
-                </div>
-
-                <h1>
-
-                    สวัสดีค่ะ<br>
-
-                    ฉันชื่อ <span>Palada</span>
-
-                </h1>
-
-                <div class="subtitle">
-
-                    คณะครุศาสตร์ สาขาคณิตศาสตร์
-
-                </div>
-
-                <p class="description">
-
-                    แฟ้มสะสมผลงานที่รวบรวมประสบการณ์
-
-                    ความสามารถ กิจกรรม และผลงานต่าง ๆ
-
-                    ที่สะท้อนถึงความตั้งใจในการเรียนรู้
-
-                    และความมุ่งมั่นที่จะก้าวสู่เส้นทางการเป็นครู
-
-                </p>
-
-                <a href="portfolio.html" class="btn">
-
-                    เข้าสู่ Portfolio →
-
-                </a>
+                WELCOME TO MY PORTFOLIO
 
             </div>
 
-            <div class="decoration">
+            <!-- รูปตรงกลาง -->
 
-                <div class="decoration-inner">
+            <div class="profile-circle">
 
-                    Mathematics<br>
-
-                    ×<br>
-
-                    Education
-
-                </div>
+                รูปของฉัน
 
             </div>
+
+            <!-- ข้อมูล -->
+
+            <h1>
+
+                นางสาว<span>ภลดา แสนศรี</span>
+
+            </h1>
+
+            <div class="nickname">
+
+                ชื่อเล่น : อิงฟ้า
+
+            </div>
+
+            <div class="school">
+
+                โรงเรียนบ้านบึง"อุตสาหกรรมนุเคราะห์"
+
+            </div>
+
+            <!-- จุดประสงค์ -->
+
+            <div class="purpose-title">
+
+                แฟ้มสะสมผลงานจัดทำขึ้นเพื่อ
+
+            </div>
+
+            <p class="purpose">
+
+                รวบรวมประวัติ ผลงาน กิจกรรม และประสบการณ์
+
+                เพื่อแสดงถึงความสามารถ ความสนใจ และความตั้งใจ
+
+                ของผู้จัดทำ รวมถึงใช้ประกอบการนำเสนอผลงาน
+
+                และการศึกษาต่อในอนาคต
+
+            </p>
 
         </div>
 
