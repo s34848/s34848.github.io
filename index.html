@@ -1,32 +1,405 @@
 <!DOCTYPE html>
+
 <html lang="th">
+
 <head>
-<meta charset="UTF-8">
-<title>หน้าแนะนำตัวของฉัน</title>
-<style>
-body {
-background-color: #fce4ec; color: #333;
-text-align: center; padding: 50px;
 
-}
-.card {
-background: white; border-radius: 10px;
-box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-max-width: 500px; margin: 0 auto; padding: 30px;
+    <meta charset="UTF-8">
 
-}
-h1 { color: #2c3e50; }
-p { font-size: 18px; line-height: 1.6; }
-</style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Portfolio | ภลดา แสนศรี</title>
+
+    <style>
+
+        * {
+
+            box-sizing: border-box;
+
+            margin: 0;
+
+            padding: 0;
+
+        }
+
+        body {
+
+            font-family: Arial, sans-serif;
+
+            background-color: #fff5f8;
+
+            color: #4a3740;
+
+            line-height: 1.8;
+
+        }
+
+        /* เมนูด้านบน */
+
+        nav {
+
+            background-color: #d96b9b;
+
+            padding: 15px;
+
+            text-align: center;
+
+        }
+
+        nav h2 {
+
+            color: white;
+
+            margin-bottom: 5px;
+
+        }
+
+        nav p {
+
+            color: #ffeef5;
+
+            font-size: 14px;
+
+        }
+
+        /* ส่วนหลัก */
+
+        .container {
+
+            max-width: 900px;
+
+            margin: 40px auto;
+
+            padding: 20px;
+
+        }
+
+        .profile-card {
+
+            background-color: white;
+
+            border-radius: 25px;
+
+            padding: 40px;
+
+            text-align: center;
+
+            box-shadow: 0 5px 20px rgba(217, 107, 155, 0.15);
+
+        }
+
+        /* รูปโปรไฟล์ */
+
+        .profile-img {
+
+            width: 220px;
+
+            height: 280px;
+
+            object-fit: cover;
+
+            border-radius: 20px;
+
+            border: 6px solid #f8d6e4;
+
+            margin-bottom: 20px;
+
+        }
+
+        h1 {
+
+            color: #c65387;
+
+            margin-bottom: 5px;
+
+        }
+
+        .nickname {
+
+            color: #d96b9b;
+
+            font-size: 20px;
+
+            margin-bottom: 20px;
+
+        }
+
+        .intro {
+
+            max-width: 700px;
+
+            margin: auto;
+
+            color: #6b5961;
+
+        }
+
+        /* ข้อมูลส่วนตัว */
+
+        .info {
+
+            margin-top: 30px;
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 20px;
+
+        }
+
+        .box {
+
+            background-color: #fff0f5;
+
+            border-radius: 15px;
+
+            padding: 20px;
+
+            text-align: left;
+
+        }
+
+        .box h3 {
+
+            color: #c65387;
+
+            margin-bottom: 8px;
+
+        }
+
+        /* เป้าหมาย */
+
+        .goal {
+
+            margin-top: 30px;
+
+            background-color: #fce3ed;
+
+            border-radius: 20px;
+
+            padding: 25px;
+
+        }
+
+        .goal h2 {
+
+            color: #c65387;
+
+            margin-bottom: 10px;
+
+        }
+
+        /* ปุ่ม */
+
+        .button {
+
+            display: inline-block;
+
+            margin-top: 30px;
+
+            padding: 12px 30px;
+
+            background-color: #d96b9b;
+
+            color: white;
+
+            text-decoration: none;
+
+            border-radius: 30px;
+
+            transition: 0.3s;
+
+        }
+
+        .button:hover {
+
+            background-color: #c65387;
+
+        }
+
+        /* มือถือ */
+
+        @media (max-width: 600px) {
+
+            .info {
+
+                grid-template-columns: 1fr;
+
+            }
+
+            .profile-card {
+
+                padding: 25px;
+
+            }
+
+            .profile-img {
+
+                width: 180px;
+
+                height: 230px;
+
+            }
+
+            h1 {
+
+                font-size: 28px;
+
+            }
+
+        }
+
+    </style>
+
 </head>
+
 <body>
-<div class="card">
-<h1>ยินดีต้อนรับสู่โปรไฟล์ของฉัน </h1>
-<p>สวัสดีค่ะ ดิฉันชื่อ <strong>นางสาวภลดา แสนศรี (Palada Sansri)</strong></p>
-<p>ขณะนี้กำลังสนใจด้านการพัฒนาการศึกษาไทย </p>
-<p>นี่คือเว็บไซต์แรกของดิฉันที่โฮสต์บน GitHub Pages!</p>
-  <!-- ไปหน้าแฟ้มสะสมผลงาน -->
-  <a href="portfolio.html" class="btn"> แฟ้มสะสมผลงาน</a>
-</div>
+
+    <!-- ส่วนหัว -->
+
+    <nav>
+
+        <h2>My Portfolio ♡</h2>
+
+        <p>แฟ้มสะสมผลงานของฉัน</p>
+
+    </nav>
+
+    <!-- เนื้อหาหลัก -->
+
+    <div class="container">
+
+        <div class="profile-card">
+
+            <!-- รูปโปรไฟล์ -->
+
+            <img
+
+                src="IMG_7941.jpeg"
+
+                alt="รูปโปรไฟล์ของภลดา แสนศรี"
+
+                class="profile-img"
+
+            >
+
+            <h1>นางสาวภลดา แสนศรี</h1>
+
+            <div class="nickname">
+
+                ชื่อเล่น อิงฟ้า ♡
+
+            </div>
+
+            <p class="intro">
+
+                สวัสดีค่ะ ฉันชื่อภลดา แสนศรี
+
+                ชื่อเล่นอิงฟ้า เป็นนักเรียนจากโรงเรียน
+
+                บ้านบึง"อุตสาหกรรมนุเคราะห์" จังหวัดชลบุรี
+
+                มีความสนใจในวิชาคณิตศาสตร์
+
+                และมีความตั้งใจที่จะศึกษาต่อในคณะครุศาสตร์
+
+                สาขาคณิตศาสตร์
+
+            </p>
+
+            <!-- ข้อมูลส่วนตัว -->
+
+            <div class="info">
+
+                <div class="box">
+
+                    <h3>🎓 โรงเรียน</h3>
+
+                    <p>
+
+                        บ้านบึง"อุตสาหกรรมนุเคราะห์"
+
+                    </p>
+
+                </div>
+
+                <div class="box">
+
+                    <h3>📍 จังหวัด</h3>
+
+                    <p>
+
+                        ชลบุรี
+
+                    </p>
+
+                </div>
+
+                <div class="box">
+
+                    <h3>📐 ความสนใจ</h3>
+
+                    <p>
+
+                        คณิตศาสตร์ การแก้โจทย์
+
+                        และการคิดวิเคราะห์
+
+                    </p>
+
+                </div>
+
+                <div class="box">
+
+                    <h3>🏫 คณะที่สนใจ</h3>
+
+                    <p>
+
+                        คณะครุศาสตร์
+
+                        สาขาคณิตศาสตร์
+
+                        มหาวิทยาลัยราชภัฏบุรีรัมย์
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- เป้าหมาย -->
+
+            <div class="goal">
+
+                <h2>🌷 เป้าหมายของฉัน</h2>
+
+                <p>
+
+                    ฉันมีความตั้งใจที่จะศึกษาต่อในคณะครุศาสตร์
+
+                    สาขาคณิตศาสตร์ เพื่อพัฒนาความรู้และทักษะ
+
+                    และเติบโตเป็นครูคณิตศาสตร์ที่สามารถถ่ายทอดความรู้
+
+                    และสร้างแรงบันดาลใจให้กับนักเรียน
+
+                </p>
+
+            </div>
+
+            <!-- ปุ่มไปหน้า Portfolio -->
+
+            <a href="portfolio.html" class="button">
+
+                ดูผลงานและกิจกรรม →
+
+            </a>
+
+        </div>
+
+    </div>
+
 </body>
+
 </html>
