@@ -34,6 +34,8 @@
 
             scroll-behavior: smooth;
 
+            scroll-padding-top: 100px;
+
         }
 
         body {
@@ -66,9 +68,9 @@
 
         nav {
 
-            height: 80px;
+            min-height: 80px;
 
-            padding: 0 7%;
+            padding: 15px 5%;
 
             display: flex;
 
@@ -80,11 +82,15 @@
 
             top: 0;
 
-            z-index: 10;
+            z-index: 100;
 
-            background: rgba(255, 247, 249, 0.90);
+            background: rgba(255, 247, 249, 0.94);
 
             backdrop-filter: blur(10px);
+
+            box-shadow:
+
+                0 5px 20px rgba(201, 120, 140, 0.08);
 
         }
 
@@ -98,15 +104,21 @@
 
             letter-spacing: 2px;
 
+            white-space: nowrap;
+
         }
 
         nav ul {
 
             display: flex;
 
-            gap: 30px;
+            gap: 18px;
 
             list-style: none;
+
+            flex-wrap: wrap;
+
+            justify-content: flex-end;
 
         }
 
@@ -116,11 +128,13 @@
 
             color: #5A3A40;
 
-            font-size: 18px;
+            font-size: 15px;
 
             font-weight: bold;
 
             transition: 0.3s;
+
+            white-space: nowrap;
 
         }
 
@@ -139,6 +153,8 @@
         section {
 
             padding: 80px 8%;
+
+            scroll-margin-top: 100px;
 
         }
 
@@ -178,7 +194,7 @@
 
         ========================= */
 
-        .profile-section {
+        #profile {
 
             min-height: calc(100vh - 80px);
 
@@ -450,7 +466,7 @@
 
         /* =========================
 
-           Goal
+           Goal / Inspiration
 
         ========================= */
 
@@ -516,13 +532,9 @@
 
         ========================= */
 
-        @media (max-width: 800px) {
+        @media (max-width: 900px) {
 
             nav {
-
-                height: auto;
-
-                padding: 20px;
 
                 flex-direction: column;
 
@@ -532,13 +544,7 @@
 
             nav ul {
 
-                gap: 18px;
-
-            }
-
-            section {
-
-                padding: 60px 20px;
+                justify-content: center;
 
             }
 
@@ -547,20 +553,6 @@
                 flex-direction: column;
 
                 text-align: center;
-
-            }
-
-            .profile-photo {
-
-                width: 230px;
-
-                height: 230px;
-
-            }
-
-            .profile-info h1 {
-
-                font-size: 35px;
 
             }
 
@@ -573,12 +565,6 @@
             .activity-container {
 
                 grid-template-columns: 1fr;
-
-            }
-
-            .section-title {
-
-                font-size: 32px;
 
             }
 
@@ -610,7 +596,7 @@
 
                 <a href="index.html">
 
-                    หน้าแรก
+                    แนะนำตัว
 
                 </a>
 
@@ -618,9 +604,69 @@
 
             <li>
 
-                <a href="portfolio.html">
+                <a href="#profile">
 
-                    แฟ้มผลงาน
+                    ประวัติส่วนตัว
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="#education">
+
+                    ประวัติการศึกษา
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="#skills">
+
+                    ความสามารถและความสนใจ
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="#achievements">
+
+                    ผลงานและการแข่งขัน
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="#activities">
+
+                    กิจกรรม
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="#certificates">
+
+                    เกียรติบัตร
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="#inspiration">
+
+                    แรงบันดาลใจ
 
                 </a>
 
@@ -632,11 +678,11 @@
 
     <!-- =========================
 
-         Profile
+         ประวัติส่วนตัว
 
     ========================= -->
 
-    <section class="profile-section">
+    <section id="profile">
 
         <div class="profile-container">
 
@@ -694,11 +740,11 @@
 
     <!-- =========================
 
-         Education
+         ประวัติการศึกษา
 
     ========================= -->
 
-    <section>
+    <section id="education">
 
         <h2 class="section-title">
 
@@ -754,11 +800,11 @@
 
     <!-- =========================
 
-         Skills
+         ความสามารถและความสนใจ
 
     ========================= -->
 
-    <section>
+    <section id="skills">
 
         <h2 class="section-title">
 
@@ -786,11 +832,11 @@
 
     <!-- =========================
 
-         Achievements
+         ผลงานและการแข่งขัน
 
     ========================= -->
 
-    <section>
+    <section id="achievements">
 
         <h2 class="section-title">
 
@@ -812,9 +858,9 @@
 
                     เป็นตัวแทนเข้าร่วมการแข่งขัน Sudoku
 
-                    และได้รับประสบการณ์จากการฝึกคิดวิเคราะห์
+                    และได้รับประสบการณ์ด้านการคิดวิเคราะห์
 
-                    การแก้ปัญหา และการทำงานภายใต้ความกดดัน
+                    การแก้ปัญหา และการฝึกฝนอย่างเป็นระบบ
 
                 </p>
 
@@ -846,11 +892,11 @@
 
     <!-- =========================
 
-         Activities
+         กิจกรรม
 
     ========================= -->
 
-    <section>
+    <section id="activities">
 
         <h2 class="section-title">
 
@@ -906,11 +952,11 @@
 
     <!-- =========================
 
-         Certificates
+         เกียรติบัตร
 
     ========================= -->
 
-    <section>
+    <section id="certificates">
 
         <h2 class="section-title">
 
@@ -962,11 +1008,11 @@
 
     <!-- =========================
 
-         Inspiration
+         แรงบันดาลใจ
 
     ========================= -->
 
-    <section>
+    <section id="inspiration">
 
         <h2 class="section-title">
 
@@ -996,7 +1042,7 @@
 
     <!-- =========================
 
-         Future Goal
+         เป้าหมายในอนาคต
 
     ========================= -->
 
