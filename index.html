@@ -1,405 +1,237 @@
-<!DOCTYPE html>
-
-<html lang="th">
-
-<head>
-
-    <meta charset="UTF-8">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Portfolio | ภลดา แสนศรี</title>
-
-    <style>
-
-        * {
-
-            box-sizing: border-box;
-
+<\!DOCTYPE html\>
+<html lang="th"\>
+<head\>
+    <meta charset="UTF\-8"\>
+    <meta name="viewport" content="width=device\-width, initial\-scale=1\.0"\>
+    <title\>Portfolio \| Palada Sansri</title\>
+    <style\>
+        \* \{
             margin: 0;
-
             padding: 0;
-
-        }
-
-        body {
-
-            font-family: Arial, sans-serif;
-
-            background-color: #fff5f8;
-
-            color: #4a3740;
-
-            line-height: 1.8;
-
-        }
-
-        /* เมนูด้านบน */
-
-        nav {
-
-            background-color: #d96b9b;
-
-            padding: 15px;
-
-            text-align: center;
-
-        }
-
-        nav h2 {
-
+            box\-sizing: border\-box;
+        \}
+        body \{
+            font\-family: Arial, "Noto Sans Thai", sans\-serif;
+            min\-height: 100vh;
+            color: \#5A3A40;
+            background: linear\-gradient&#40;
+                135deg,
+                \#FFF7F9 0%,
+                \#FCE8ED 45%,
+                \#F8D0D9 100%
+            &#41;;
+        \}
+        /\* Navigation \*/
+        nav \{
+            height: 90px;
+            padding: 0 7%;
+            display: flex;
+            justify\-content: space\-between;
+            align\-items: center;
+        \}
+        \.logo \{
+            font\-size: 27px;
+            font\-weight: bold;
+            color: \#C9788C;
+            letter\-spacing: 2px;
+        \}
+        nav ul \{
+            display: flex;
+            gap: 35px;
+            list\-style: none;
+        \}
+        nav ul li a \{
+            text\-decoration: none;
+            color: \#5A3A40;
+            font\-weight: bold;
+            transition: 0\.3s;
+        \}
+        nav ul li a:hover \{
+            color: \#C9788C;
+        \}
+        /\* Hero \*/
+        \.hero \{
+            min\-height: calc&#40;100vh \- 90px&#41;;
+            padding: 40px 8%;
+            display: flex;
+            align\-items: center;
+            justify\-content: center;
+        \}
+        \.hero\-content \{
+            width: 100%;
+            max\-width: 1100px;
+            display: flex;
+            align\-items: center;
+            justify\-content: space\-between;
+            gap: 60px;
+        \}
+        /\* Text \*/
+        \.text \{
+            flex: 1;
+        \}
+        \.welcome \{
+            color: \#C9788C;
+            font\-size: 20px;
+            font\-weight: bold;
+            margin\-bottom: 18px;
+            letter\-spacing: 1px;
+        \}
+        h1 \{
+            font\-size: 55px;
+            line\-height: 1\.25;
+            color: \#5A3A40;
+            margin\-bottom: 18px;
+        \}
+        h1 span \{
+            color: \#C9788C;
+        \}
+        \.subtitle \{
+            font\-size: 24px;
+            font\-weight: bold;
+            margin\-bottom: 15px;
+        \}
+        \.description \{
+            font\-size: 18px;
+            line\-height: 1\.8;
+            max\-width: 650px;
+            margin\-bottom: 30px;
+        \}
+        /\* Button \*/
+        \.btn \{
+            display: inline\-block;
+            padding: 14px 32px;
+            border\-radius: 30px;
+            background: \#E7A7B6;
             color: white;
-
-            margin-bottom: 5px;
-
-        }
-
-        nav p {
-
-            color: #ffeef5;
-
-            font-size: 14px;
-
-        }
-
-        /* ส่วนหลัก */
-
-        .container {
-
-            max-width: 900px;
-
-            margin: 40px auto;
-
-            padding: 20px;
-
-        }
-
-        .profile-card {
-
-            background-color: white;
-
-            border-radius: 25px;
-
-            padding: 40px;
-
-            text-align: center;
-
-            box-shadow: 0 5px 20px rgba(217, 107, 155, 0.15);
-
-        }
-
-        /* รูปโปรไฟล์ */
-
-        .profile-img {
-
-            width: 220px;
-
-            height: 280px;
-
-            object-fit: cover;
-
-            border-radius: 20px;
-
-            border: 6px solid #f8d6e4;
-
-            margin-bottom: 20px;
-
-        }
-
-        h1 {
-
-            color: #c65387;
-
-            margin-bottom: 5px;
-
-        }
-
-        .nickname {
-
-            color: #d96b9b;
-
-            font-size: 20px;
-
-            margin-bottom: 20px;
-
-        }
-
-        .intro {
-
-            max-width: 700px;
-
-            margin: auto;
-
-            color: #6b5961;
-
-        }
-
-        /* ข้อมูลส่วนตัว */
-
-        .info {
-
-            margin-top: 30px;
-
-            display: grid;
-
-            grid-template-columns: 1fr 1fr;
-
-            gap: 20px;
-
-        }
-
-        .box {
-
-            background-color: #fff0f5;
-
-            border-radius: 15px;
-
-            padding: 20px;
-
-            text-align: left;
-
-        }
-
-        .box h3 {
-
-            color: #c65387;
-
-            margin-bottom: 8px;
-
-        }
-
-        /* เป้าหมาย */
-
-        .goal {
-
-            margin-top: 30px;
-
-            background-color: #fce3ed;
-
-            border-radius: 20px;
-
-            padding: 25px;
-
-        }
-
-        .goal h2 {
-
-            color: #c65387;
-
-            margin-bottom: 10px;
-
-        }
-
-        /* ปุ่ม */
-
-        .button {
-
-            display: inline-block;
-
-            margin-top: 30px;
-
-            padding: 12px 30px;
-
-            background-color: #d96b9b;
-
-            color: white;
-
-            text-decoration: none;
-
-            border-radius: 30px;
-
-            transition: 0.3s;
-
-        }
-
-        .button:hover {
-
-            background-color: #c65387;
-
-        }
-
-        /* มือถือ */
-
-        @media (max-width: 600px) {
-
-            .info {
-
-                grid-template-columns: 1fr;
-
-            }
-
-            .profile-card {
-
-                padding: 25px;
-
-            }
-
-            .profile-img {
-
+            text\-decoration: none;
+            font\-weight: bold;
+            box\-shadow: 0 8px 20px rgba&#40;201, 120, 140, 0\.20&#41;;
+            transition: 0\.3s;
+        \}
+        \.btn:hover \{
+            transform: translateY&#40;\-3px&#41;;
+            background: \#C9788C;
+        \}
+        /\* Decorative Circle \*/
+        \.decoration \{
+            width: 330px;
+            height: 330px;
+            border\-radius: 50%;
+            background: linear\-gradient&#40;
+                145deg,
+                \#FCE8ED,
+                \#E7A7B6
+            &#41;;
+            box\-shadow:
+                0 20px 45px rgba&#40;201, 120, 140, 0\.18&#41;;
+            display: flex;
+            align\-items: center;
+            justify\-content: center;
+            flex\-shrink: 0;
+        \}
+        \.decoration\-inner \{
+            width: 250px;
+            height: 250px;
+            border\-radius: 50%;
+            background: rgba&#40;255, 255, 255, 0\.55&#41;;
+            display: flex;
+            align\-items: center;
+            justify\-content: center;
+            text\-align: center;
+            padding: 30px;
+            color: \#C9788C;
+            font\-size: 22px;
+            font\-weight: bold;
+            line\-height: 1\.6;
+        \}
+        /\* Mobile \*/
+        @media &#40;max\-width: 800px&#41; \{
+            nav \{
+                height: auto;
+                padding: 20px;
+                flex\-direction: column;
+                gap: 15px;
+            \}
+            nav ul \{
+                gap: 18px;
+            \}
+            \.hero \{
+                padding: 40px 25px;
+            \}
+            \.hero\-content \{
+                flex\-direction: column\-reverse;
+                text\-align: center;
+            \}
+            \.description \{
+                margin\-left: auto;
+                margin\-right: auto;
+            \}
+            h1 \{
+                font\-size: 40px;
+            \}
+            \.subtitle \{
+                font\-size: 20px;
+            \}
+            \.decoration \{
+                width: 240px;
+                height: 240px;
+            \}
+            \.decoration\-inner \{
                 width: 180px;
-
-                height: 230px;
-
-            }
-
-            h1 {
-
-                font-size: 28px;
-
-            }
-
-        }
-
-    </style>
-
-</head>
-
-<body>
-
-    <!-- ส่วนหัว -->
-
-    <nav>
-
-        <h2>My Portfolio ♡</h2>
-
-        <p>แฟ้มสะสมผลงานของฉัน</p>
-
-    </nav>
-
-    <!-- เนื้อหาหลัก -->
-
-    <div class="container">
-
-        <div class="profile-card">
-
-            <!-- รูปโปรไฟล์ -->
-
-            <img
-
-                src="IMG_7941.jpeg"
-
-                alt="รูปโปรไฟล์ของภลดา แสนศรี"
-
-                class="profile-img"
-
-            >
-
-            <h1>นางสาวภลดา แสนศรี</h1>
-
-            <div class="nickname">
-
-                ชื่อเล่น อิงฟ้า ♡
-
-            </div>
-
-            <p class="intro">
-
-                สวัสดีค่ะ ฉันชื่อภลดา แสนศรี
-
-                ชื่อเล่นอิงฟ้า เป็นนักเรียนจากโรงเรียน
-
-                บ้านบึง"อุตสาหกรรมนุเคราะห์" จังหวัดชลบุรี
-
-                มีความสนใจในวิชาคณิตศาสตร์
-
-                และมีความตั้งใจที่จะศึกษาต่อในคณะครุศาสตร์
-
-                สาขาคณิตศาสตร์
-
-            </p>
-
-            <!-- ข้อมูลส่วนตัว -->
-
-            <div class="info">
-
-                <div class="box">
-
-                    <h3>🎓 โรงเรียน</h3>
-
-                    <p>
-
-                        บ้านบึง"อุตสาหกรรมนุเคราะห์"
-
-                    </p>
-
-                </div>
-
-                <div class="box">
-
-                    <h3>📍 จังหวัด</h3>
-
-                    <p>
-
-                        ชลบุรี
-
-                    </p>
-
-                </div>
-
-                <div class="box">
-
-                    <h3>📐 ความสนใจ</h3>
-
-                    <p>
-
-                        คณิตศาสตร์ การแก้โจทย์
-
-                        และการคิดวิเคราะห์
-
-                    </p>
-
-                </div>
-
-                <div class="box">
-
-                    <h3>🏫 คณะที่สนใจ</h3>
-
-                    <p>
-
-                        คณะครุศาสตร์
-
-                        สาขาคณิตศาสตร์
-
-                        มหาวิทยาลัยราชภัฏบุรีรัมย์
-
-                    </p>
-
-                </div>
-
-            </div>
-
-            <!-- เป้าหมาย -->
-
-            <div class="goal">
-
-                <h2>🌷 เป้าหมายของฉัน</h2>
-
-                <p>
-
-                    ฉันมีความตั้งใจที่จะศึกษาต่อในคณะครุศาสตร์
-
-                    สาขาคณิตศาสตร์ เพื่อพัฒนาความรู้และทักษะ
-
-                    และเติบโตเป็นครูคณิตศาสตร์ที่สามารถถ่ายทอดความรู้
-
-                    และสร้างแรงบันดาลใจให้กับนักเรียน
-
-                </p>
-
-            </div>
-
-            <!-- ปุ่มไปหน้า Portfolio -->
-
-            <a href="portfolio.html" class="button">
-
-                ดูผลงานและกิจกรรม →
-
-            </a>
-
-        </div>
-
-    </div>
-
-</body>
-
-</html>
+                height: 180px;
+                font\-size: 17px;
+            \}
+        \}
+    </style\>
+</head\>
+<body\>
+    <\!\-\- Navigation \-\-\>
+    <nav\>
+        <div class="logo"\>
+            PALADA
+        </div\>
+        <ul\>
+            <li\>
+                <a href="index\.html"\>หน้าแรก</a\>
+            </li\>
+            <li\>
+                <a href="portfolio\.html"\>Portfolio</a\>
+            </li\>
+        </ul\>
+    </nav\>
+    <\!\-\- Hero Section \-\-\>
+    <section class="hero"\>
+        <div class="hero\-content"\>
+            <div class="text"\>
+                <div class="welcome"\>
+                    WELCOME TO MY PORTFOLIO
+                </div\>
+                <h1\>
+                    สวัสดีค่ะ<br\>
+                    ฉันชื่อ <span\>Palada</span\>
+                </h1\>
+                <div class="subtitle"\>
+                    คณะครุศาสตร์ สาขาคณิตศาสตร์
+                </div\>
+                <p class="description"\>
+                    แฟ้มสะสมผลงานที่รวบรวมประสบการณ์
+                    ความสามารถ กิจกรรม และผลงานต่าง ๆ
+                    ที่สะท้อนถึงความตั้งใจในการเรียนรู้
+                    และความมุ่งมั่นที่จะก้าวสู่เส้นทางการเป็นครู
+                </p\>
+                <a href="portfolio\.html" class="btn"\>
+                    เข้าสู่ Portfolio →
+                </a\>
+            </div\>
+            <\!\-\- Decorative Area \-\-\>
+            <div class="decoration"\>
+                <div class="decoration\-inner"\>
+                    Mathematics<br\>
+                    ×<br\>
+                    Education
+                </div\>
+            </div\>
+        </div\>
+    </section\>
+</body\>
+</html\>
