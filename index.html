@@ -1,237 +1,455 @@
-<\!DOCTYPE html\>
-<html lang="th"\>
-<head\>
-    <meta charset="UTF\-8"\>
-    <meta name="viewport" content="width=device\-width, initial\-scale=1\.0"\>
-    <title\>Portfolio \| Palada Sansri</title\>
-    <style\>
-        \* \{
+<!DOCTYPE html>
+
+<html lang="th">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Portfolio | Palada Sansri</title>
+
+    <style>
+
+        * {
+
             margin: 0;
+
             padding: 0;
-            box\-sizing: border\-box;
-        \}
-        body \{
-            font\-family: Arial, "Noto Sans Thai", sans\-serif;
-            min\-height: 100vh;
-            color: \#5A3A40;
-            background: linear\-gradient&#40;
+
+            box-sizing: border-box;
+
+        }
+
+        body {
+
+            font-family: Arial, "Noto Sans Thai", sans-serif;
+
+            min-height: 100vh;
+
+            color: #5A3A40;
+
+            background: linear-gradient(
+
                 135deg,
-                \#FFF7F9 0%,
-                \#FCE8ED 45%,
-                \#F8D0D9 100%
-            &#41;;
-        \}
-        /\* Navigation \*/
-        nav \{
+
+                #FFF7F9 0%,
+
+                #FCE8ED 45%,
+
+                #F8D0D9 100%
+
+            );
+
+        }
+
+        nav {
+
             height: 90px;
+
             padding: 0 7%;
+
             display: flex;
-            justify\-content: space\-between;
-            align\-items: center;
-        \}
-        \.logo \{
-            font\-size: 27px;
-            font\-weight: bold;
-            color: \#C9788C;
-            letter\-spacing: 2px;
-        \}
-        nav ul \{
+
+            justify-content: space-between;
+
+            align-items: center;
+
+        }
+
+        .logo {
+
+            font-size: 27px;
+
+            font-weight: bold;
+
+            color: #C9788C;
+
+            letter-spacing: 2px;
+
+        }
+
+        nav ul {
+
             display: flex;
+
             gap: 35px;
-            list\-style: none;
-        \}
-        nav ul li a \{
-            text\-decoration: none;
-            color: \#5A3A40;
-            font\-weight: bold;
-            transition: 0\.3s;
-        \}
-        nav ul li a:hover \{
-            color: \#C9788C;
-        \}
-        /\* Hero \*/
-        \.hero \{
-            min\-height: calc&#40;100vh \- 90px&#41;;
+
+            list-style: none;
+
+        }
+
+        nav ul li a {
+
+            text-decoration: none;
+
+            color: #5A3A40;
+
+            font-weight: bold;
+
+            transition: 0.3s;
+
+        }
+
+        nav ul li a:hover {
+
+            color: #C9788C;
+
+        }
+
+        .hero {
+
+            min-height: calc(100vh - 90px);
+
             padding: 40px 8%;
+
             display: flex;
-            align\-items: center;
-            justify\-content: center;
-        \}
-        \.hero\-content \{
+
+            align-items: center;
+
+            justify-content: center;
+
+        }
+
+        .hero-content {
+
             width: 100%;
-            max\-width: 1100px;
+
+            max-width: 1100px;
+
             display: flex;
-            align\-items: center;
-            justify\-content: space\-between;
+
+            align-items: center;
+
+            justify-content: space-between;
+
             gap: 60px;
-        \}
-        /\* Text \*/
-        \.text \{
+
+        }
+
+        .text {
+
             flex: 1;
-        \}
-        \.welcome \{
-            color: \#C9788C;
-            font\-size: 20px;
-            font\-weight: bold;
-            margin\-bottom: 18px;
-            letter\-spacing: 1px;
-        \}
-        h1 \{
-            font\-size: 55px;
-            line\-height: 1\.25;
-            color: \#5A3A40;
-            margin\-bottom: 18px;
-        \}
-        h1 span \{
-            color: \#C9788C;
-        \}
-        \.subtitle \{
-            font\-size: 24px;
-            font\-weight: bold;
-            margin\-bottom: 15px;
-        \}
-        \.description \{
-            font\-size: 18px;
-            line\-height: 1\.8;
-            max\-width: 650px;
-            margin\-bottom: 30px;
-        \}
-        /\* Button \*/
-        \.btn \{
-            display: inline\-block;
+
+        }
+
+        .welcome {
+
+            color: #C9788C;
+
+            font-size: 20px;
+
+            font-weight: bold;
+
+            margin-bottom: 18px;
+
+            letter-spacing: 1px;
+
+        }
+
+        h1 {
+
+            font-size: 55px;
+
+            line-height: 1.25;
+
+            color: #5A3A40;
+
+            margin-bottom: 18px;
+
+        }
+
+        h1 span {
+
+            color: #C9788C;
+
+        }
+
+        .subtitle {
+
+            font-size: 24px;
+
+            font-weight: bold;
+
+            margin-bottom: 15px;
+
+        }
+
+        .description {
+
+            font-size: 18px;
+
+            line-height: 1.8;
+
+            max-width: 650px;
+
+            margin-bottom: 30px;
+
+        }
+
+        .btn {
+
+            display: inline-block;
+
             padding: 14px 32px;
-            border\-radius: 30px;
-            background: \#E7A7B6;
+
+            border-radius: 30px;
+
+            background: #E7A7B6;
+
             color: white;
-            text\-decoration: none;
-            font\-weight: bold;
-            box\-shadow: 0 8px 20px rgba&#40;201, 120, 140, 0\.20&#41;;
-            transition: 0\.3s;
-        \}
-        \.btn:hover \{
-            transform: translateY&#40;\-3px&#41;;
-            background: \#C9788C;
-        \}
-        /\* Decorative Circle \*/
-        \.decoration \{
+
+            text-decoration: none;
+
+            font-weight: bold;
+
+            box-shadow: 0 8px 20px rgba(201, 120, 140, 0.20);
+
+            transition: 0.3s;
+
+        }
+
+        .btn:hover {
+
+            transform: translateY(-3px);
+
+            background: #C9788C;
+
+        }
+
+        .decoration {
+
             width: 330px;
+
             height: 330px;
-            border\-radius: 50%;
-            background: linear\-gradient&#40;
+
+            border-radius: 50%;
+
+            background: linear-gradient(
+
                 145deg,
-                \#FCE8ED,
-                \#E7A7B6
-            &#41;;
-            box\-shadow:
-                0 20px 45px rgba&#40;201, 120, 140, 0\.18&#41;;
+
+                #FCE8ED,
+
+                #E7A7B6
+
+            );
+
+            box-shadow:
+
+                0 20px 45px rgba(201, 120, 140, 0.18);
+
             display: flex;
-            align\-items: center;
-            justify\-content: center;
-            flex\-shrink: 0;
-        \}
-        \.decoration\-inner \{
+
+            align-items: center;
+
+            justify-content: center;
+
+            flex-shrink: 0;
+
+        }
+
+        .decoration-inner {
+
             width: 250px;
+
             height: 250px;
-            border\-radius: 50%;
-            background: rgba&#40;255, 255, 255, 0\.55&#41;;
+
+            border-radius: 50%;
+
+            background: rgba(255, 255, 255, 0.55);
+
             display: flex;
-            align\-items: center;
-            justify\-content: center;
-            text\-align: center;
+
+            align-items: center;
+
+            justify-content: center;
+
+            text-align: center;
+
             padding: 30px;
-            color: \#C9788C;
-            font\-size: 22px;
-            font\-weight: bold;
-            line\-height: 1\.6;
-        \}
-        /\* Mobile \*/
-        @media &#40;max\-width: 800px&#41; \{
-            nav \{
+
+            color: #C9788C;
+
+            font-size: 22px;
+
+            font-weight: bold;
+
+            line-height: 1.6;
+
+        }
+
+        @media (max-width: 800px) {
+
+            nav {
+
                 height: auto;
+
                 padding: 20px;
-                flex\-direction: column;
+
+                flex-direction: column;
+
                 gap: 15px;
-            \}
-            nav ul \{
+
+            }
+
+            nav ul {
+
                 gap: 18px;
-            \}
-            \.hero \{
+
+            }
+
+            .hero {
+
                 padding: 40px 25px;
-            \}
-            \.hero\-content \{
-                flex\-direction: column\-reverse;
-                text\-align: center;
-            \}
-            \.description \{
-                margin\-left: auto;
-                margin\-right: auto;
-            \}
-            h1 \{
-                font\-size: 40px;
-            \}
-            \.subtitle \{
-                font\-size: 20px;
-            \}
-            \.decoration \{
+
+            }
+
+            .hero-content {
+
+                flex-direction: column-reverse;
+
+                text-align: center;
+
+            }
+
+            .description {
+
+                margin-left: auto;
+
+                margin-right: auto;
+
+            }
+
+            h1 {
+
+                font-size: 40px;
+
+            }
+
+            .subtitle {
+
+                font-size: 20px;
+
+            }
+
+            .decoration {
+
                 width: 240px;
+
                 height: 240px;
-            \}
-            \.decoration\-inner \{
+
+            }
+
+            .decoration-inner {
+
                 width: 180px;
+
                 height: 180px;
-                font\-size: 17px;
-            \}
-        \}
-    </style\>
-</head\>
-<body\>
-    <\!\-\- Navigation \-\-\>
-    <nav\>
-        <div class="logo"\>
+
+                font-size: 17px;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <nav>
+
+        <div class="logo">
+
             PALADA
-        </div\>
-        <ul\>
-            <li\>
-                <a href="index\.html"\>หน้าแรก</a\>
-            </li\>
-            <li\>
-                <a href="portfolio\.html"\>Portfolio</a\>
-            </li\>
-        </ul\>
-    </nav\>
-    <\!\-\- Hero Section \-\-\>
-    <section class="hero"\>
-        <div class="hero\-content"\>
-            <div class="text"\>
-                <div class="welcome"\>
+
+        </div>
+
+        <ul>
+
+            <li>
+
+                <a href="index.html">หน้าแรก</a>
+
+            </li>
+
+            <li>
+
+                <a href="portfolio.html">Portfolio</a>
+
+            </li>
+
+        </ul>
+
+    </nav>
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <div class="text">
+
+                <div class="welcome">
+
                     WELCOME TO MY PORTFOLIO
-                </div\>
-                <h1\>
-                    สวัสดีค่ะ<br\>
-                    ฉันชื่อ <span\>Palada</span\>
-                </h1\>
-                <div class="subtitle"\>
+
+                </div>
+
+                <h1>
+
+                    สวัสดีค่ะ<br>
+
+                    ฉันชื่อ <span>Palada</span>
+
+                </h1>
+
+                <div class="subtitle">
+
                     คณะครุศาสตร์ สาขาคณิตศาสตร์
-                </div\>
-                <p class="description"\>
+
+                </div>
+
+                <p class="description">
+
                     แฟ้มสะสมผลงานที่รวบรวมประสบการณ์
+
                     ความสามารถ กิจกรรม และผลงานต่าง ๆ
+
                     ที่สะท้อนถึงความตั้งใจในการเรียนรู้
+
                     และความมุ่งมั่นที่จะก้าวสู่เส้นทางการเป็นครู
-                </p\>
-                <a href="portfolio\.html" class="btn"\>
+
+                </p>
+
+                <a href="portfolio.html" class="btn">
+
                     เข้าสู่ Portfolio →
-                </a\>
-            </div\>
-            <\!\-\- Decorative Area \-\-\>
-            <div class="decoration"\>
-                <div class="decoration\-inner"\>
-                    Mathematics<br\>
-                    ×<br\>
+
+                </a>
+
+            </div>
+
+            <div class="decoration">
+
+                <div class="decoration-inner">
+
+                    Mathematics<br>
+
+                    ×<br>
+
                     Education
-                </div\>
-            </div\>
-        </div\>
-    </section\>
-</body\>
-</html\>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</body>
+
+</html>
