@@ -38,7 +38,6 @@
             line-height: 1.7;
         }
 
-        /* เมนูด้านบน */
         nav {
             position: sticky;
             top: 0;
@@ -72,7 +71,6 @@
             transform: translateY(-2px);
         }
 
-        /* ส่วนหัว */
         .hero {
             min-height: 80vh;
             display: flex;
@@ -91,7 +89,6 @@
             box-shadow: 0 15px 40px rgba(201, 120, 140, 0.15);
         }
 
-        /* รูปโปรไฟล์ */
         .profile-circle {
             width: 180px;
             height: 180px;
@@ -125,7 +122,6 @@
             font-size: 20px;
         }
 
-        /* แต่ละ Section */
         section {
             padding: 70px 20px;
         }
@@ -142,7 +138,6 @@
             margin: auto;
         }
 
-        /* กล่องข้อมูล */
         .card {
             background: var(--white);
             padding: 30px;
@@ -161,7 +156,6 @@
             font-size: 19px;
         }
 
-        /* การศึกษา */
         .education-container {
             max-width: 1000px;
             margin: auto;
@@ -183,7 +177,6 @@
             margin-bottom: 10px;
         }
 
-        /* ความสามารถ */
         .skill-container {
             max-width: 1000px;
             margin: auto;
@@ -210,26 +203,43 @@
             font-size: 25px;
         }
 
-        /* ผลงาน */
+        /* ผลงานและการแข่งขัน */
         .achievement-container {
-            max-width: 1000px;
+            max-width: 1100px;
             margin: auto;
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(3, 1fr);
             gap: 25px;
         }
 
         .achievement {
             background: white;
-            padding: 30px;
+            padding: 15px;
             border-radius: 25px;
             box-shadow: 0 10px 30px rgba(201, 120, 140, 0.12);
+            transition: 0.3s;
+        }
+
+        .achievement:hover {
+            transform: translateY(-5px);
+        }
+
+        .achievement img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 18px;
+            margin-bottom: 15px;
         }
 
         .achievement h3 {
             color: var(--pink-dark);
-            margin-bottom: 10px;
-            font-size: 24px;
+            font-size: 23px;
+            margin-bottom: 8px;
+        }
+
+        .achievement p {
+            font-size: 17px;
         }
 
         /* กิจกรรม */
@@ -269,7 +279,6 @@
 
         .activity p {
             font-size: 17px;
-            margin-bottom: 5px;
         }
 
         /* เกียรติบัตร */
@@ -311,7 +320,6 @@
             margin-bottom: 5px;
         }
 
-        /* แรงบันดาลใจ */
         .inspiration {
             max-width: 1000px;
             margin: auto;
@@ -326,7 +334,6 @@
             font-size: 20px;
         }
 
-        /* เป้าหมาย */
         .goal {
             max-width: 1000px;
             margin: auto;
@@ -347,7 +354,6 @@
             font-size: 20px;
         }
 
-        /* Footer */
         footer {
             text-align: center;
             padding: 35px 20px;
@@ -356,19 +362,15 @@
             margin-top: 30px;
         }
 
-        /* มือถือ */
         @media (max-width: 900px) {
 
             .education-container,
-            .skill-container,
-            .achievement-container {
+            .skill-container {
                 grid-template-columns: 1fr;
             }
 
-            .activity-container {
-                grid-template-columns: 1fr;
-            }
-
+            .achievement-container,
+            .activity-container,
             .certificate-container {
                 grid-template-columns: 1fr;
             }
@@ -407,6 +409,7 @@
 
     <!-- แนะนำตัว -->
     <section class="hero" id="profile">
+
         <div class="hero-box">
 
             <div class="profile-circle">
@@ -427,6 +430,7 @@
             </p>
 
         </div>
+
     </section>
 
 
@@ -452,6 +456,7 @@
             </div>
 
         </div>
+
     </section>
 
 
@@ -495,6 +500,7 @@
             </div>
 
         </div>
+
     </section>
 
 
@@ -529,6 +535,7 @@
             </div>
 
         </div>
+
     </section>
 
 
@@ -539,7 +546,10 @@
 
         <div class="achievement-container">
 
+            <!-- ผลงานที่ 1 -->
             <div class="achievement">
+
+                <img src="achievement1.jpg" alt="ผลงานและการแข่งขันที่ 1">
 
                 <h3>การแข่งขัน Sudoku</h3>
 
@@ -552,7 +562,10 @@
             </div>
 
 
+            <!-- ผลงานที่ 2 -->
             <div class="achievement">
+
+                <img src="achievement2.jpg" alt="ผลงานและการแข่งขันที่ 2">
 
                 <h3>กิจกรรมบูธคณิตศาสตร์</h3>
 
@@ -565,7 +578,24 @@
 
             </div>
 
+
+            <!-- ผลงานที่ 3 -->
+            <div class="achievement">
+
+                <img src="achievement3.jpg" alt="ผลงานและการแข่งขันที่ 3">
+
+                <h3>ผลงานด้านคณิตศาสตร์</h3>
+
+                <p>
+                    ผลงานที่แสดงถึงความสนใจและความสามารถ
+                    ด้านคณิตศาสตร์ รวมถึงการฝึกคิดวิเคราะห์
+                    และการแก้โจทย์ปัญหาอย่างเป็นระบบ
+                </p>
+
+            </div>
+
         </div>
+
     </section>
 
 
@@ -575,7 +605,6 @@
         <h2 class="section-title">กิจกรรม</h2>
 
         <div class="activity-container">
-
 
             <!-- กิจกรรมที่ 1 -->
             <div class="activity">
@@ -625,6 +654,7 @@
             </div>
 
         </div>
+
     </section>
 
 
@@ -635,7 +665,6 @@
 
         <div class="certificate-container">
 
-
             <!-- เกียรติบัตรใบที่ 1 -->
             <div class="certificate">
 
@@ -644,8 +673,10 @@
                 <h3>เกียรติบัตรใบที่ 1</h3>
 
                 <p>
-                    เกียรติบัตรที่ได้รับจากการเข้าร่วมกิจกรรม
-                    หรือการพัฒนาความรู้และทักษะ
+                    ได้รับรางวัลอันดับเหรียญเงิน
+                    การแข่งขันซูโดกุ เกมถอดรหัสปริศนาตัวเลข
+                    รุ่นมัธยมศึกษาตอนปลาย
+                    ณ วันที่ 15-16 สิงหาคม 2569
                 </p>
 
             </div>
@@ -659,8 +690,10 @@
                 <h3>เกียรติบัตรใบที่ 2</h3>
 
                 <p>
-                    เกียรติบัตรที่แสดงถึงการเข้าร่วมกิจกรรม
-                    และประสบการณ์ที่ได้รับ
+                    ได้รับรางวัลระดับเหรียญทอง
+                    กิจกรรมการแข่งขันซูโดกุ ระดับชั้น ม.4-ม.6
+                    งานศิลปหัตถกรรมนักเรียน ครั้งที่ 73
+                    ปีการศึกษา 2568
                 </p>
 
             </div>
@@ -674,13 +707,67 @@
                 <h3>เกียรติบัตรใบที่ 3</h3>
 
                 <p>
-                    เกียรติบัตรที่สะท้อนถึงความตั้งใจ
-                    และการพัฒนาความสามารถของตนเอง
+                    ได้รับรางวัลชนะเลิศ
+                    การแข่งขันซูโดกุ ระดับมัธยมศึกษาตอนปลาย
+                    เนื่องในกิจกรรมสัปดาห์คณิตศาสตร์สู่ความเป็นเลิศ
+                    ประจำปีการศึกษา 2567
+                </p>
+
+            </div>
+
+
+            <!-- เกียรติบัตรใบที่ 4 -->
+            <div class="certificate">
+
+                <img src="certificate4.jpg" alt="เกียรติบัตรใบที่ 4">
+
+                <h3>เกียรติบัตรใบที่ 4</h3>
+
+                <p>
+                    ได้ผ่านการฝึกประสบการณ์อาชีพ
+                    (Work experiences)
+                    ณ เทศบาลเมืองลำปลายมาศ
+                    ระหว่างวันที่ 17 เมษายน 2569
+                    ถึงวันที่ 30 เมษายน 2569
+                </p>
+
+            </div>
+
+
+            <!-- เกียรติบัตรใบที่ 5 -->
+            <div class="certificate">
+
+                <img src="certificate5.jpg" alt="เกียรติบัตรใบที่ 5">
+
+                <h3>เกียรติบัตรใบที่ 5</h3>
+
+                <p>
+                    เป็นนักเรียนจิตอาสาในงานมหกรรมวิชาการ
+                    “ทักษะสร้างสุข วิชาการสร้างงาน
+                    เปิดบ้านสู่ EEC”
+                    ให้ไว้ ณ วันที่ 20 กุมภาพันธ์ 2568
+                </p>
+
+            </div>
+
+
+            <!-- เกียรติบัตรใบที่ 6 -->
+            <div class="certificate">
+
+                <img src="certificate6.jpg" alt="เกียรติบัตรใบที่ 6">
+
+                <h3>เกียรติบัตรใบที่ 6</h3>
+
+                <p>
+                    เข้าร่วมอบรมค่ายพัฒนาคุณธรรม
+                    จริยธรรมนักเรียน
+                    ประจำปีการศึกษา 2567
                 </p>
 
             </div>
 
         </div>
+
     </section>
 
 
@@ -708,6 +795,7 @@
             </p>
 
         </div>
+
     </section>
 
 
@@ -727,6 +815,7 @@
             </p>
 
         </div>
+
     </section>
 
 
