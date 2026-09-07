@@ -12,6 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
 
     <style>
+
         :root {
             --pink-dark: #D86B88;
             --pink: #E98FA5;
@@ -32,6 +33,7 @@
             font-family: "Itim", cursive;
             color: var(--text);
             line-height: 1.7;
+
             background:
                 radial-gradient(circle at top left, #FFEAF0, transparent 35%),
                 radial-gradient(circle at bottom right, #F8D0D9, transparent 35%),
@@ -125,17 +127,24 @@
         /* ==================== Section ==================== */
 
         section {
+            position: relative;
+            overflow: hidden;
+
             max-width: 1100px;
             margin: 35px auto;
             padding: 40px 30px;
+
             background: rgba(255, 255, 255, 0.9);
             border: 1px solid rgba(216, 107, 136, 0.08);
             border-radius: 28px;
+
             box-shadow: 0 12px 35px rgba(216, 107, 136, 0.1);
         }
 
         section h2 {
             position: relative;
+            z-index: 2;
+
             text-align: center;
             color: var(--pink-dark);
             font-size: 32px;
@@ -156,11 +165,87 @@
             font-size: 17px;
         }
 
+        /* ==================== เอฟเฟกต์ดาวลอย ==================== */
+
+        .floating-stars {
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .floating-stars span {
+            position: absolute;
+            color: var(--pink);
+            font-size: 20px;
+            opacity: 0.55;
+            animation: starFloat 5s ease-in-out infinite;
+        }
+
+        .floating-stars span:nth-child(1) {
+            top: 8%;
+            left: 4%;
+            font-size: 24px;
+            animation-delay: 0s;
+        }
+
+        .floating-stars span:nth-child(2) {
+            top: 18%;
+            right: 5%;
+            font-size: 18px;
+            animation-delay: 1s;
+        }
+
+        .floating-stars span:nth-child(3) {
+            top: 48%;
+            left: 2%;
+            font-size: 17px;
+            animation-delay: 2s;
+        }
+
+        .floating-stars span:nth-child(4) {
+            top: 55%;
+            right: 3%;
+            font-size: 25px;
+            animation-delay: 0.7s;
+        }
+
+        .floating-stars span:nth-child(5) {
+            bottom: 10%;
+            left: 7%;
+            font-size: 19px;
+            animation-delay: 1.8s;
+        }
+
+        .floating-stars span:nth-child(6) {
+            bottom: 7%;
+            right: 8%;
+            font-size: 17px;
+            animation-delay: 2.5s;
+        }
+
+        .floating-stars span:nth-child(7) {
+            top: 30%;
+            left: 48%;
+            font-size: 15px;
+            animation-delay: 1.3s;
+        }
+
+        .floating-stars span:nth-child(8) {
+            bottom: 25%;
+            right: 45%;
+            font-size: 21px;
+            animation-delay: 3s;
+        }
+
         /* ==================== ข้อมูลส่วนตัว ==================== */
 
         .info-card,
         .inspiration-box,
         .goal-box {
+            position: relative;
+            z-index: 2;
+
             padding: 25px;
             background: var(--pink-soft);
             border-radius: 20px;
@@ -176,6 +261,9 @@
 
         .education-container,
         .skill-container {
+            position: relative;
+            z-index: 2;
+
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 20px;
@@ -206,6 +294,9 @@
         /* ==================== การ์ดผลงาน ==================== */
 
         .card-container {
+            position: relative;
+            z-index: 2;
+
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 25px;
@@ -214,6 +305,7 @@
         .card {
             position: relative;
             overflow: hidden;
+
             background: white;
             border-radius: 22px;
             box-shadow: 0 8px 25px rgba(216, 107, 136, 0.1);
@@ -242,58 +334,12 @@
             margin-bottom: 8px;
         }
 
-        /* ==================== เหรียญผลงาน ==================== */
-
-        .achievement-card {
-            position: relative;
-        }
-
-        .medal {
-            position: absolute;
-            top: 12px;
-            right: 12px;
-            z-index: 2;
-            width: 55px;
-            height: 55px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 34px;
-            background: rgba(255, 255, 255, 0.92);
-            border-radius: 50%;
-            box-shadow: 0 5px 15px rgba(216, 107, 136, 0.2);
-            animation: medalFloat 2.5s ease-in-out infinite;
-        }
-
-        .achievement-card:nth-child(2) .medal {
-            animation-delay: 0.4s;
-        }
-
-        .achievement-card:nth-child(3) .medal {
-            animation-delay: 0.8s;
-        }
-
-        /* ประกาย */
-        .sparkle {
-            position: absolute;
-            font-size: 18px;
-            animation: sparkle 2s infinite;
-        }
-
-        .sparkle.one {
-            top: 15px;
-            left: 15px;
-        }
-
-        .sparkle.two {
-            bottom: 15px;
-            right: 15px;
-            animation-delay: 0.8s;
-        }
-
         /* ==================== เกียรติบัตร ==================== */
 
         .certificate-container {
+            position: relative;
+            z-index: 2;
+
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 25px;
@@ -357,25 +403,15 @@
             }
         }
 
-        @keyframes medalFloat {
-            0%, 100% {
-                transform: translateY(0) rotate(-3deg);
-            }
-
-            50% {
-                transform: translateY(-6px) rotate(3deg);
-            }
-        }
-
-        @keyframes sparkle {
+        @keyframes starFloat {
             0%, 100% {
                 opacity: 0.3;
-                transform: scale(0.8) rotate(0deg);
+                transform: translateY(0) rotate(0deg) scale(0.9);
             }
 
             50% {
-                opacity: 1;
-                transform: scale(1.2) rotate(15deg);
+                opacity: 0.9;
+                transform: translateY(-18px) rotate(15deg) scale(1.15);
             }
         }
 
@@ -403,13 +439,19 @@
             header {
                 min-height: 75vh;
             }
+
+            .floating-stars span {
+                font-size: 16px;
+            }
         }
+
     </style>
 </head>
 
 <body>
 
-    <!-- เมนู -->
+    <!-- ==================== เมนู ==================== -->
+
     <nav>
         <ul>
             <li><a href="#profile">แนะนำตัว</a></li>
@@ -424,7 +466,9 @@
         </ul>
     </nav>
 
-    <!-- แนะนำตัว -->
+
+    <!-- ==================== แนะนำตัว ==================== -->
+
     <header id="profile">
 
         <div class="profile-circle">
@@ -432,7 +476,9 @@
         </div>
 
         <h1>นางสาวภลดา แสนศรี</h1>
+
         <p>ชื่อเล่น : อิงฟ้า</p>
+
         <p>โรงเรียนบ้านบึง"อุตสาหกรรมนุเคราะห์"</p>
 
         <div class="intro-line"></div>
@@ -441,7 +487,9 @@
 
     </header>
 
-    <!-- ประวัติส่วนตัว -->
+
+    <!-- ==================== ประวัติส่วนตัว ==================== -->
+
     <section id="personal">
 
         <h2>ประวัติส่วนตัว</h2>
@@ -474,7 +522,9 @@
 
     </section>
 
-    <!-- ประวัติการศึกษา -->
+
+    <!-- ==================== ประวัติการศึกษา ==================== -->
+
     <section id="education">
 
         <h2>ประวัติการศึกษา</h2>
@@ -482,25 +532,44 @@
         <div class="education-container">
 
             <div class="education-card">
+
                 <h3>ระดับประถมศึกษา</h3>
-                <p>โรงเรียนกุญแจคริสเตียนวิทยา</p>
+
+                <p>
+                    โรงเรียนกุญแจคริสเตียนวิทยา
+                </p>
+
             </div>
 
+
             <div class="education-card">
+
                 <h3>ระดับมัธยมศึกษา</h3>
-                <p>โรงเรียนบ้านบึง"อุตสาหกรรมนุเคราะห์"</p>
+
+                <p>
+                    โรงเรียนบ้านบึง"อุตสาหกรรมนุเคราะห์"
+                </p>
+
             </div>
 
+
             <div class="education-card">
+
                 <h3>ผลการเรียน</h3>
-                <p>GPAX 4 เทอม : 3.91</p>
+
+                <p>
+                    GPAX 4 เทอม : 3.91
+                </p>
+
             </div>
 
         </div>
 
     </section>
 
-    <!-- ความสามารถและความสนใจ -->
+
+    <!-- ==================== ความสามารถและความสนใจ ==================== -->
+
     <section id="skills">
 
         <h2>ความสามารถและความสนใจ</h2>
@@ -508,50 +577,73 @@
         <div class="skill-container">
 
             <div class="skill-card">
+
                 <h3>คณิตศาสตร์</h3>
 
                 <p>
                     ชอบการคิดวิเคราะห์และการแก้โจทย์ปัญหา
                     เพราะเป็นสิ่งที่ท้าทายและสามารถค้นหาวิธีแก้ปัญหาได้หลายรูปแบบ
                 </p>
+
             </div>
 
+
             <div class="skill-card">
+
                 <h3>Sudoku</h3>
 
                 <p>
                     มีความสนใจในการเล่น Sudoku
                     และใช้การคิดอย่างเป็นระบบในการแก้ปริศนาตัวเลข
                 </p>
+
             </div>
 
+
             <div class="skill-card">
+
                 <h3>การคิดวิเคราะห์</h3>
 
                 <p>
                     สามารถวิเคราะห์โจทย์และวางแนวทางการแก้ปัญหา
                     อย่างเป็นขั้นตอนและมีเหตุผล
                 </p>
+
             </div>
 
         </div>
 
     </section>
 
-    <!-- ผลงานและการแข่งขัน -->
+
+    <!-- ==================== ผลงานและการแข่งขัน ==================== -->
+
     <section id="achievements">
 
-        <h2>🏆 ผลงานและการแข่งขัน ✨</h2>
+        <!-- ดาวลอยเฉพาะส่วนนี้ -->
+        <div class="floating-stars">
+
+            <span>✨</span>
+            <span>⭐</span>
+            <span>✦</span>
+            <span>✨</span>
+            <span>☆</span>
+            <span>⭐</span>
+            <span>✧</span>
+            <span>✨</span>
+
+        </div>
+
+
+        <h2>ผลงานและการแข่งขัน</h2>
+
 
         <div class="card-container">
 
             <div class="card achievement-card">
 
-                <div class="medal">🥈</div>
-                <div class="sparkle one">✨</div>
-                <div class="sparkle two">⭐</div>
-
-                <img src="achievement1.jpg" alt="การแข่งขันซูโดกุ">
+                <img src="achievement1.jpg"
+                     alt="การแข่งขันซูโดกุ">
 
                 <div class="card-content">
 
@@ -568,13 +660,11 @@
 
             </div>
 
+
             <div class="card achievement-card">
 
-                <div class="medal">🥇</div>
-                <div class="sparkle one">✨</div>
-                <div class="sparkle two">⭐</div>
-
-                <img src="achievement2.jpg" alt="การแข่งขันซูโดกุ">
+                <img src="achievement2.jpg"
+                     alt="การแข่งขันซูโดกุ">
 
                 <div class="card-content">
 
@@ -589,13 +679,11 @@
 
             </div>
 
+
             <div class="card achievement-card">
 
-                <div class="medal">🏆</div>
-                <div class="sparkle one">✨</div>
-                <div class="sparkle two">⭐</div>
-
-                <img src="achievement3.jpg" alt="การแข่งขันซูโดกุ">
+                <img src="achievement3.jpg"
+                     alt="การแข่งขันซูโดกุ">
 
                 <div class="card-content">
 
@@ -615,10 +703,28 @@
 
     </section>
 
-    <!-- กิจกรรม -->
+
+    <!-- ==================== กิจกรรม ==================== -->
+
     <section id="activities">
 
+        <!-- ดาวลอยเฉพาะส่วนนี้ -->
+        <div class="floating-stars">
+
+            <span>✨</span>
+            <span>⭐</span>
+            <span>✦</span>
+            <span>☆</span>
+            <span>✨</span>
+            <span>✧</span>
+            <span>⭐</span>
+            <span>✨</span>
+
+        </div>
+
+
         <h2>กิจกรรม</h2>
+
 
         <div class="card-container">
 
@@ -629,7 +735,9 @@
 
                 <div class="card-content">
 
-                    <h3>การฝึกประสบการณ์ ณ เทศบาลเมืองลำปลายมาศ</h3>
+                    <h3>
+                        การฝึกประสบการณ์ ณ เทศบาลเมืองลำปลายมาศ
+                    </h3>
 
                     <p>
                         ช่วงแรกของการฝึกงานได้มีส่วนร่วมในงานจัดการข้อมูล
@@ -647,6 +755,7 @@
 
             </div>
 
+
             <div class="card">
 
                 <img src="activity2.jpg"
@@ -654,7 +763,9 @@
 
                 <div class="card-content">
 
-                    <h3>นักเรียนจิตอาสาในงานมหกรรมวิชาการ</h3>
+                    <h3>
+                        นักเรียนจิตอาสาในงานมหกรรมวิชาการ
+                    </h3>
 
                     <p>
                         ได้เป็นนักเรียนจิตอาสาประจำบูธแผนการเรียนวิทยาศาสตร์-คณิตศาสตร์
@@ -669,6 +780,7 @@
 
             </div>
 
+
             <div class="card">
 
                 <img src="activity3.jpg"
@@ -676,7 +788,9 @@
 
                 <div class="card-content">
 
-                    <h3>อบรมค่ายพัฒนาคุณธรรมจริยธรรมนักเรียน</h3>
+                    <h3>
+                        อบรมค่ายพัฒนาคุณธรรมจริยธรรมนักเรียน
+                    </h3>
 
                     <p>
                         การเข้าร่วมกิจกรรมในครั้งนี้ทำให้ดิฉันได้เรียนรู้และตระหนักถึง
@@ -695,35 +809,63 @@
 
     </section>
 
-    <!-- เกียรติบัตร -->
+
+    <!-- ==================== เกียรติบัตร ==================== -->
+
     <section id="certificates">
 
+        <!-- ดาวลอยเฉพาะส่วนนี้ -->
+        <div class="floating-stars">
+
+            <span>✨</span>
+            <span>⭐</span>
+            <span>✧</span>
+            <span>✨</span>
+            <span>☆</span>
+            <span>⭐</span>
+            <span>✦</span>
+            <span>✨</span>
+
+        </div>
+
+
         <h2>เกียรติบัตร</h2>
+
 
         <div class="certificate-container">
 
             <div class="certificate">
-                <img src="certificate1.jpg" alt="เกียรติบัตร">
+
+                <img src="certificate1.jpg"
+                     alt="เกียรติบัตร">
 
                 <p>
                     ได้รับรางวัลอันดับเหรียญเงิน การแข่งขันซูโดกุ
                     เกมถอดรหัสปริศนาตัวเลข รุ่นมัธยมศึกษาตอนปลาย
                     ณ วันที่ 15-16 สิงหาคม 2569
                 </p>
+
             </div>
 
+
             <div class="certificate">
-                <img src="certificate2.jpg" alt="เกียรติบัตร">
+
+                <img src="certificate2.jpg"
+                     alt="เกียรติบัตร">
 
                 <p>
                     ได้รับรางวัลระดับเหรียญทอง กิจกรรมการแข่งขันซูโดกุ
                     ระดับชั้น ม.4-ม.6 งานศิลปหัตถกรรมนักเรียน
                     ครั้งที่ 73 ปีการศึกษา 2568
                 </p>
+
             </div>
 
+
             <div class="certificate">
-                <img src="certificate3.jpg" alt="เกียรติบัตร">
+
+                <img src="certificate3.jpg"
+                     alt="เกียรติบัตร">
 
                 <p>
                     ได้รับรางวัลชนะเลิศ การแข่งขันซูโดกุ
@@ -731,10 +873,14 @@
                     สัปดาห์คณิตศาสตร์สู่ความเป็นเลิศ
                     ประจำปีการศึกษา 2567
                 </p>
+
             </div>
 
+
             <div class="certificate">
-                <img src="certificate4.jpg" alt="เกียรติบัตร">
+
+                <img src="certificate4.jpg"
+                     alt="เกียรติบัตร">
 
                 <p>
                     ได้ผ่านการฝึกประสบการณ์อาชีพ (Work experiences)
@@ -742,35 +888,46 @@
                     ระหว่างวันที่ 17 เมษายน 2569
                     ถึงวันที่ 30 เมษายน 2569
                 </p>
+
             </div>
 
+
             <div class="certificate">
-                <img src="certificate5.jpg" alt="เกียรติบัตร">
+
+                <img src="certificate5.jpg"
+                     alt="เกียรติบัตร">
 
                 <p>
                     เป็นนักเรียนจิตอาสาในงานมหกรรมวิชาการ
                     “ทักษะสร้างสุข วิชาการสร้างงาน เปิดบ้านสู่ EEC”
                     ให้ไว้ ณ วันที่ 20 กุมภาพันธ์ 2568
                 </p>
+
             </div>
 
+
             <div class="certificate">
-                <img src="certificate6.jpg" alt="เกียรติบัตร">
+
+                <img src="certificate6.jpg"
+                     alt="เกียรติบัตร">
 
                 <p>
                     เข้าร่วมอบรมค่ายพัฒนาคุณธรรม
                     จริยธรรมนักเรียน ประจำปีการศึกษา 2567
                 </p>
+
             </div>
 
         </div>
 
     </section>
 
-    <!-- แรงบันดาลใจ -->
+
+    <!-- ==================== แรงบันดาลใจ ==================== -->
+
     <section id="inspiration">
 
-        <h2>💗 แรงบันดาลใจ</h2>
+        <h2>แรงบันดาลใจ</h2>
 
         <div class="inspiration-box">
 
@@ -787,10 +944,12 @@
 
     </section>
 
-    <!-- เป้าหมายในอนาคต -->
+
+    <!-- ==================== เป้าหมายในอนาคต ==================== -->
+
     <section id="goal">
 
-        <h2>🎯 เป้าหมายในอนาคต</h2>
+        <h2>เป้าหมายในอนาคต</h2>
 
         <div class="goal-box">
 
@@ -805,11 +964,18 @@
 
     </section>
 
-    <!-- Footer -->
+
+    <!-- ==================== Footer ==================== -->
+
     <footer>
 
-        <p>นางสาวภลดา แสนศรี | อิงฟ้า</p>
-        <p>โรงเรียนบ้านบึง"อุตสาหกรรมนุเคราะห์"</p>
+        <p>
+            นางสาวภลดา แสนศรี | อิงฟ้า
+        </p>
+
+        <p>
+            โรงเรียนบ้านบึง"อุตสาหกรรมนุเคราะห์"
+        </p>
 
     </footer>
 
