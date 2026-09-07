@@ -30,21 +30,22 @@
             font-family: "Itim", cursive;
             background: linear-gradient(
                 135deg,
-                #FFF7F9,
-                #FCE8ED,
+                var(--pink-soft),
+                var(--pink-light),
                 #F8D0D9
             );
             color: var(--text);
             line-height: 1.7;
         }
 
+        /* เมนู */
         nav {
             position: sticky;
             top: 0;
             z-index: 1000;
             background: rgba(255, 255, 255, 0.95);
+            padding: 12px 20px;
             box-shadow: 0 4px 15px rgba(201, 120, 140, 0.15);
-            padding: 15px 20px;
         }
 
         nav ul {
@@ -52,51 +53,49 @@
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-            gap: 12px;
+            gap: 10px;
         }
 
         nav a {
             text-decoration: none;
             color: var(--pink-dark);
             background: var(--pink-light);
-            padding: 8px 18px;
+            padding: 8px 16px;
             border-radius: 20px;
+            font-size: 17px;
             transition: 0.3s;
-            display: inline-block;
         }
 
         nav a:hover {
             background: var(--pink);
             color: white;
-            transform: translateY(-2px);
         }
 
-        .hero {
-            min-height: 80vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+        /* ส่วนหัว */
+        header {
             text-align: center;
-            padding: 60px 20px;
+            padding: 60px 20px 40px;
         }
 
-        .hero-box {
-            background: rgba(255, 255, 255, 0.9);
-            padding: 45px;
-            border-radius: 30px;
-            max-width: 850px;
-            width: 100%;
-            box-shadow: 0 15px 40px rgba(201, 120, 140, 0.15);
+        header h1 {
+            font-size: 42px;
+            color: var(--pink-dark);
+            margin-bottom: 10px;
         }
 
+        header p {
+            font-size: 21px;
+        }
+
+        /* รูปโปรไฟล์ */
         .profile-circle {
-            width: 180px;
-            height: 180px;
-            margin: 0 auto 25px;
+            width: 190px;
+            height: 190px;
+            margin: 25px auto;
             border-radius: 50%;
             overflow: hidden;
-            border: 6px solid var(--pink-light);
-            box-shadow: 0 8px 25px rgba(201, 120, 140, 0.2);
+            border: 7px solid white;
+            box-shadow: 0 8px 25px rgba(201, 120, 140, 0.25);
         }
 
         .profile-circle img {
@@ -106,116 +105,89 @@
             border-radius: 50%;
         }
 
-        .hero h1 {
-            color: var(--pink-dark);
-            font-size: 42px;
-            margin-bottom: 10px;
-        }
-
-        .hero h2 {
-            color: var(--pink);
-            font-size: 28px;
-            margin-bottom: 15px;
-        }
-
-        .hero p {
-            font-size: 20px;
-        }
-
+        /* Section */
         section {
-            padding: 70px 20px;
-        }
-
-        .section-title {
-            text-align: center;
-            color: var(--pink-dark);
-            font-size: 35px;
-            margin-bottom: 35px;
-        }
-
-        .container {
-            max-width: 1000px;
-            margin: auto;
-        }
-
-        .card {
-            background: var(--white);
-            padding: 30px;
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 35px 25px;
+            background: rgba(255, 255, 255, 0.85);
             border-radius: 25px;
             box-shadow: 0 10px 30px rgba(201, 120, 140, 0.12);
+        }
+
+        section h2 {
+            text-align: center;
+            color: var(--pink-dark);
+            font-size: 32px;
             margin-bottom: 25px;
         }
 
-        .card h3 {
+        section h3 {
             color: var(--pink-dark);
-            font-size: 25px;
+            font-size: 24px;
+            margin-bottom: 8px;
+        }
+
+        section p {
+            font-size: 18px;
             margin-bottom: 10px;
         }
 
-        .card p {
-            font-size: 19px;
+        /* การ์ดข้อมูล */
+        .info-card {
+            background: var(--pink-soft);
+            padding: 20px;
+            border-radius: 18px;
+            margin-bottom: 15px;
         }
 
+        /* การศึกษา */
         .education-container {
-            max-width: 1000px;
-            margin: auto;
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 25px;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
         }
 
         .education-card {
-            background: white;
-            padding: 30px;
-            border-radius: 25px;
-            box-shadow: 0 10px 30px rgba(201, 120, 140, 0.12);
+            background: var(--pink-soft);
+            padding: 25px;
+            border-radius: 20px;
+            text-align: center;
         }
 
         .education-card h3 {
-            color: var(--pink-dark);
-            font-size: 24px;
-            margin-bottom: 10px;
+            font-size: 23px;
         }
 
+        /* ความสามารถ */
         .skill-container {
-            max-width: 1000px;
-            margin: auto;
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 25px;
+            gap: 20px;
         }
 
         .skill-card {
-            background: white;
-            padding: 30px;
-            border-radius: 25px;
+            background: var(--pink-soft);
+            padding: 25px;
+            border-radius: 20px;
             text-align: center;
-            box-shadow: 0 10px 30px rgba(201, 120, 140, 0.12);
-            transition: 0.3s;
-        }
-
-        .skill-card:hover {
-            transform: translateY(-5px);
         }
 
         .skill-card h3 {
-            color: var(--pink-dark);
             font-size: 25px;
         }
 
         /* ผลงานและการแข่งขัน */
         .achievement-container {
-            max-width: 1100px;
-            margin: auto;
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 25px;
         }
 
         .achievement {
-            background: white;
+            background: var(--white);
             padding: 15px;
-            border-radius: 25px;
+            border-radius: 20px;
             box-shadow: 0 10px 30px rgba(201, 120, 140, 0.12);
             transition: 0.3s;
         }
@@ -228,14 +200,15 @@
             width: 100%;
             height: 220px;
             object-fit: cover;
+            display: block;
             border-radius: 18px;
-            margin-bottom: 15px;
         }
 
         .achievement h3 {
             color: var(--pink-dark);
             font-size: 23px;
-            margin-bottom: 8px;
+            margin-top: 15px;
+            margin-bottom: 5px;
         }
 
         .achievement p {
@@ -244,17 +217,15 @@
 
         /* กิจกรรม */
         .activity-container {
-            max-width: 1100px;
-            margin: auto;
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 25px;
         }
 
         .activity {
-            background: white;
+            background: var(--white);
             padding: 15px;
-            border-radius: 25px;
+            border-radius: 20px;
             box-shadow: 0 10px 30px rgba(201, 120, 140, 0.12);
             transition: 0.3s;
         }
@@ -267,14 +238,15 @@
             width: 100%;
             height: 220px;
             object-fit: cover;
+            display: block;
             border-radius: 18px;
-            margin-bottom: 15px;
         }
 
         .activity h3 {
             color: var(--pink-dark);
             font-size: 23px;
-            margin-bottom: 8px;
+            margin-top: 15px;
+            margin-bottom: 5px;
         }
 
         .activity p {
@@ -308,83 +280,66 @@
             border-radius: 12px;
         }
 
-        .certificate h3 {
-            color: var(--pink-dark);
-            font-size: 22px;
+        .certificate p {
+            font-size: 17px;
             margin-top: 15px;
             margin-bottom: 5px;
         }
 
-        .certificate p {
-            font-size: 17px;
-            margin-bottom: 5px;
+        /* แรงบันดาลใจ */
+        .inspiration-box {
+            background: var(--pink-soft);
+            padding: 25px;
+            border-radius: 20px;
         }
 
-        .inspiration {
-            max-width: 1000px;
-            margin: auto;
-            background: white;
-            padding: 40px;
-            border-radius: 30px;
-            box-shadow: 0 10px 30px rgba(201, 120, 140, 0.12);
+        /* เป้าหมาย */
+        .goal-box {
+            background: var(--pink-soft);
+            padding: 25px;
+            border-radius: 20px;
             text-align: center;
         }
 
-        .inspiration p {
-            font-size: 20px;
-        }
-
-        .goal {
-            max-width: 1000px;
-            margin: auto;
-            background: white;
-            padding: 40px;
-            border-radius: 30px;
-            box-shadow: 0 10px 30px rgba(201, 120, 140, 0.12);
-            text-align: center;
-        }
-
-        .goal h3 {
-            color: var(--pink-dark);
-            font-size: 28px;
-            margin-bottom: 15px;
-        }
-
-        .goal p {
-            font-size: 20px;
-        }
-
+        /* Footer */
         footer {
             text-align: center;
             padding: 35px 20px;
-            background: rgba(255, 255, 255, 0.8);
-            color: var(--pink-dark);
-            margin-top: 30px;
+            margin-top: 50px;
+            background: var(--pink-dark);
+            color: white;
         }
 
+        footer p {
+            font-size: 18px;
+        }
+
+        /* Responsive */
         @media (max-width: 900px) {
 
             .education-container,
-            .skill-container {
-                grid-template-columns: 1fr;
-            }
-
             .achievement-container,
             .activity-container,
             .certificate-container {
                 grid-template-columns: 1fr;
             }
 
-            .hero h1 {
-                font-size: 32px;
+            .skill-container {
+                grid-template-columns: 1fr;
             }
 
-            .hero h2 {
-                font-size: 24px;
+            header h1 {
+                font-size: 34px;
             }
 
-            .hero-box {
-                padding: 30px 20px;
+            section {
+                margin: 25px 15px;
+                padding: 25px 18px;
+            }
+
+            nav a {
+                font-size: 15px;
+                padding: 7px 12px;
             }
         }
     </style>
@@ -396,6 +351,7 @@
     <nav>
         <ul>
             <li><a href="#profile">แนะนำตัว</a></li>
+            <li><a href="#personal">ประวัติส่วนตัว</a></li>
             <li><a href="#education">ประวัติการศึกษา</a></li>
             <li><a href="#skills">ความสามารถและความสนใจ</a></li>
             <li><a href="#achievements">ผลงานและการแข่งขัน</a></li>
@@ -406,210 +362,132 @@
         </ul>
     </nav>
 
-
     <!-- แนะนำตัว -->
-    <section class="hero" id="profile">
-
-        <div class="hero-box">
-
-            <div class="profile-circle">
-                <img src="profile.jpg" alt="รูปโปรไฟล์ของอิงฟ้า">
-            </div>
-
-            <h1>นางสาวภลดา แสนศรี</h1>
-
-            <h2>ชื่อเล่น อิงฟ้า</h2>
-
-            <p>
-                นักเรียนโรงเรียนบ้านบึง"อุตสาหกรรมนุเคราะห์"
-            </p>
-
-            <p>
-                ผู้ที่มีความสนใจด้านคณิตศาสตร์
-                และมีความตั้งใจที่จะก้าวสู่การเป็นครูในอนาคต
-            </p>
-
+    <header id="profile">
+        <div class="profile-circle">
+            <img src="profile.jpg" alt="รูปโปรไฟล์ของอิงฟ้า">
         </div>
 
-    </section>
-
+        <h1>นางสาวภลดา แสนศรี</h1>
+        <p>ชื่อเล่น : อิงฟ้า</p>
+        <p>โรงเรียนบ้านบึง"อุตสาหกรรมนุเคราะห์"</p>
+    </header>
 
     <!-- ประวัติส่วนตัว -->
-    <section>
+    <section id="personal">
+        <h2>ประวัติส่วนตัว</h2>
 
-        <h2 class="section-title">ประวัติส่วนตัว</h2>
-
-        <div class="container">
-
-            <div class="card">
-
-                <h3>ข้อมูลส่วนตัว</h3>
-
-                <p>ชื่อจริง : นางสาวภลดา แสนศรี</p>
-
-                <p>ชื่อเล่น : อิงฟ้า</p>
-
-                <p>วันเกิด : 1 ธันวาคม 2551</p>
-
-                <p>จังหวัด : ชลบุรี</p>
-
-            </div>
-
+        <div class="info-card">
+            <h3>ข้อมูลส่วนตัว</h3>
+            <p><strong>ชื่อ-นามสกุล :</strong> นางสาวภลดา แสนศรี</p>
+            <p><strong>ชื่อเล่น :</strong> อิงฟ้า</p>
+            <p><strong>วันเกิด :</strong> 1 ธันวาคม 2551</p>
+            <p><strong>จังหวัด :</strong> ชลบุรี</p>
         </div>
-
     </section>
-
 
     <!-- ประวัติการศึกษา -->
     <section id="education">
-
-        <h2 class="section-title">ประวัติการศึกษา</h2>
+        <h2>ประวัติการศึกษา</h2>
 
         <div class="education-container">
 
             <div class="education-card">
-
                 <h3>ระดับประถมศึกษา</h3>
-
-                <p>
-                    โรงเรียนกุญแจคริสเตียนวิทยา
-                </p>
-
+                <p>โรงเรียนกุญแจคริสเตียนวิทยา</p>
             </div>
 
-
             <div class="education-card">
-
                 <h3>ระดับมัธยมศึกษา</h3>
-
-                <p>
-                    โรงเรียนบ้านบึง"อุตสาหกรรมนุเคราะห์"
-                </p>
-
+                <p>โรงเรียนบ้านบึง"อุตสาหกรรมนุเคราะห์"</p>
             </div>
 
-
             <div class="education-card">
-
                 <h3>ผลการเรียน</h3>
-
-                <p>
-                    GPAX 4 ภาคเรียน : 3.91
-                </p>
-
+                <p>GPAX 4 เทอม : 3.91</p>
             </div>
 
         </div>
-
     </section>
-
 
     <!-- ความสามารถและความสนใจ -->
     <section id="skills">
-
-        <h2 class="section-title">ความสามารถและความสนใจ</h2>
+        <h2>ความสามารถและความสนใจ</h2>
 
         <div class="skill-container">
 
             <div class="skill-card">
-
                 <h3>คณิตศาสตร์</h3>
-
                 <p>
-                    มีความสนใจและชื่นชอบการแก้โจทย์คณิตศาสตร์
-                    เพราะเป็นสิ่งที่ท้าทายและทำให้ได้คิดวิเคราะห์
+                    ชอบการคิดวิเคราะห์และการแก้โจทย์ปัญหา
+                    เพราะเป็นสิ่งที่ท้าทายและสามารถค้นหาวิธีแก้ปัญหาได้หลายรูปแบบ
                 </p>
-
             </div>
 
-
             <div class="skill-card">
-
                 <h3>Sudoku</h3>
-
                 <p>
-                    ชื่นชอบการเล่น Sudoku
-                    และการฝึกคิดอย่างเป็นระบบ
+                    มีความสนใจในการเล่น Sudoku
+                    และใช้การคิดอย่างเป็นระบบในการแก้ปริศนาตัวเลข
                 </p>
-
             </div>
 
         </div>
-
     </section>
-
 
     <!-- ผลงานและการแข่งขัน -->
     <section id="achievements">
-
-        <h2 class="section-title">ผลงานและการแข่งขัน</h2>
+        <h2>ผลงานและการแข่งขัน</h2>
 
         <div class="achievement-container">
 
-            <!-- ผลงานที่ 1 -->
             <div class="achievement">
-
-                <img src="achievement1.jpg" alt="ผลงานและการแข่งขันที่ 1">
-
-                <h3>การแข่งขัน Sudoku</h3>
+                <img src="achievement1.jpg" alt="ผลงานการแข่งขันซูโดกุ">
 
                 <p>
-                    เป็นตัวแทนเข้าร่วมการแข่งขัน Sudoku
-                    ได้ฝึกทักษะการคิดวิเคราะห์ การแก้ปัญหา
-                    และการตัดสินใจอย่างเป็นระบบ
+                    เป็นตัวแทนโรงเรียนเข้าร่วมการแข่งขันซูโดกุ
+                    สามารถทำโจทย์ปริศนาได้ครบทุกกระดาน
+                    และทำคะแนนได้เต็ม 100 คะแนน
+                    คว้าอันดับที่ 11 ระดับเหรียญเงิน
+                    จากการแข่งขันระดับภาคตะวันออกและภาคกลาง
+                    ประจำปี 2569
                 </p>
-
             </div>
 
-
-            <!-- ผลงานที่ 2 -->
             <div class="achievement">
-
-                <img src="achievement2.jpg" alt="ผลงานและการแข่งขันที่ 2">
-
-                <h3>กิจกรรมบูธคณิตศาสตร์</h3>
+                <img src="achievement2.jpg" alt="ผลงานการแข่งขันซูโดกุ">
 
                 <p>
-                    เป็นนักเรียนอาสาประจำบูธคณิตศาสตร์
-                    ในกิจกรรมเกม 24
-                    ได้มีส่วนร่วมในการถ่ายทอดความรู้
-                    และสร้างความสนุกให้กับผู้เข้าร่วมกิจกรรม
+                    เป็นตัวแทนโรงเรียนเข้าร่วมการแข่งขันซูโดกุ
+                    ระดับสำนักงานเขตพื้นที่การศึกษา
+                    ทำคะแนนได้ 88.50 คะแนน
+                    ได้รับอันดับที่ 11 ระดับเหรียญทอง
                 </p>
-
             </div>
 
-
-            <!-- ผลงานที่ 3 -->
             <div class="achievement">
-
-                <img src="achievement3.jpg" alt="ผลงานและการแข่งขันที่ 3">
-
-                <h3>ผลงานด้านคณิตศาสตร์</h3>
+                <img src="achievement3.jpg" alt="ผลงานการแข่งขันซูโดกุ">
 
                 <p>
-                    ผลงานที่แสดงถึงความสนใจและความสามารถ
-                    ด้านคณิตศาสตร์ รวมถึงการฝึกคิดวิเคราะห์
-                    และการแก้โจทย์ปัญหาอย่างเป็นระบบ
+                    เข้าร่วมการแข่งขันซูโดกุ
+                    ระดับมัธยมศึกษาตอนปลาย
+                    สามารถทำกระดาษปริศนาได้ครบทุกกระดาน
+                    ผ่านเข้าสู่รอบชิงชนะเลิศ
+                    และได้รับรางวัลชนะเลิศ
                 </p>
-
             </div>
 
         </div>
-
     </section>
-
 
     <!-- กิจกรรม -->
     <section id="activities">
-
-        <h2 class="section-title">กิจกรรม</h2>
+        <h2>กิจกรรม</h2>
 
         <div class="activity-container">
 
-            <!-- กิจกรรมที่ 1 -->
             <div class="activity">
-
-                <img src="activity1.jpg" alt="กิจกรรมที่ 1">
+                <img src="activity1.jpg" alt="กิจกรรมนักเรียนอาสาประจำบูธคณิตศาสตร์">
 
                 <h3>กิจกรรมนักเรียนอาสาประจำบูธคณิตศาสตร์</h3>
 
@@ -618,14 +496,10 @@
                     โดยมีส่วนร่วมในการจัดกิจกรรมเกม 24
                     และช่วยสร้างบรรยากาศการเรียนรู้ให้กับผู้เข้าร่วมกิจกรรม
                 </p>
-
             </div>
 
-
-            <!-- กิจกรรมที่ 2 -->
             <div class="activity">
-
-                <img src="activity2.jpg" alt="กิจกรรมที่ 2">
+                <img src="activity2.jpg" alt="กิจกรรมการแข่งขัน Sudoku">
 
                 <h3>กิจกรรมการแข่งขัน Sudoku</h3>
 
@@ -634,14 +508,10 @@
                     ได้ฝึกการคิดวิเคราะห์ การแก้ปัญหา
                     และการทำงานภายใต้เวลาที่กำหนด
                 </p>
-
             </div>
 
-
-            <!-- กิจกรรมที่ 3 -->
             <div class="activity">
-
-                <img src="activity3.jpg" alt="กิจกรรมที่ 3">
+                <img src="activity3.jpg" alt="กิจกรรมพัฒนาทักษะและประสบการณ์">
 
                 <h3>กิจกรรมพัฒนาทักษะและประสบการณ์</h3>
 
@@ -650,186 +520,109 @@
                     ฝึกความรับผิดชอบ การทำงานร่วมกับผู้อื่น
                     และนำประสบการณ์มาพัฒนาตนเอง
                 </p>
-
             </div>
 
         </div>
-
     </section>
-
 
     <!-- เกียรติบัตร -->
     <section id="certificates">
-
-        <h2 class="section-title">เกียรติบัตร</h2>
+        <h2>เกียรติบัตร</h2>
 
         <div class="certificate-container">
 
-            <!-- เกียรติบัตรใบที่ 1 -->
             <div class="certificate">
-
-                <img src="certificate1.jpg" alt="เกียรติบัตรใบที่ 1">
-
-                <h3>เกียรติบัตรใบที่ 1</h3>
-
+                <img src="certificate1.jpg" alt="เกียรติบัตร">
                 <p>
-                    ได้รับรางวัลอันดับเหรียญเงิน
-                    การแข่งขันซูโดกุ เกมถอดรหัสปริศนาตัวเลข
-                    รุ่นมัธยมศึกษาตอนปลาย
+                    ได้รับรางวัลอันดับเหรียญเงิน การแข่งขันซูโดกุ
+                    เกมถอดรหัสปริศนาตัวเลข รุ่นมัธยมศึกษาตอนปลาย
                     ณ วันที่ 15-16 สิงหาคม 2569
                 </p>
-
             </div>
 
-
-            <!-- เกียรติบัตรใบที่ 2 -->
             <div class="certificate">
-
-                <img src="certificate2.jpg" alt="เกียรติบัตรใบที่ 2">
-
-                <h3>เกียรติบัตรใบที่ 2</h3>
-
+                <img src="certificate2.jpg" alt="เกียรติบัตร">
                 <p>
-                    ได้รับรางวัลระดับเหรียญทอง
-                    กิจกรรมการแข่งขันซูโดกุ ระดับชั้น ม.4-ม.6
-                    งานศิลปหัตถกรรมนักเรียน ครั้งที่ 73
-                    ปีการศึกษา 2568
+                    ได้รับรางวัลระดับเหรียญทอง กิจกรรมการแข่งขันซูโดกุ
+                    ระดับชั้น ม.4-ม.6 งานศิลปหัตถกรรมนักเรียน
+                    ครั้งที่ 73 ปีการศึกษา 2568
                 </p>
-
             </div>
 
-
-            <!-- เกียรติบัตรใบที่ 3 -->
             <div class="certificate">
-
-                <img src="certificate3.jpg" alt="เกียรติบัตรใบที่ 3">
-
-                <h3>เกียรติบัตรใบที่ 3</h3>
-
+                <img src="certificate3.jpg" alt="เกียรติบัตร">
                 <p>
-                    ได้รับรางวัลชนะเลิศ
-                    การแข่งขันซูโดกุ ระดับมัธยมศึกษาตอนปลาย
-                    เนื่องในกิจกรรมสัปดาห์คณิตศาสตร์สู่ความเป็นเลิศ
+                    ได้รับรางวัลชนะเลิศ การแข่งขันซูโดกุ
+                    ระดับมัธยมศึกษาตอนปลาย เนื่องในกิจกรรม
+                    สัปดาห์คณิตศาสตร์สู่ความเป็นเลิศ
                     ประจำปีการศึกษา 2567
                 </p>
-
             </div>
 
-
-            <!-- เกียรติบัตรใบที่ 4 -->
             <div class="certificate">
-
-                <img src="certificate4.jpg" alt="เกียรติบัตรใบที่ 4">
-
-                <h3>เกียรติบัตรใบที่ 4</h3>
-
+                <img src="certificate4.jpg" alt="เกียรติบัตร">
                 <p>
-                    ได้ผ่านการฝึกประสบการณ์อาชีพ
-                    (Work experiences)
+                    ได้ผ่านการฝึกประสบการณ์อาชีพ (Work experiences)
                     ณ เทศบาลเมืองลำปลายมาศ
                     ระหว่างวันที่ 17 เมษายน 2569
                     ถึงวันที่ 30 เมษายน 2569
                 </p>
-
             </div>
 
-
-            <!-- เกียรติบัตรใบที่ 5 -->
             <div class="certificate">
-
-                <img src="certificate5.jpg" alt="เกียรติบัตรใบที่ 5">
-
-                <h3>เกียรติบัตรใบที่ 5</h3>
-
+                <img src="certificate5.jpg" alt="เกียรติบัตร">
                 <p>
                     เป็นนักเรียนจิตอาสาในงานมหกรรมวิชาการ
-                    “ทักษะสร้างสุข วิชาการสร้างงาน
-                    เปิดบ้านสู่ EEC”
+                    “ทักษะสร้างสุข วิชาการสร้างงาน เปิดบ้านสู่ EEC”
                     ให้ไว้ ณ วันที่ 20 กุมภาพันธ์ 2568
                 </p>
-
             </div>
 
-
-            <!-- เกียรติบัตรใบที่ 6 -->
             <div class="certificate">
-
-                <img src="certificate6.jpg" alt="เกียรติบัตรใบที่ 6">
-
-                <h3>เกียรติบัตรใบที่ 6</h3>
-
+                <img src="certificate6.jpg" alt="เกียรติบัตร">
                 <p>
                     เข้าร่วมอบรมค่ายพัฒนาคุณธรรม
-                    จริยธรรมนักเรียน
-                    ประจำปีการศึกษา 2567
+                    จริยธรรมนักเรียน ประจำปีการศึกษา 2567
                 </p>
-
             </div>
 
         </div>
-
     </section>
-
 
     <!-- แรงบันดาลใจ -->
     <section id="inspiration">
+        <h2>แรงบันดาลใจ</h2>
 
-        <h2 class="section-title">แรงบันดาลใจ</h2>
-
-        <div class="inspiration">
-
+        <div class="inspiration-box">
             <p>
-                แรงบันดาลใจในการอยากเป็นครูของฉัน
-                มาจากคุณครูและคุณยาย
-                ซึ่งทำให้ฉันเห็นถึงความสำคัญของอาชีพครู
-                และรู้สึกว่าการได้ถ่ายทอดความรู้ให้ผู้อื่น
-                เป็นสิ่งที่มีคุณค่า
+                แรงบันดาลใจในการอยากเป็นครูเกิดจากคุณครู
+                ที่คอยให้คำแนะนำและสร้างแรงบันดาลใจในการเรียน
+                รวมถึงคุณยายที่เคยเรียนด้านการสอน
+                ทำให้รู้สึกประทับใจในอาชีพครู
+                และอยากเป็นครูที่สามารถสร้างแรงบันดาลใจ
+                ให้กับเด็ก ๆ ได้เช่นเดียวกัน
             </p>
-
-            <br>
-
-            <p>
-                โดยเฉพาะวิชาคณิตศาสตร์ที่ฉันชื่นชอบ
-                ฉันจึงอยากนำความรู้และความชอบของตัวเอง
-                ไปสร้างแรงบันดาลใจให้กับเด็ก ๆ ในอนาคต
-            </p>
-
         </div>
-
     </section>
-
 
     <!-- เป้าหมายในอนาคต -->
     <section id="goal">
+        <h2>เป้าหมายในอนาคต</h2>
 
-        <h2 class="section-title">เป้าหมายในอนาคต</h2>
-
-        <div class="goal">
-
-            <h3>ครูคณิตศาสตร์</h3>
-
+        <div class="goal-box">
             <p>
-                มีเป้าหมายที่จะศึกษาต่อในคณะครุศาสตร์หรือศึกษาศาสตร์
-                สาขาวิชาคณิตศาสตร์
-                และมุ่งมั่นที่จะเป็นข้าราชการครูในอนาคต
+                ในอนาคตมีเป้าหมายที่จะศึกษาต่อ
+                คณะครุศาสตร์หรือศึกษาศาสตร์ สาขาคณิตศาสตร์
+                และมุ่งหวังที่จะประกอบอาชีพเป็นข้าราชการครู
+                เพื่อถ่ายทอดความรู้และสร้างแรงบันดาลใจให้กับนักเรียน
             </p>
-
         </div>
-
     </section>
-
 
     <!-- Footer -->
     <footer>
-
-        <p>
-            Portfolio ของ นางสาวภลดา แสนศรี (อิงฟ้า)
-        </p>
-
-        <p>
-            โรงเรียนบ้านบึง"อุตสาหกรรมนุเคราะห์"
-        </p>
-
+        <p>นางสาวภลดา แสนศรี | อิงฟ้า</p>
+        <p>โรงเรียนบ้านบึง"อุตสาหกรรมนุเคราะห์"</p>
     </footer>
 
 </body>
