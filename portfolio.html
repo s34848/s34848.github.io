@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Portfolio | ภลดา แสนศรี</title>
 
+    <!-- ฟอนต์ -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
@@ -28,245 +30,229 @@
 
         body {
             font-family: "Itim", cursive;
-            background: linear-gradient(
-                135deg,
-                var(--pink-soft),
-                var(--pink-light),
-                #F8D0D9
-            );
             color: var(--text);
             line-height: 1.7;
+            background:
+                radial-gradient(circle at top left, #FFEAF0, transparent 35%),
+                radial-gradient(circle at bottom right, #F8D0D9, transparent 35%),
+                #FFF7F9;
         }
 
-        /* เมนู */
+        /* ==================== เมนู ==================== */
+
         nav {
             position: sticky;
             top: 0;
-            z-index: 1000;
-            background: rgba(255, 255, 255, 0.95);
+            z-index: 100;
             padding: 12px 20px;
-            box-shadow: 0 4px 15px rgba(201, 120, 140, 0.15);
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 20px rgba(216, 107, 136, 0.12);
         }
 
         nav ul {
-            list-style: none;
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-            gap: 10px;
+            gap: 8px;
+            list-style: none;
         }
 
         nav a {
-            text-decoration: none;
+            display: block;
+            padding: 7px 15px;
             color: var(--pink-dark);
             background: var(--pink-light);
-            padding: 8px 16px;
             border-radius: 20px;
-            font-size: 17px;
+            text-decoration: none;
+            font-size: 16px;
             transition: 0.3s;
         }
 
         nav a:hover {
-            background: var(--pink);
             color: white;
+            background: var(--pink);
+            transform: translateY(-2px);
         }
 
-        /* ส่วนหัว */
+        /* ==================== ส่วนหัว ==================== */
+
         header {
+            min-height: 85vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             text-align: center;
-            padding: 60px 20px 40px;
+            padding: 50px 20px;
         }
 
-        header h1 {
-            font-size: 42px;
-            color: var(--pink-dark);
-            margin-bottom: 10px;
-        }
-
-        header p {
-            font-size: 21px;
-        }
-
-        /* รูปโปรไฟล์ */
         .profile-circle {
             width: 190px;
             height: 190px;
-            margin: 25px auto;
-            border-radius: 50%;
             overflow: hidden;
             border: 7px solid white;
-            box-shadow: 0 8px 25px rgba(201, 120, 140, 0.25);
+            border-radius: 50%;
+            box-shadow: 0 12px 35px rgba(216, 107, 136, 0.25);
+            margin-bottom: 25px;
         }
 
         .profile-circle img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            border-radius: 50%;
         }
 
-        /* Section */
+        header h1 {
+            color: var(--pink-dark);
+            font-size: clamp(34px, 6vw, 48px);
+            margin-bottom: 5px;
+        }
+
+        header p {
+            font-size: 21px;
+        }
+
+        .intro-line {
+            width: 70px;
+            height: 4px;
+            margin: 18px 0;
+            background: var(--pink);
+            border-radius: 10px;
+        }
+
+        /* ==================== Section ==================== */
+
         section {
             max-width: 1100px;
-            margin: 40px auto;
-            padding: 35px 25px;
-            background: rgba(255, 255, 255, 0.85);
-            border-radius: 25px;
-            box-shadow: 0 10px 30px rgba(201, 120, 140, 0.12);
+            margin: 35px auto;
+            padding: 40px 30px;
+            background: rgba(255, 255, 255, 0.9);
+            border: 1px solid rgba(216, 107, 136, 0.08);
+            border-radius: 28px;
+            box-shadow: 0 12px 35px rgba(216, 107, 136, 0.1);
         }
 
         section h2 {
+            position: relative;
             text-align: center;
             color: var(--pink-dark);
             font-size: 32px;
-            margin-bottom: 25px;
+            margin-bottom: 30px;
         }
 
-        section h3 {
-            color: var(--pink-dark);
-            font-size: 24px;
-            margin-bottom: 8px;
+        section h2::after {
+            content: "";
+            display: block;
+            width: 55px;
+            height: 4px;
+            margin: 8px auto 0;
+            background: var(--pink);
+            border-radius: 10px;
         }
 
         section p {
-            font-size: 18px;
+            font-size: 17px;
+        }
+
+        /* ==================== ข้อมูลส่วนตัว ==================== */
+
+        .info-card,
+        .inspiration-box,
+        .goal-box {
+            padding: 25px;
+            background: var(--pink-soft);
+            border-radius: 20px;
+        }
+
+        .info-card h3 {
+            color: var(--pink-dark);
+            font-size: 24px;
             margin-bottom: 10px;
         }
 
-        /* การ์ดข้อมูล */
-        .info-card {
-            background: var(--pink-soft);
-            padding: 20px;
-            border-radius: 18px;
-            margin-bottom: 15px;
-        }
+        /* ==================== การศึกษา ==================== */
 
-        /* การศึกษา */
-        .education-container {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-        }
-
-        .education-card {
-            background: var(--pink-soft);
-            padding: 25px;
-            border-radius: 20px;
-            text-align: center;
-        }
-
-        .education-card h3 {
-            font-size: 23px;
-        }
-
-        /* ความสามารถ */
+        .education-container,
         .skill-container {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(3, 1fr);
             gap: 20px;
         }
 
+        .education-card,
         .skill-card {
-            background: var(--pink-soft);
             padding: 25px;
-            border-radius: 20px;
             text-align: center;
+            background: var(--pink-soft);
+            border-radius: 20px;
+            transition: 0.3s;
         }
 
+        .education-card:hover,
+        .skill-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(216, 107, 136, 0.12);
+        }
+
+        .education-card h3,
         .skill-card h3 {
-            font-size: 25px;
+            color: var(--pink-dark);
+            font-size: 23px;
+            margin-bottom: 8px;
         }
 
-        /* ผลงานและการแข่งขัน */
-        .achievement-container {
+        /* ==================== การ์ดผลงาน / กิจกรรม ==================== */
+
+        .card-container {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 25px;
         }
 
-        .achievement {
-            background: var(--white);
-            padding: 15px;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(201, 120, 140, 0.12);
+        .card {
+            overflow: hidden;
+            background: white;
+            border-radius: 22px;
+            box-shadow: 0 8px 25px rgba(216, 107, 136, 0.1);
             transition: 0.3s;
         }
 
-        .achievement:hover {
-            transform: translateY(-5px);
+        .card:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 15px 30px rgba(216, 107, 136, 0.18);
         }
 
-        .achievement img {
+        .card img {
             width: 100%;
-            height: 220px;
-            object-fit: cover;
+            height: 230px;
             display: block;
-            border-radius: 18px;
-        }
-
-        .achievement h3 {
-            color: var(--pink-dark);
-            font-size: 23px;
-            margin-top: 15px;
-            margin-bottom: 5px;
-        }
-
-        .achievement p {
-            font-size: 17px;
-        }
-
-        /* กิจกรรม */
-        .activity-container {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
-        }
-
-        .activity {
-            background: var(--white);
-            padding: 15px;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(201, 120, 140, 0.12);
-            transition: 0.3s;
-        }
-
-        .activity:hover {
-            transform: translateY(-5px);
-        }
-
-        .activity img {
-            width: 100%;
-            height: 220px;
             object-fit: cover;
-            display: block;
-            border-radius: 18px;
         }
 
-        .activity h3 {
+        .card-content {
+            padding: 20px;
+        }
+
+        .card h3 {
             color: var(--pink-dark);
-            font-size: 23px;
-            margin-top: 15px;
-            margin-bottom: 5px;
+            font-size: 22px;
+            margin-bottom: 8px;
         }
 
-        .activity p {
-            font-size: 17px;
-        }
+        /* ==================== เกียรติบัตร ==================== */
 
-        /* เกียรติบัตร */
         .certificate-container {
-            max-width: 1100px;
-            margin: auto;
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 25px;
         }
 
         .certificate {
-            background: var(--white);
-            padding: 15px;
+            padding: 12px;
+            background: white;
             border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(201, 120, 140, 0.12);
+            box-shadow: 0 8px 25px rgba(216, 107, 136, 0.1);
             transition: 0.3s;
         }
 
@@ -277,69 +263,53 @@
         .certificate img {
             width: 100%;
             display: block;
-            border-radius: 12px;
+            border-radius: 14px;
         }
 
         .certificate p {
-            font-size: 17px;
-            margin-top: 15px;
-            margin-bottom: 5px;
+            padding: 12px 5px 5px;
+            font-size: 16px;
         }
 
-        /* แรงบันดาลใจ */
-        .inspiration-box {
-            background: var(--pink-soft);
-            padding: 25px;
-            border-radius: 20px;
-        }
+        /* ==================== แรงบันดาลใจ / เป้าหมาย ==================== */
 
-        /* เป้าหมาย */
-        .goal-box {
-            background: var(--pink-soft);
-            padding: 25px;
-            border-radius: 20px;
+        .inspiration-box p,
+        .goal-box p {
             text-align: center;
         }
 
-        /* Footer */
+        /* ==================== Footer ==================== */
+
         footer {
-            text-align: center;
-            padding: 35px 20px;
             margin-top: 50px;
-            background: var(--pink-dark);
+            padding: 30px 20px;
+            text-align: center;
             color: white;
+            background: var(--pink-dark);
         }
 
-        footer p {
-            font-size: 18px;
-        }
+        /* ==================== Responsive ==================== */
 
-        /* Responsive */
-        @media (max-width: 900px) {
-
+        @media (max-width: 850px) {
             .education-container,
-            .achievement-container,
-            .activity-container,
+            .skill-container,
+            .card-container,
             .certificate-container {
                 grid-template-columns: 1fr;
             }
 
-            .skill-container {
-                grid-template-columns: 1fr;
-            }
-
-            header h1 {
-                font-size: 34px;
-            }
-
             section {
                 margin: 25px 15px;
-                padding: 25px 18px;
+                padding: 30px 20px;
             }
 
             nav a {
-                font-size: 15px;
-                padding: 7px 12px;
+                font-size: 14px;
+                padding: 6px 11px;
+            }
+
+            header {
+                min-height: 75vh;
             }
         }
     </style>
@@ -371,6 +341,9 @@
         <h1>นางสาวภลดา แสนศรี</h1>
         <p>ชื่อเล่น : อิงฟ้า</p>
         <p>โรงเรียนบ้านบึง"อุตสาหกรรมนุเคราะห์"</p>
+
+        <div class="intro-line"></div>
+        <p>Portfolio</p>
     </header>
 
     <!-- ประวัติส่วนตัว -->
@@ -432,6 +405,14 @@
                 </p>
             </div>
 
+            <div class="skill-card">
+                <h3>การคิดวิเคราะห์</h3>
+                <p>
+                    สามารถวิเคราะห์โจทย์และวางแนวทางการแก้ปัญหา
+                    อย่างเป็นขั้นตอนและมีเหตุผล
+                </p>
+            </div>
+
         </div>
     </section>
 
@@ -439,42 +420,48 @@
     <section id="achievements">
         <h2>ผลงานและการแข่งขัน</h2>
 
-        <div class="achievement-container">
+        <div class="card-container">
 
-            <div class="achievement">
-                <img src="achievement1.jpg" alt="ผลงานการแข่งขันซูโดกุ">
+            <div class="card">
+                <img src="achievement1.jpg" alt="การแข่งขันซูโดกุ">
 
-                <p>
-                    เป็นตัวแทนโรงเรียนเข้าร่วมการแข่งขันซูโดกุ
-                    สามารถทำโจทย์ปริศนาได้ครบทุกกระดาน
-                    และทำคะแนนได้เต็ม 100 คะแนน
-                    คว้าอันดับที่ 11 ระดับเหรียญเงิน
-                    จากการแข่งขันระดับภาคตะวันออกและภาคกลาง
-                    ประจำปี 2569
-                </p>
+                <div class="card-content">
+                    <p>
+                        เป็นตัวแทนโรงเรียนเข้าร่วมการแข่งขันซูโดกุ
+                        สามารถทำโจทย์ปริศนาได้ครบทุกกระดาน
+                        และทำคะแนนได้เต็ม 100 คะแนน
+                        คว้าอันดับที่ 11 ระดับเหรียญเงิน
+                        จากการแข่งขันระดับภาคตะวันออกและภาคกลาง
+                        ประจำปี 2569
+                    </p>
+                </div>
             </div>
 
-            <div class="achievement">
-                <img src="achievement2.jpg" alt="ผลงานการแข่งขันซูโดกุ">
+            <div class="card">
+                <img src="achievement2.jpg" alt="การแข่งขันซูโดกุ">
 
-                <p>
-                    เป็นตัวแทนโรงเรียนเข้าร่วมการแข่งขันซูโดกุ
-                    ระดับสำนักงานเขตพื้นที่การศึกษา
-                    ทำคะแนนได้ 88.50 คะแนน
-                    ได้รับอันดับที่ 11 ระดับเหรียญทอง
-                </p>
+                <div class="card-content">
+                    <p>
+                        เป็นตัวแทนโรงเรียนเข้าร่วมการแข่งขันซูโดกุ
+                        ระดับสำนักงานเขตพื้นที่การศึกษา
+                        ทำคะแนนได้ 88.50 คะแนน
+                        ได้รับอันดับที่ 11 ระดับเหรียญทอง
+                    </p>
+                </div>
             </div>
 
-            <div class="achievement">
-                <img src="achievement3.jpg" alt="ผลงานการแข่งขันซูโดกุ">
+            <div class="card">
+                <img src="achievement3.jpg" alt="การแข่งขันซูโดกุ">
 
-                <p>
-                    เข้าร่วมการแข่งขันซูโดกุ
-                    ระดับมัธยมศึกษาตอนปลาย
-                    สามารถทำกระดาษปริศนาได้ครบทุกกระดาน
-                    ผ่านเข้าสู่รอบชิงชนะเลิศ
-                    และได้รับรางวัลชนะเลิศ
-                </p>
+                <div class="card-content">
+                    <p>
+                        เข้าร่วมการแข่งขันซูโดกุ
+                        ระดับมัธยมศึกษาตอนปลาย
+                        สามารถทำกระดาษปริศนาได้ครบทุกกระดาน
+                        ผ่านเข้าสู่รอบชิงชนะเลิศ
+                        และได้รับรางวัลชนะเลิศ
+                    </p>
+                </div>
             </div>
 
         </div>
@@ -484,42 +471,60 @@
     <section id="activities">
         <h2>กิจกรรม</h2>
 
-        <div class="activity-container">
+        <div class="card-container">
 
-            <div class="activity">
-                <img src="activity1.jpg" alt="กิจกรรมนักเรียนอาสาประจำบูธคณิตศาสตร์">
+            <div class="card">
+                <img src="activity1.jpg" alt="การฝึกประสบการณ์ ณ เทศบาลเมืองลำปลายมาศ">
 
-                <h3>กิจกรรมนักเรียนอาสาประจำบูธคณิตศาสตร์</h3>
+                <div class="card-content">
+                    <h3>การฝึกประสบการณ์ ณ เทศบาลเมืองลำปลายมาศ</h3>
 
-                <p>
-                    เข้าร่วมกิจกรรมในฐานะนักเรียนอาสาประจำบูธคณิตศาสตร์
-                    โดยมีส่วนร่วมในการจัดกิจกรรมเกม 24
-                    และช่วยสร้างบรรยากาศการเรียนรู้ให้กับผู้เข้าร่วมกิจกรรม
-                </p>
+                    <p>
+                        ช่วงแรกของการฝึกงานได้มีส่วนร่วมในงานจัดการข้อมูล
+                        ด้วยการรวบรวมและจัดเก็บสถิติของอาสาสมัครสาธารณสุขประจำหมู่บ้าน (อสม.)
+                        อย่างเป็นระบบ นอกจากนี้ยังได้ร่วมดำเนินกิจกรรมในโรงเรียนผู้สูงอายุ
+                        และโครงการศูนย์ดูแลผู้สูงอายุระหว่างวัน ซึ่งเปิดโอกาสให้ได้เข้าไปมีส่วนร่วม
+                        ในการสร้างรอยยิ้ม ความสุข และส่งเสริมสุขภาวะที่ดีให้แก่ผู้สูงวัยในชุมชน
+                        นอกเหนือจากงานในสำนักงานแล้ว ยังได้ลงพื้นที่ปฏิบัติงานภาคสนาม
+                        ผ่านกิจกรรมปลูกป่าเพื่ออนุรักษ์ธรรมชาติ รวมถึงร่วมสำรวจปักแนวเขต
+                        และจัดเก็บข้อมูลพันธุกรรมพืชในโครงการ อพ.สธ.
+                        ร่วมกับชุมชนและผู้เชี่ยวชาญ
+                    </p>
+                </div>
             </div>
 
-            <div class="activity">
-                <img src="activity2.jpg" alt="กิจกรรมการแข่งขัน Sudoku">
+            <div class="card">
+                <img src="activity2.jpg" alt="นักเรียนจิตอาสาในงานมหกรรมวิชาการ">
 
-                <h3>กิจกรรมการแข่งขัน Sudoku</h3>
+                <div class="card-content">
+                    <h3>นักเรียนจิตอาสาในงานมหกรรมวิชาการ</h3>
 
-                <p>
-                    เข้าร่วมการแข่งขัน Sudoku ในฐานะตัวแทน
-                    ได้ฝึกการคิดวิเคราะห์ การแก้ปัญหา
-                    และการทำงานภายใต้เวลาที่กำหนด
-                </p>
+                    <p>
+                        ได้เป็นนักเรียนจิตอาสาประจำบูธแผนการเรียนวิทยาศาสตร์-คณิตศาสตร์
+                        (Gifted Program) ฐานเกม 24 โดยรับผิดชอบการต้อนรับ
+                        อธิบายกติกา และสาธิตวิธีการเล่น การทำงานเพื่อส่วนรวมในครั้งนี้
+                        ดิฉันได้เรียนรู้ทักษะที่สำคัญทั้งความกล้าแสดงออกในการพูดคุย
+                        กับผู้คนหลากหลาย และการฝึกทักษะการสื่อสารเพื่อการถ่ายทอดข้อมูล
+                        ที่ซับซ้อนให้เข้าใจง่ายและเป็นกันเอง
+                    </p>
+                </div>
             </div>
 
-            <div class="activity">
-                <img src="activity3.jpg" alt="กิจกรรมพัฒนาทักษะและประสบการณ์">
+            <div class="card">
+                <img src="activity3.jpg" alt="อบรมค่ายพัฒนาคุณธรรมจริยธรรมนักเรียน">
 
-                <h3>กิจกรรมพัฒนาทักษะและประสบการณ์</h3>
+                <div class="card-content">
+                    <h3>อบรมค่ายพัฒนาคุณธรรมจริยธรรมนักเรียน</h3>
 
-                <p>
-                    การเข้าร่วมกิจกรรมช่วยให้ได้เรียนรู้
-                    ฝึกความรับผิดชอบ การทำงานร่วมกับผู้อื่น
-                    และนำประสบการณ์มาพัฒนาตนเอง
-                </p>
+                    <p>
+                        การเข้าร่วมกิจกรรมในครั้งนี้ทำให้ดิฉันได้เรียนรู้และตระหนักถึง
+                        ความสำคัญของคุณธรรม จริยธรรม ระเบียบวินัย ความรับผิดชอบ
+                        และการอยู่ร่วมกับผู้อื่นในสังคม ผ่านกิจกรรมที่ช่วยส่งเสริม
+                        การพัฒนาทั้งด้านความคิด จิตใจ และพฤติกรรม นอกจากนี้ยังได้ฝึกสมาธิ
+                        การควบคุมตนเอง การเคารพผู้อื่น และการนำหลักคุณธรรม
+                        มาปรับใช้ในชีวิตประจำวัน
+                    </p>
+                </div>
             </div>
 
         </div>
