@@ -1,4 +1,11 @@
+/* ==============================
+   🌸 PORTFOLIO - PALLADA SANSRI
+   ============================== */
+
 @import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+
+
+/* ---------- สีหลัก ---------- */
 
 :root {
     --pink-dark: #D86B88;
@@ -8,6 +15,9 @@
     --white: #FFFFFF;
     --text: #5A3A43;
 }
+
+
+/* ---------- พื้นฐาน ---------- */
 
 * {
     box-sizing: border-box;
@@ -22,321 +32,171 @@ html {
 body {
     font-family: 'Itim', cursive;
     color: var(--text);
+
     background:
-        radial-gradient(circle at top left, #FFEAF0, transparent 35%),
-        radial-gradient(circle at bottom right, #F8D0D9, transparent 35%),
-        #FFF7F9;
+        radial-gradient(
+            circle at top left,
+            #FFEAF0,
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at bottom right,
+            #F8D0D9,
+            transparent 35%
+        ),
+        var(--pink-soft);
+
     min-height: 100vh;
 }
 
-/* ================= NAVBAR ================= */
 
-nav {
+/* ---------- เมนู ---------- */
+
+.navbar {
+    width: 100%;
+    padding: 15px 25px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
     position: sticky;
     top: 0;
     z-index: 100;
-    background: rgba(255, 255, 255, 0.82);
+
+    background: rgba(255, 255, 255, 0.85);
     backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(216, 107, 136, 0.12);
-    padding: 12px 20px;
+
+    border-bottom: 1px solid rgba(216, 107, 136, 0.15);
+
+    box-shadow: 0 4px 20px rgba(216, 107, 136, 0.08);
 }
 
-nav ul {
-    list-style: none;
+.nav-logo {
+    font-size: 25px;
+    font-weight: bold;
+    color: var(--pink-dark);
+    white-space: nowrap;
+}
+
+.nav-links {
     display: flex;
-    justify-content: center;
     align-items: center;
     gap: 8px;
-    flex-wrap: wrap;
+
+    overflow-x: auto;
+    white-space: nowrap;
+    padding-bottom: 3px;
 }
 
-nav a {
-    display: block;
+.nav-links a {
     text-decoration: none;
-    color: var(--pink-dark);
-    padding: 8px 14px;
-    border-radius: 20px;
+    color: var(--text);
+
     font-size: 16px;
-    transition: 0.3s;
+
+    padding: 8px 13px;
+    border-radius: 20px;
+
+    transition: 0.3s ease;
 }
 
-nav a:hover,
-nav a.active {
+.nav-links a:hover {
     background: var(--pink-light);
     color: var(--pink-dark);
     transform: translateY(-2px);
 }
 
-/* ================= MAIN ================= */
 
-main {
-    width: min(1100px, 92%);
-    margin: 45px auto;
-}
+/* ---------- หน้าปก ---------- */
 
-.page-title {
-    text-align: center;
-    margin-bottom: 30px;
-}
+.cover {
+    min-height: calc(100vh - 70px);
 
-.page-title h1 {
-    color: var(--pink-dark);
-    font-size: 38px;
-    margin-bottom: 8px;
-}
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-.page-title p {
-    font-size: 18px;
-}
+    padding: 50px 20px;
 
-/* ================= HEADER ================= */
-
-header {
-    text-align: center;
-    padding: 55px 20px 45px;
-}
-
-.profile-img {
-    width: 190px;
-    height: 190px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 7px solid white;
-    box-shadow: 0 12px 30px rgba(216, 107, 136, 0.2);
-    animation: floating 4s ease-in-out infinite;
-}
-
-header h1 {
-    margin-top: 25px;
-    font-size: 38px;
-    color: var(--pink-dark);
-}
-
-header p {
-    font-size: 19px;
-    margin-top: 5px;
-}
-
-.class-info {
-    margin-top: 3px;
-}
-
-.intro-line {
-    width: 80px;
-    height: 4px;
-    border-radius: 10px;
-    background: var(--pink);
-    margin: 20px auto;
-}
-
-.portfolio-purpose {
-    max-width: 750px;
-    margin: 22px auto 0;
-    padding: 18px 25px;
-    background: rgba(255, 255, 255, 0.8);
-    border: 1px solid rgba(216, 107, 136, 0.12);
-    border-radius: 20px;
-    box-shadow: 0 8px 25px rgba(216, 107, 136, 0.08);
-}
-
-.portfolio-purpose p {
-    font-size: 18px;
-}
-
-/* ================= CARDS ================= */
-
-.card {
-    background: rgba(255, 255, 255, 0.85);
-    border-radius: 25px;
-    padding: 30px;
-    box-shadow: 0 10px 30px rgba(216, 107, 136, 0.1);
-    border: 1px solid rgba(216, 107, 136, 0.1);
-    margin-bottom: 25px;
-}
-
-.card h2 {
-    color: var(--pink-dark);
-    font-size: 27px;
-    margin-bottom: 15px;
-}
-
-.card p {
-    font-size: 18px;
-    line-height: 1.8;
-}
-
-.info-box {
-    background: var(--pink-soft);
-    border-radius: 20px;
-    padding: 22px;
-    margin-top: 15px;
-    border-left: 5px solid var(--pink);
-}
-
-.info-box p {
-    margin: 5px 0;
-}
-
-/* ================= GRID ================= */
-
-.grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 22px;
-}
-
-.two-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 25px;
-}
-
-/* ================= IMAGES ================= */
-
-.card-image {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-    border-radius: 18px;
-    margin-bottom: 18px;
-}
-
-.certificate-image {
-    width: 100%;
-    height: 330px;
-    object-fit: contain;
-    background: white;
-    border-radius: 18px;
-    margin-bottom: 15px;
-}
-
-/* ================= ACHIEVEMENT / ACTIVITY ================= */
-
-.photo-card {
-    background: rgba(255, 255, 255, 0.9);
-    border-radius: 24px;
-    padding: 18px;
-    box-shadow: 0 10px 28px rgba(216, 107, 136, 0.1);
-    transition: 0.3s;
-}
-
-.photo-card:hover {
-    transform: translateY(-5px);
-}
-
-.photo-card h3 {
-    color: var(--pink-dark);
-    font-size: 23px;
-    margin-bottom: 10px;
-}
-
-.photo-card p {
-    font-size: 17px;
-    line-height: 1.7;
-}
-
-/* ================= FLOATING STARS ================= */
-
-.page-with-stars {
     position: relative;
     overflow: hidden;
 }
 
-.floating-stars {
-    position: absolute;
-    inset: 0;
-    pointer-events: none;
-    z-index: 1;
-}
 
-.floating-stars span {
-    position: absolute;
-    color: var(--pink);
-    font-size: 20px;
-    opacity: 0.55;
-    animation: starFloat 5s ease-in-out infinite;
-}
+/* ---------- การ์ดหน้าปก ---------- */
 
-.floating-stars span:nth-child(1) {
-    top: 8%;
-    left: 4%;
-    font-size: 24px;
-    animation-delay: 0s;
-}
+.cover-card {
+    width: min(850px, 100%);
 
-.floating-stars span:nth-child(2) {
-    top: 18%;
-    right: 5%;
-    font-size: 18px;
-    animation-delay: 1s;
-}
-
-.floating-stars span:nth-child(3) {
-    top: 48%;
-    left: 2%;
-    font-size: 17px;
-    animation-delay: 2s;
-}
-
-.floating-stars span:nth-child(4) {
-    top: 55%;
-    right: 3%;
-    font-size: 25px;
-    animation-delay: 0.7s;
-}
-
-.floating-stars span:nth-child(5) {
-    bottom: 10%;
-    left: 7%;
-    font-size: 19px;
-    animation-delay: 1.8s;
-}
-
-.floating-stars span:nth-child(6) {
-    bottom: 7%;
-    right: 8%;
-    font-size: 17px;
-    animation-delay: 2.5s;
-}
-
-.floating-stars span:nth-child(7) {
-    top: 30%;
-    left: 48%;
-    font-size: 15px;
-    animation-delay: 1.3s;
-}
-
-.floating-stars span:nth-child(8) {
-    bottom: 25%;
-    right: 45%;
-    font-size: 21px;
-    animation-delay: 3s;
-}
-
-@keyframes starFloat {
-    0%, 100% {
-        opacity: 0.3;
-        transform: translateY(0) rotate(0deg) scale(0.9);
-    }
-
-    50% {
-        opacity: 0.9;
-        transform: translateY(-18px) rotate(15deg) scale(1.15);
-    }
-}
-
-/* ================= FOOTER ================= */
-
-footer {
     text-align: center;
-    padding: 30px 15px;
-    color: var(--pink-dark);
-    font-size: 16px;
+
+    padding: 45px 35px;
+
+    background: rgba(255, 255, 255, 0.88);
+
+    border: 2px solid rgba(233, 143, 165, 0.25);
+
+    border-radius: 35px;
+
+    box-shadow:
+        0 20px 50px rgba(216, 107, 136, 0.15);
+
+    position: relative;
+    z-index: 5;
+
+    animation: cardAppear 0.8s ease;
 }
 
-/* ================= ANIMATION ================= */
+@keyframes cardAppear {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
 
-@keyframes floating {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* ---------- รูปโปรไฟล์ ---------- */
+
+.profile-frame {
+    width: 190px;
+    height: 190px;
+
+    margin: 0 auto 20px;
+
+    border-radius: 50%;
+
+    padding: 6px;
+
+    background: linear-gradient(
+        135deg,
+        var(--pink),
+        var(--pink-dark)
+    );
+
+    box-shadow:
+        0 10px 30px rgba(216, 107, 136, 0.25);
+
+    animation: profileFloat 4s ease-in-out infinite;
+}
+
+.profile-frame img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border: 5px solid white;
+}
+
+@keyframes profileFloat {
     0%, 100% {
         transform: translateY(0);
     }
@@ -346,34 +206,295 @@ footer {
     }
 }
 
-/* ================= MOBILE ================= */
+
+/* ---------- ข้อความหน้าปก ---------- */
+
+.cover-small {
+    color: var(--pink);
+    font-size: 20px;
+    letter-spacing: 3px;
+
+    margin-bottom: 5px;
+}
+
+.cover-card h1 {
+    color: var(--pink-dark);
+
+    font-size: clamp(35px, 6vw, 55px);
+
+    margin-bottom: 5px;
+}
+
+.cover-card h2 {
+    color: var(--pink);
+
+    font-size: 25px;
+
+    margin-bottom: 22px;
+}
+
+
+/* ---------- ข้อมูลนักเรียน ---------- */
+
+.student-info {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    gap: 10px 20px;
+
+    font-size: 19px;
+
+    margin-bottom: 25px;
+}
+
+.student-info p {
+    background: var(--pink-light);
+
+    padding: 8px 16px;
+
+    border-radius: 20px;
+}
+
+
+/* ---------- เส้นคั่น ---------- */
+
+.cover-line {
+    width: 75%;
+    height: 2px;
+
+    margin: 20px auto;
+
+    background: linear-gradient(
+        to right,
+        transparent,
+        var(--pink),
+        transparent
+    );
+}
+
+
+/* ---------- มหาวิทยาลัย ---------- */
+
+.university {
+    color: var(--pink-dark);
+
+    font-size: 23px;
+
+    margin-top: 15px;
+}
+
+.university-name {
+    color: var(--pink-dark);
+
+    font-size: 32px;
+    font-weight: bold;
+
+    margin: 5px 0;
+}
+
+.faculty {
+    font-size: 20px;
+    line-height: 1.7;
+
+    margin-bottom: 25px;
+}
+
+
+/* ---------- กล่องจุดประสงค์ ---------- */
+
+.purpose-box {
+    max-width: 650px;
+
+    margin: 0 auto 25px;
+
+    padding: 20px 25px;
+
+    background: linear-gradient(
+        135deg,
+        #FFF5F8,
+        #FCE8ED
+    );
+
+    border-left: 5px solid var(--pink);
+
+    border-radius: 18px;
+
+    text-align: left;
+}
+
+.purpose-box h3 {
+    color: var(--pink-dark);
+
+    font-size: 23px;
+
+    margin-bottom: 7px;
+}
+
+.purpose-box p {
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+
+/* ---------- ปุ่ม ---------- */
+
+.start-button {
+    display: inline-block;
+
+    text-decoration: none;
+
+    color: white;
+
+    background: linear-gradient(
+        135deg,
+        var(--pink),
+        var(--pink-dark)
+    );
+
+    padding: 12px 30px;
+
+    border-radius: 30px;
+
+    font-size: 20px;
+
+    box-shadow:
+        0 8px 20px rgba(216, 107, 136, 0.25);
+
+    transition: 0.3s ease;
+}
+
+.start-button:hover {
+    transform: translateY(-3px) scale(1.03);
+
+    box-shadow:
+        0 12px 25px rgba(216, 107, 136, 0.35);
+}
+
+
+/* ---------- ดาววิ้ง ๆ ---------- */
+
+.sparkle {
+    position: absolute;
+
+    color: var(--pink);
+
+    opacity: 0.65;
+
+    font-size: 25px;
+
+    animation: sparkleFloat 4s ease-in-out infinite;
+
+    z-index: 2;
+}
+
+.sparkle-1 {
+    top: 15%;
+    left: 12%;
+}
+
+.sparkle-2 {
+    top: 25%;
+    right: 13%;
+
+    animation-delay: 1s;
+}
+
+.sparkle-3 {
+    bottom: 18%;
+    left: 18%;
+
+    animation-delay: 2s;
+}
+
+.sparkle-4 {
+    bottom: 25%;
+    right: 18%;
+
+    animation-delay: 1.5s;
+}
+
+@keyframes sparkleFloat {
+    0%, 100% {
+        opacity: 0.3;
+        transform: translateY(0) rotate(0deg) scale(0.9);
+    }
+
+    50% {
+        opacity: 0.9;
+        transform: translateY(-15px) rotate(15deg) scale(1.15);
+    }
+}
+
+
+/* ---------- โทรศัพท์ / หน้าจอเล็ก ---------- */
 
 @media (max-width: 850px) {
 
-    nav ul {
-        gap: 3px;
+    .navbar {
+        flex-direction: column;
+        gap: 10px;
+
+        padding: 12px 15px;
     }
 
-    nav a {
-        font-size: 14px;
-        padding: 7px 10px;
+    .nav-links {
+        width: 100%;
     }
 
-    header h1 {
-        font-size: 30px;
+    .nav-links a {
+        font-size: 15px;
+        padding: 7px 11px;
     }
 
-    .page-title h1 {
-        font-size: 30px;
+    .cover {
+        padding: 30px 15px;
     }
 
-    .grid,
-    .two-grid {
-        grid-template-columns: 1fr;
+    .cover-card {
+        padding: 35px 20px;
+        border-radius: 25px;
     }
 
-    .profile-img {
+    .profile-frame {
         width: 160px;
         height: 160px;
+    }
+
+    .student-info {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .student-info p {
+        width: 100%;
+    }
+
+    .university-name {
+        font-size: 27px;
+    }
+
+    .faculty {
+        font-size: 18px;
+    }
+
+    .purpose-box {
+        padding: 17px;
+    }
+
+    .sparkle-1 {
+        left: 4%;
+    }
+
+    .sparkle-2 {
+        right: 4%;
+    }
+
+    .sparkle-3 {
+        left: 7%;
+    }
+
+    .sparkle-4 {
+        right: 7%;
     }
 }
