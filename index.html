@@ -1,441 +1,97 @@
 <!DOCTYPE html>
-
 <html lang="th">
-
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Portfolio | อิงฟ้า</title>
-
-    <!-- Google Font : Itim -->
+    <title>Portfolio | ภลดา แสนศรี</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
-
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
     <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
 
-    <style>
-.profile-circle img {
-
-    width: 100%;
-
-    height: 100%;
-
-    object-fit: cover;
-
-    border-radius: 50%;
-
-}
-        * {
-
-            margin: 0;
-
-            padding: 0;
-
-            box-sizing: border-box;
-
-        }
-
-        body {
-
-            font-family: "Itim", cursive;
-
-            min-height: 100vh;
-
-            color: #5A3A40;
-
-            background: linear-gradient(
-
-                135deg,
-
-                #FFF7F9,
-
-                #FCE8ED,
-
-                #F8D0D9
-
-            );
-
-        }
-
-        /* Navigation */
-
-        nav {
-
-            height: 80px;
-
-            padding: 0 7%;
-
-            display: flex;
-
-            justify-content: space-between;
-
-            align-items: center;
-
-        }
-
-        .logo {
-
-            font-size: 25px;
-
-            font-weight: bold;
-
-            color: #C9788C;
-
-            letter-spacing: 2px;
-
-        }
-
-        nav ul {
-
-            display: flex;
-
-            gap: 30px;
-
-            list-style: none;
-
-        }
-
-        nav ul li a {
-
-            text-decoration: none;
-
-            color: #5A3A40;
-
-            font-weight: bold;
-
-            font-size: 18px;
-
-        }
-
-        nav ul li a:hover {
-
-            color: #C9788C;
-
-        }
-
-        /* Main */
-
-        .hero {
-
-            min-height: calc(100vh - 80px);
-
-            display: flex;
-
-            justify-content: center;
-
-            align-items: center;
-
-            text-align: center;
-
-            padding: 30px 20px;
-
-        }
-
-        .content {
-
-            width: 100%;
-
-            max-width: 900px;
-
-        }
-
-        /* Welcome */
-
-        .welcome {
-
-            color: #C9788C;
-
-            font-size: 20px;
-
-            font-weight: bold;
-
-            letter-spacing: 2px;
-
-            margin-bottom: 15px;
-
-        }
-
-        /* Profile */
-
-        .profile-circle {
-
-            width: 230px;
-
-            height: 230px;
-
-            margin: 0 auto 25px;
-
-            border-radius: 50%;
-
-            background: linear-gradient(
-
-                145deg,
-
-                #FCE8ED,
-
-                #E7A7B6
-
-            );
-
-            border: 8px solid rgba(255, 255, 255, 0.75);
-
-            box-shadow:
-
-                0 15px 35px rgba(201, 120, 140, 0.20);
-
-            display: flex;
-
-            justify-content: center;
-
-            align-items: center;
-
-            color: #C9788C;
-
-            font-size: 22px;
-
-        }
-
-        /* Name */
-
-        h1 {
-
-            font-size: 45px;
-
-            color: #5A3A40;
-
-            margin-bottom: 8px;
-
-        }
-
-        h1 span {
-
-            color: #C9788C;
-
-        }
-
-        /* Nickname */
-
-        .nickname {
-
-            font-size: 23px;
-
-            margin-bottom: 8px;
-
-        }
-
-        /* School */
-
-        .school {
-
-            font-size: 19px;
-
-            margin-bottom: 25px;
-
-        }
-
-        /* Purpose */
-
-        .purpose-title {
-
-            color: #C9788C;
-
-            font-size: 21px;
-
-            font-weight: bold;
-
-            margin-bottom: 8px;
-
-        }
-
-        .purpose {
-
-            max-width: 700px;
-
-            margin: 0 auto;
-
-            font-size: 17px;
-
-            line-height: 1.8;
-
-        }
-
-        /* Mobile */
-
-        @media (max-width: 700px) {
-
-            nav {
-
-                height: auto;
-
-                padding: 20px;
-
-                flex-direction: column;
-
-                gap: 15px;
-
-            }
-
-            nav ul {
-
-                gap: 18px;
-
-            }
-
-            .hero {
-
-                padding: 30px 20px;
-
-            }
-
-            .profile-circle {
-
-                width: 190px;
-
-                height: 190px;
-
-            }
-
-            h1 {
-
-                font-size: 34px;
-
-            }
-
-            .nickname {
-
-                font-size: 20px;
-
-            }
-
-            .school {
-
-                font-size: 16px;
-
-            }
-
-            .purpose {
-
-                font-size: 16px;
-
-            }
-
-        }
-
-    </style>
-
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- Navigation -->
+    <!-- เมนู -->
+    <nav class="navbar">
+        <div class="nav-logo">🌸 Portfolio</div>
 
-    <nav>
-
-        <div class="logo">
-
-            PORTFOLIO
-
+        <div class="nav-links">
+            <a href="index.html">หน้าหลัก</a>
+            <a href="preface.html">คำนำ</a>
+            <a href="personal.html">ประวัติส่วนตัว</a>
+            <a href="education.html">ประวัติการศึกษา</a>
+            <a href="achievements.html">ผลงานและการแข่งขัน</a>
+            <a href="activities.html">กิจกรรม</a>
+            <a href="certificates.html">เกียรติบัตร</a>
+            <a href="inspiration.html">แรงบันดาลใจ</a>
+            <a href="goal.html">เป้าหมายในอนาคต</a>
         </div>
-
-        <ul>
-
-            <li>
-
-                <a href="index.html">
-
-                    หน้าแรก
-
-                </a>
-
-            </li>
-
-            <li>
-
-                <a href="portfolio.html">
-
-                    เกี่ยวกับฉัน
-
-                </a>
-
-            </li>
-
-        </ul>
-
     </nav>
 
-    <!-- Main -->
 
-    <section class="hero">
+    <!-- หน้าปก -->
+    <main class="cover">
 
-        <div class="content">
+        <div class="sparkle sparkle-1">✦</div>
+        <div class="sparkle sparkle-2">✨</div>
+        <div class="sparkle sparkle-3">⭐</div>
+        <div class="sparkle sparkle-4">✧</div>
 
-            <div class="welcome">
+        <div class="cover-card">
 
-                WELCOME TO MY PORTFOLIO
-
+            <!-- รูปโปรไฟล์ -->
+            <div class="profile-frame">
+                <img src="profile.jpg" alt="รูปโปรไฟล์">
             </div>
 
-            <!-- รูปตรงกลาง -->
+            <p class="cover-small">MY PORTFOLIO</p>
 
-            <div class="profile-circle">
+            <h1>นางสาวภลดา แสนศรี</h1>
 
-                <img src="profile.jpg" alt="รูปโปรไฟล์ของอิงฟ้า">
+            <h2>ชื่อเล่น : อิงฟ้า</h2>
 
+            <div class="student-info">
+                <p>🏫 โรงเรียนบ้านบึง"อุตสาหกรรมนุเคราะห์</p>
+                <p>📚 ชั้นมัธยมศึกษาปีที่ 6/2</p>
+                <p>🔢 เลขที่ 22</p>
             </div>
 
-            <!-- ชื่อ -->
+            <div class="cover-line"></div>
 
-            <h1>
-
-                นางสาว<span>ภลดา แสนศรี</span>
-
-            </h1>
-
-            <!-- ชื่อเล่น -->
-
-            <div class="nickname">
-
-                ชื่อเล่น : อิงฟ้า
-
-            </div>
-
-            <!-- โรงเรียน -->
-
-            <div class="school">
-
-                โรงเรียนบ้านบึง"อุตสาหกรรมนุเคราะห์"
-
-            </div>
-
-            <!-- จุดประสงค์ -->
-
-            <div class="purpose-title">
-
-                แฟ้มสะสมผลงานจัดทำขึ้นเพื่อ
-
-            </div>
-
-            <p class="purpose">
-
-                รวบรวมประวัติ ผลงาน กิจกรรม และประสบการณ์
-
-                เพื่อแสดงถึงความสามารถ ความสนใจ และความตั้งใจ
-
-                ของผู้จัดทำ รวมถึงใช้ประกอบการนำเสนอผลงาน
-
-                และการศึกษาต่อในอนาคต
-
+            <p class="university">
+                🎓 เป้าหมายการศึกษาต่อ
             </p>
+
+            <p class="university-name">
+                จุฬาลงกรณ์มหาวิทยาลัย
+            </p>
+
+            <p class="faculty">
+                คณะครุศาสตร์<br>
+                สาขาวิชามัธยมศึกษา (วิทยาศาสตร์)<br>
+                วิชาเอกคณิตศาสตร์
+            </p>
+
+            <div class="purpose-box">
+                <h3>เว็บไซต์นี้จัดทำขึ้นเพื่อ</h3>
+
+                <p>
+                    นำเสนอตัวตน ผลงานที่ผ่านมา ตลอดจนเป้าหมาย
+                    การเรียนและการประกอบอาชีพในอนาคต
+                </p>
+            </div>
+
+            <a href="preface.html" class="start-button">
+                เข้าชม Portfolio ✨
+            </a>
 
         </div>
 
-    </section>
+    </main>
 
 </body>
-
 </html>
