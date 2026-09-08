@@ -1,0 +1,379 @@
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+
+:root {
+    --pink-dark: #D86B88;
+    --pink: #E98FA5;
+    --pink-light: #FCE8ED;
+    --pink-soft: #FFF7F9;
+    --white: #FFFFFF;
+    --text: #5A3A43;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Itim', cursive;
+    color: var(--text);
+    background:
+        radial-gradient(circle at top left, #FFEAF0, transparent 35%),
+        radial-gradient(circle at bottom right, #F8D0D9, transparent 35%),
+        #FFF7F9;
+    min-height: 100vh;
+}
+
+/* ================= NAVBAR ================= */
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(255, 255, 255, 0.82);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(216, 107, 136, 0.12);
+    padding: 12px 20px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    display: block;
+    text-decoration: none;
+    color: var(--pink-dark);
+    padding: 8px 14px;
+    border-radius: 20px;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+nav a:hover,
+nav a.active {
+    background: var(--pink-light);
+    color: var(--pink-dark);
+    transform: translateY(-2px);
+}
+
+/* ================= MAIN ================= */
+
+main {
+    width: min(1100px, 92%);
+    margin: 45px auto;
+}
+
+.page-title {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.page-title h1 {
+    color: var(--pink-dark);
+    font-size: 38px;
+    margin-bottom: 8px;
+}
+
+.page-title p {
+    font-size: 18px;
+}
+
+/* ================= HEADER ================= */
+
+header {
+    text-align: center;
+    padding: 55px 20px 45px;
+}
+
+.profile-img {
+    width: 190px;
+    height: 190px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 7px solid white;
+    box-shadow: 0 12px 30px rgba(216, 107, 136, 0.2);
+    animation: floating 4s ease-in-out infinite;
+}
+
+header h1 {
+    margin-top: 25px;
+    font-size: 38px;
+    color: var(--pink-dark);
+}
+
+header p {
+    font-size: 19px;
+    margin-top: 5px;
+}
+
+.class-info {
+    margin-top: 3px;
+}
+
+.intro-line {
+    width: 80px;
+    height: 4px;
+    border-radius: 10px;
+    background: var(--pink);
+    margin: 20px auto;
+}
+
+.portfolio-purpose {
+    max-width: 750px;
+    margin: 22px auto 0;
+    padding: 18px 25px;
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(216, 107, 136, 0.12);
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(216, 107, 136, 0.08);
+}
+
+.portfolio-purpose p {
+    font-size: 18px;
+}
+
+/* ================= CARDS ================= */
+
+.card {
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 25px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(216, 107, 136, 0.1);
+    border: 1px solid rgba(216, 107, 136, 0.1);
+    margin-bottom: 25px;
+}
+
+.card h2 {
+    color: var(--pink-dark);
+    font-size: 27px;
+    margin-bottom: 15px;
+}
+
+.card p {
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+.info-box {
+    background: var(--pink-soft);
+    border-radius: 20px;
+    padding: 22px;
+    margin-top: 15px;
+    border-left: 5px solid var(--pink);
+}
+
+.info-box p {
+    margin: 5px 0;
+}
+
+/* ================= GRID ================= */
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.two-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+/* ================= IMAGES ================= */
+
+.card-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 18px;
+    margin-bottom: 18px;
+}
+
+.certificate-image {
+    width: 100%;
+    height: 330px;
+    object-fit: contain;
+    background: white;
+    border-radius: 18px;
+    margin-bottom: 15px;
+}
+
+/* ================= ACHIEVEMENT / ACTIVITY ================= */
+
+.photo-card {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 24px;
+    padding: 18px;
+    box-shadow: 0 10px 28px rgba(216, 107, 136, 0.1);
+    transition: 0.3s;
+}
+
+.photo-card:hover {
+    transform: translateY(-5px);
+}
+
+.photo-card h3 {
+    color: var(--pink-dark);
+    font-size: 23px;
+    margin-bottom: 10px;
+}
+
+.photo-card p {
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+/* ================= FLOATING STARS ================= */
+
+.page-with-stars {
+    position: relative;
+    overflow: hidden;
+}
+
+.floating-stars {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.floating-stars span {
+    position: absolute;
+    color: var(--pink);
+    font-size: 20px;
+    opacity: 0.55;
+    animation: starFloat 5s ease-in-out infinite;
+}
+
+.floating-stars span:nth-child(1) {
+    top: 8%;
+    left: 4%;
+    font-size: 24px;
+    animation-delay: 0s;
+}
+
+.floating-stars span:nth-child(2) {
+    top: 18%;
+    right: 5%;
+    font-size: 18px;
+    animation-delay: 1s;
+}
+
+.floating-stars span:nth-child(3) {
+    top: 48%;
+    left: 2%;
+    font-size: 17px;
+    animation-delay: 2s;
+}
+
+.floating-stars span:nth-child(4) {
+    top: 55%;
+    right: 3%;
+    font-size: 25px;
+    animation-delay: 0.7s;
+}
+
+.floating-stars span:nth-child(5) {
+    bottom: 10%;
+    left: 7%;
+    font-size: 19px;
+    animation-delay: 1.8s;
+}
+
+.floating-stars span:nth-child(6) {
+    bottom: 7%;
+    right: 8%;
+    font-size: 17px;
+    animation-delay: 2.5s;
+}
+
+.floating-stars span:nth-child(7) {
+    top: 30%;
+    left: 48%;
+    font-size: 15px;
+    animation-delay: 1.3s;
+}
+
+.floating-stars span:nth-child(8) {
+    bottom: 25%;
+    right: 45%;
+    font-size: 21px;
+    animation-delay: 3s;
+}
+
+@keyframes starFloat {
+    0%, 100% {
+        opacity: 0.3;
+        transform: translateY(0) rotate(0deg) scale(0.9);
+    }
+
+    50% {
+        opacity: 0.9;
+        transform: translateY(-18px) rotate(15deg) scale(1.15);
+    }
+}
+
+/* ================= FOOTER ================= */
+
+footer {
+    text-align: center;
+    padding: 30px 15px;
+    color: var(--pink-dark);
+    font-size: 16px;
+}
+
+/* ================= ANIMATION ================= */
+
+@keyframes floating {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 850px) {
+
+    nav ul {
+        gap: 3px;
+    }
+
+    nav a {
+        font-size: 14px;
+        padding: 7px 10px;
+    }
+
+    header h1 {
+        font-size: 30px;
+    }
+
+    .page-title h1 {
+        font-size: 30px;
+    }
+
+    .grid,
+    .two-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-img {
+        width: 160px;
+        height: 160px;
+    }
+}
