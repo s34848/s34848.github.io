@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ผลงานและการแข่งขัน | Portfolio อิงฟ้า</title>
+
+    <!-- Google Font : Itim -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "Itim", cursive;
+            min-height: 100vh;
+            color: #31516b;
+
+            background: linear-gradient(
+                135deg,
+                #eaf8ff 0%,
+                #cfeeff 35%,
+                #a9d9f5 65%,
+                #79b9df 100%
+            );
+        }
+
+        /* Navigation */
+
+        nav {
+            width: 100%;
+            padding: 18px 7%;
+
+            background: rgba(255, 255, 255, 0.72);
+            backdrop-filter: blur(10px);
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            box-shadow: 0 3px 15px rgba(70, 130, 170, 0.15);
+        }
+
+        .logo {
+            font-size: 28px;
+            color: #3c7fa8;
+        }
+
+        .menu {
+            display: flex;
+            gap: 25px;
+            list-style: none;
+        }
+
+        .menu a {
+            text-decoration: none;
+            color: #416b85;
+            font-size: 18px;
+        }
+
+        .menu a:hover {
+            color: #2373a5;
+        }
+
+        /* Main */
+
+        main {
+            padding: 60px 20px;
+        }
+
+        .achievement-card {
+            width: 92%;
+            max-width: 1100px;
+
+            margin: auto;
+            padding: 50px;
+
+            background: rgba(255, 255, 255, 0.82);
+
+            border: 2px solid rgba(255, 255, 255, 0.85);
+            border-radius: 30px;
+
+            box-shadow: 0 15px 40px rgba(53, 112, 150, 0.18);
+        }
+
+        .page-title {
+            text-align: center;
+
+            font-size: 45px;
+            color: #32749c;
+
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            text-align: center;
+
+            font-size: 21px;
+            color: #6798b5;
+
+            margin-bottom: 30px;
+        }
+
+        .line {
+            width: 80px;
+            height: 4px;
+
+            margin: 0 auto 45px;
+
+            background: linear-gradient(
+                to right,
+                #b8e4f8,
+                #5b9fc5
+            );
+
+            border-radius: 10px;
+        }
+
+        /* Section Title */
+
+        .section-title {
+            text-align: center;
+
+            font-size: 32px;
+            color: #397da4;
+
+            margin: 35px 0 25px;
+        }
+
+        /* Achievement Item */
+
+        .achievement-item {
+            margin-bottom: 45px;
+            padding: 30px;
+
+            background: rgba(225, 244, 253, 0.72);
+
+            border-radius: 25px;
+
+            border-left: 6px solid #69a9cb;
+
+            box-shadow: 0 6px 18px rgba(70, 130, 165, 0.08);
+        }
+
+        .achievement-content {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .achievement-image {
+            width: 330px;
+            height: 230px;
+
+            object-fit: cover;
+
+            border-radius: 18px;
+
+            border: 5px solid white;
+
+            box-shadow: 0 7px 20px rgba(60, 120, 155, 0.18);
+        }
+
+        .achievement-text {
+            flex: 1;
+        }
+
+        .achievement-title {
+            font-size: 25px;
+            color: #397da4;
+
+            margin-bottom: 12px;
+        }
+
+        .achievement-description {
+            font-size: 19px;
+            color: #526f82;
+
+            line-height: 1.8;
+        }
+
+        /* Certificate */
+
+        .certificate-title {
+            margin-top: 25px;
+
+            font-size: 21px;
+            color: #5790ae;
+        }
+
+        .certificate-image {
+            width: 100%;
+            max-width: 500px;
+
+            margin-top: 12px;
+
+            border-radius: 18px;
+            border: 5px solid white;
+
+            box-shadow: 0 7px 20px rgba(60, 120, 155, 0.18);
+        }
+
+        /* Sparkles */
+
+        .sparkle {
+            text-align: center;
+
+            font-size: 25px;
+
+            color: #76afd0;
+
+            margin: 15px 0;
+        }
+
+        /* Back Button */
+
+        .back-button {
+            display: block;
+            width: fit-content;
+
+            margin: 20px auto 0;
+
+            padding: 11px 30px;
+
+            background: linear-gradient(
+                135deg,
+                #9ed7f1,
+                #579ac3
+            );
+
+            color: white;
+            text-decoration: none;
+
+            font-size: 19px;
+
+            border-radius: 30px;
+
+            transition: 0.3s;
+        }
+
+        .back-button:hover {
+            transform: translateY(-3px);
+        }
+
+        /* Responsive */
+
+        @media (max-width: 800px) {
+
+            nav {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .menu {
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .achievement-card {
+                padding: 35px 22px;
+            }
+
+            .page-title {
+                font-size: 36px;
+            }
+
+            .achievement-content {
+                flex-direction: column;
+            }
+
+            .achievement-image {
+                width: 100%;
+                height: auto;
+            }
+
+            .achievement-description {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+
+    <nav>
+
+        <div class="logo">
+            Portfolio
+        </div>
+
+        <ul class="menu">
+            <li><a href="index.html">หน้าแรก</a></li>
+            <li><a href="preface.html">คำนำ</a></li>
+            <li><a href="profile.html">ประวัติส่วนตัว</a></li>
+            <li><a href="education.html">ประวัติการศึกษา</a></li>
+            <li><a href="achievements.html">ผลงานและการแข่งขัน</a></li>
+        </ul>
+
+    </nav>
+
+
+    <!-- Main -->
+
+    <main>
+
+        <section class="achievement-card">
+
+            <h1 class="page-title">
+                ผลงานและการแข่งขัน
+            </h1>
+
+            <p class="subtitle">
+                Achievements & Competitions
+            </p>
+
+            <div class="line"></div>
+
+
+            <!-- ผลงานที่ 1 -->
+
+            <h2 class="section-title">
+                🏆 ผลงานและการแข่งขัน
+            </h2>
+
+            <div class="achievement-item">
+
+                <div class="achievement-content">
+
+                    <img
+                        src="achievement1.jpg"
+                        alt="การแข่งขัน Sudoku"
+                        class="achievement-image"
+                    >
+
+                    <div class="achievement-text">
+
+                        <h3 class="achievement-title">
+                            การแข่งขัน Sudoku ระดับภาคตะวันออกและภาคกลาง
+                        </h3>
+
+                        <p class="achievement-description">
+                            เป็นตัวแทนของโรงเรียนเข้าร่วมการแข่งขัน Sudoku
+                            ระดับภาคตะวันออกและภาคกลาง ประจำปี 2569
+                            สามารถแก้โจทย์ปริศนาตัวเลขได้ครบทุกกระดาน
+                            ได้คะแนนเต็ม 100 คะแนน
+                            ได้รับรางวัลเหรียญเงิน และได้อันดับที่ 11
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <p class="certificate-title">
+                    เกียรติบัตร
+                </p>
+
+                <img
+                    src="certificate1.jpg"
+                    alt="เกียรติบัตรการแข่งขัน Sudoku"
+                    class="certificate-image"
+                >
+
+            </div>
+
+
+            <div class="sparkle">
+                ✦　✧　✦
+            </div>
+
+
+            <!-- ผลงานที่ 2 -->
+
+            <div class="achievement-item">
+
+                <div class="achievement-content">
+
+                    <img
+                        src="achievement2.jpg"
+                        alt="การแข่งขัน Sudoku"
+                        class="achievement-image"
+                    >
+
+                    <div class="achievement-text">
+
+                        <h3 class="achievement-title">
+                            การแข่งขัน Sudoku ระดับสำนักงานเขตพื้นที่การศึกษา
+                        </h3>
+
+                        <p class="achievement-description">
+                            เป็นตัวแทนของโรงเรียนเข้าร่วมการแข่งขัน Sudoku
+                            ในระดับสำนักงานเขตพื้นที่การศึกษา
+                            สามารถทำคะแนนได้ 88.50 คะแนน
+                            ได้อันดับที่ 11 และได้รับรางวัลเหรียญทอง
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <p class="certificate-title">
+                    เกียรติบัตร
+                </p>
+
+                <img
+                    src="certificate2.jpg"
+                    alt="เกียรติบัตรการแข่งขัน Sudoku"
+                    class="certificate-image"
+                >
+
+            </div>
+
+
+            <div class="sparkle">
+                ✦　✧　✦
+            </div>
+
+
+            <!-- ผลงานที่ 3 -->
+
+            <div class="achievement-item">
+
+                <div class="achievement-content">
+
+                    <img
+                        src="achievement3.jpg"
+                        alt="การแข่งขัน Sudoku ระดับมัธยมศึกษา"
+                        class="achievement-image"
+                    >
+
+                    <div class="achievement-text">
+
+                        <h3 class="achievement-title">
+                            การแข่งขัน Sudoku ระดับมัธยมศึกษาตอนปลาย
+                        </h3>
+
+                        <p class="achievement-description">
+                            เข้าร่วมการแข่งขัน Sudoku ระดับมัธยมศึกษาตอนปลาย
+                            สามารถแก้โจทย์ปริศนาตัวเลขได้ครบทุกชุด
+                            ผ่านเข้าสู่รอบชิงชนะเลิศ
+                            และได้รับรางวัลชนะเลิศอันดับที่ 1
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <p class="certificate-title">
+                    เกียรติบัตร
+                </p>
+
+                <img
+                    src="certificate3.jpg"
+                    alt="เกียรติบัตรการแข่งขัน Sudoku"
+                    class="certificate-image"
+                >
+
+            </div>
+
+
+            <div class="sparkle">
+                ✦　✧　✦
+            </div>
+
+
+            <a href="index.html" class="back-button">
+                ← กลับหน้าแรก
+            </a>
+
+        </section>
+
+    </main>
+
+</body>
+</html>
