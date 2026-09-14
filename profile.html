@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ประวัติส่วนตัว | Portfolio อิงฟ้า</title>
+
+    <!-- Google Font : Itim -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "Itim", cursive;
+            min-height: 100vh;
+            color: #31516b;
+
+            background: linear-gradient(
+                135deg,
+                #eaf8ff 0%,
+                #cfeeff 35%,
+                #a9d9f5 65%,
+                #79b9df 100%
+            );
+        }
+
+        /* Navigation */
+
+        nav {
+            width: 100%;
+            padding: 18px 7%;
+
+            background: rgba(255, 255, 255, 0.72);
+            backdrop-filter: blur(10px);
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            box-shadow: 0 3px 15px rgba(70, 130, 170, 0.15);
+        }
+
+        .logo {
+            font-size: 28px;
+            color: #3c7fa8;
+        }
+
+        .menu {
+            display: flex;
+            gap: 25px;
+            list-style: none;
+        }
+
+        .menu a {
+            text-decoration: none;
+            color: #416b85;
+            font-size: 18px;
+        }
+
+        .menu a:hover {
+            color: #2373a5;
+        }
+
+        /* Main */
+
+        main {
+            min-height: calc(100vh - 80px);
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            padding: 60px 20px;
+        }
+
+        .profile-card {
+            width: 90%;
+            max-width: 950px;
+
+            padding: 50px;
+
+            background: rgba(255, 255, 255, 0.82);
+
+            border: 2px solid rgba(255, 255, 255, 0.85);
+            border-radius: 30px;
+
+            box-shadow: 0 15px 40px rgba(53, 112, 150, 0.18);
+        }
+
+        .page-title {
+            text-align: center;
+
+            font-size: 45px;
+            color: #32749c;
+
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            text-align: center;
+
+            font-size: 21px;
+            color: #6798b5;
+
+            margin-bottom: 30px;
+        }
+
+        .line {
+            width: 80px;
+            height: 4px;
+
+            margin: 0 auto 40px;
+
+            background: linear-gradient(
+                to right,
+                #b8e4f8,
+                #5b9fc5
+            );
+
+            border-radius: 10px;
+        }
+
+        /* Profile Content */
+
+        .profile-content {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .profile-image {
+            width: 230px;
+            height: 280px;
+
+            object-fit: cover;
+
+            border-radius: 25px;
+
+            border: 6px solid white;
+
+            box-shadow: 0 8px 25px rgba(60, 120, 155, 0.2);
+        }
+
+        .profile-info {
+            flex: 1;
+        }
+
+        .info-row {
+            display: flex;
+            margin-bottom: 16px;
+
+            font-size: 20px;
+            line-height: 1.6;
+        }
+
+        .info-title {
+            min-width: 145px;
+
+            color: #397da4;
+        }
+
+        .info-text {
+            color: #526f82;
+        }
+
+        /* Interest */
+
+        .interest-box {
+            margin-top: 35px;
+            padding: 25px;
+
+            background: rgba(218, 241, 252, 0.7);
+
+            border-radius: 20px;
+
+            border-left: 5px solid #6baed0;
+        }
+
+        .interest-title {
+            font-size: 23px;
+            color: #397da4;
+
+            margin-bottom: 8px;
+        }
+
+        .interest-text {
+            font-size: 19px;
+            color: #526f82;
+            line-height: 1.7;
+        }
+
+        /* Back Button */
+
+        .back-button {
+            display: block;
+            width: fit-content;
+
+            margin: 35px auto 0;
+
+            padding: 11px 30px;
+
+            background: linear-gradient(
+                135deg,
+                #9ed7f1,
+                #579ac3
+            );
+
+            color: white;
+            text-decoration: none;
+
+            font-size: 19px;
+
+            border-radius: 30px;
+
+            transition: 0.3s;
+        }
+
+        .back-button:hover {
+            transform: translateY(-3px);
+        }
+
+        /* Responsive */
+
+        @media (max-width: 750px) {
+
+            nav {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .menu {
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .profile-card {
+                padding: 35px 25px;
+            }
+
+            .page-title {
+                font-size: 36px;
+            }
+
+            .profile-content {
+                flex-direction: column;
+                gap: 30px;
+            }
+
+            .profile-image {
+                width: 210px;
+                height: 260px;
+            }
+
+            .info-row {
+                font-size: 18px;
+            }
+
+            .info-title {
+                min-width: 120px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+
+    <nav>
+
+        <div class="logo">
+            Portfolio
+        </div>
+
+        <ul class="menu">
+            <li><a href="index.html">หน้าแรก</a></li>
+            <li><a href="preface.html">คำนำ</a></li>
+            <li><a href="profile.html">ประวัติส่วนตัว</a></li>
+        </ul>
+
+    </nav>
+
+
+    <!-- Profile -->
+
+    <main>
+
+        <section class="profile-card">
+
+            <h1 class="page-title">
+                ประวัติส่วนตัว
+            </h1>
+
+            <p class="subtitle">
+                About Me
+            </p>
+
+            <div class="line"></div>
+
+
+            <div class="profile-content">
+
+                <!-- รูปโปรไฟล์ -->
+                <img
+                    src="profile.jpg"
+                    alt="รูปโปรไฟล์ของนางสาวภลดา แสนศรี"
+                    class="profile-image"
+                >
+
+
+                <!-- ข้อมูลส่วนตัว -->
+
+                <div class="profile-info">
+
+                    <div class="info-row">
+                        <span class="info-title">ชื่อ - นามสกุล</span>
+                        <span class="info-text">นางสาวภลดา แสนศรี</span>
+                    </div>
+
+                    <div class="info-row">
+                        <span class="info-title">ชื่อเล่น</span>
+                        <span class="info-text">อิงฟ้า</span>
+                    </div>
+
+                    <div class="info-row">
+                        <span class="info-title">วันเกิด</span>
+                        <span class="info-text">1 ธันวาคม 2551</span>
+                    </div>
+
+                    <div class="info-row">
+                        <span class="info-title">กำลังศึกษาอยู่</span>
+                        <span class="info-text">ชั้นมัธยมศึกษาปีที่ 6/2</span>
+                    </div>
+
+                    <div class="info-row">
+                        <span class="info-title">เลขที่</span>
+                        <span class="info-text">22</span>
+                    </div>
+
+                    <div class="info-row">
+                        <span class="info-title">โรงเรียน</span>
+                        <span class="info-text">
+                            โรงเรียนบ้านบึง"อุตสาหกรรมนุเคราะห์"
+                        </span>
+                    </div>
+
+                    <div class="info-row">
+                        <span class="info-title">จังหวัด</span>
+                        <span class="info-text">ชลบุรี</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ความสนใจ -->
+
+            <div class="interest-box">
+
+                <h2 class="interest-title">
+                    ความสามารถและความสนใจ
+                </h2>
+
+                <p class="interest-text">
+                    ดิฉันมีความสนใจในวิชาคณิตศาสตร์ ชอบการแก้โจทย์ปัญหา
+                    และสนุกกับการค้นหาวิธีการแก้โจทย์ที่หลากหลาย
+                    นอกจากนี้ยังมีความสามารถด้าน Sudoku
+                    ซึ่งช่วยฝึกการคิดวิเคราะห์และการแก้ปัญหาอย่างเป็นระบบ
+                </p>
+
+            </div>
+
+
+            <a href="index.html" class="back-button">
+                ← กลับหน้าแรก
+            </a>
+
+        </section>
+
+    </main>
+
+</body>
+</html>
