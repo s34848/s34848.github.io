@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>คำนำ | Portfolio อิงฟ้า</title>
+
+    <!-- Google Font : Itim -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "Itim", cursive;
+            min-height: 100vh;
+            color: #31516b;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #eaf8ff 0%,
+                    #cfeeff 35%,
+                    #a9d9f5 65%,
+                    #79b9df 100%
+                );
+        }
+
+        /* Navigation */
+
+        nav {
+            width: 100%;
+            padding: 18px 7%;
+
+            background: rgba(255, 255, 255, 0.72);
+            backdrop-filter: blur(10px);
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            box-shadow: 0 3px 15px rgba(70, 130, 170, 0.15);
+        }
+
+        .logo {
+            font-size: 28px;
+            color: #3c7fa8;
+        }
+
+        .menu {
+            display: flex;
+            gap: 25px;
+            list-style: none;
+        }
+
+        .menu a {
+            text-decoration: none;
+            color: #416b85;
+            font-size: 18px;
+        }
+
+        .menu a:hover {
+            color: #2373a5;
+        }
+
+        /* Main */
+
+        main {
+            min-height: calc(100vh - 80px);
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            padding: 60px 20px;
+        }
+
+        .preface-card {
+            width: 90%;
+            max-width: 850px;
+
+            padding: 55px;
+
+            background: rgba(255, 255, 255, 0.82);
+
+            border: 2px solid rgba(255, 255, 255, 0.85);
+            border-radius: 30px;
+
+            box-shadow: 0 15px 40px rgba(53, 112, 150, 0.18);
+
+            text-align: center;
+        }
+
+        .page-title {
+            font-size: 45px;
+            color: #32749c;
+
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            font-size: 21px;
+            color: #6798b5;
+
+            margin-bottom: 30px;
+        }
+
+        .line {
+            width: 80px;
+            height: 4px;
+
+            margin: 0 auto 30px;
+
+            background: linear-gradient(
+                to right,
+                #b8e4f8,
+                #5b9fc5
+            );
+
+            border-radius: 10px;
+        }
+
+        .preface-text {
+            font-size: 21px;
+            line-height: 2;
+
+            color: #526f82;
+
+            text-align: left;
+        }
+
+        .name {
+            margin-top: 30px;
+
+            text-align: right;
+
+            font-size: 20px;
+            color: #477d9b;
+        }
+
+        .back-button {
+            display: inline-block;
+
+            margin-top: 35px;
+            padding: 11px 30px;
+
+            background: linear-gradient(
+                135deg,
+                #9ed7f1,
+                #579ac3
+            );
+
+            color: white;
+            text-decoration: none;
+
+            font-size: 19px;
+
+            border-radius: 30px;
+
+            transition: 0.3s;
+        }
+
+        .back-button:hover {
+            transform: translateY(-3px);
+        }
+
+        /* Responsive */
+
+        @media (max-width: 700px) {
+
+            nav {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .menu {
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .preface-card {
+                padding: 35px 25px;
+            }
+
+            .page-title {
+                font-size: 36px;
+            }
+
+            .preface-text {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav>
+
+        <div class="logo">
+            Portfolio
+        </div>
+
+        <ul class="menu">
+            <li><a href="index.html">หน้าแรก</a></li>
+            <li><a href="preface.html">คำนำ</a></li>
+        </ul>
+
+    </nav>
+
+
+    <!-- Preface -->
+    <main>
+
+        <section class="preface-card">
+
+            <h1 class="page-title">
+                คำนำ
+            </h1>
+
+            <p class="subtitle">
+                Portfolio ของนางสาวภลดา แสนศรี
+            </p>
+
+            <div class="line"></div>
+
+            <div class="preface-text">
+
+                <p>
+                    แฟ้มสะสมผลงาน (Portfolio) เล่มนี้จัดทำขึ้นเพื่อรวบรวม
+                    ประวัติส่วนตัว ประวัติการศึกษา ผลงาน กิจกรรม
+                    และเกียรติบัตรที่ดิฉันได้เข้าร่วมและได้รับตลอดระยะเวลาที่ผ่านมา
+                </p>
+
+                <br>
+
+                <p>
+                    นอกจากนี้ยังนำเสนอความสนใจ ความสามารถ
+                    แรงบันดาลใจ และเป้าหมายในการศึกษาต่อ
+                    เพื่อแสดงให้เห็นถึงความตั้งใจและความมุ่งมั่น
+                    ในการพัฒนาตนเองเพื่อก้าวไปสู่การเป็นครูคณิตศาสตร์ในอนาคต
+                </p>
+
+                <br>
+
+                <p>
+                    ดิฉันหวังว่าแฟ้มสะสมผลงานเล่มนี้จะช่วยสะท้อนตัวตน
+                    ความตั้งใจ และประสบการณ์ที่ได้เรียนรู้
+                    และเป็นส่วนหนึ่งในการแสดงถึงความพร้อม
+                    สำหรับการศึกษาต่อในระดับมหาวิทยาลัย
+                </p>
+
+            </div>
+
+            <p class="name">
+                นางสาวภลดา แสนศรี<br>
+                โรงเรียนบ้านบึง"อุตสาหกรรมนุเคราะห์"
+            </p>
+
+            <a href="index.html" class="back-button">
+                ← กลับหน้าแรก
+            </a>
+
+        </section>
+
+    </main>
+
+</body>
+</html>
