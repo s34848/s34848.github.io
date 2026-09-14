@@ -1,209 +1,235 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เป้าหมายในอนาคต | อิงฟ้า</title>
 
-  <title>เป้าหมายในอนาคต | Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
 
-  <style>
-    * {
-      box-sizing: border-box;
-    }
+        body {
+            margin: 0;
+            font-family: 'Itim', cursive;
+            background: linear-gradient(135deg, #eaf8ff, #cfeeff, #a9d9f5, #79b9df);
+            color: #31566d;
+            min-height: 100vh;
+        }
 
-    body {
-      margin: 0;
-      font-family: 'Itim', cursive;
-      background: linear-gradient(
-        135deg,
-        #eaf8ff,
-        #cfeeff,
-        #a9d9f5,
-        #79b9df
-      );
-      color: #31566d;
-      min-height: 100vh;
-    }
+        nav {
+            background: rgba(255, 255, 255, 0.75);
+            padding: 18px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            box-shadow: 0 3px 15px rgba(49, 86, 109, 0.15);
+        }
 
-    nav {
-      background: rgba(255, 255, 255, 0.85);
-      padding: 18px 30px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      box-shadow: 0 4px 15px rgba(70, 130, 170, 0.15);
-      position: sticky;
-      top: 0;
-      z-index: 10;
-    }
+        .logo {
+            font-size: 28px;
+            color: #2f7198;
+        }
 
-    .logo {
-      font-size: 26px;
-      color: #4384ad;
-    }
+        .menu {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 8px;
+        }
 
-    nav a {
-      text-decoration: none;
-      color: #4c7895;
-      margin-left: 20px;
-      font-size: 18px;
-    }
+        .menu a {
+            text-decoration: none;
+            color: #31566d;
+            padding: 8px 13px;
+            border-radius: 20px;
+            transition: 0.3s;
+            font-size: 16px;
+        }
 
-    nav a:hover {
-      color: #23658d;
-    }
+        .menu a:hover {
+            background: #d7effc;
+            color: #23658b;
+        }
 
-    .container {
-      max-width: 950px;
-      margin: 60px auto;
-      padding: 20px;
-    }
+        .container {
+            max-width: 1000px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
 
-    .title {
-      text-align: center;
-      font-size: 42px;
-      color: #367da8;
-      margin-bottom: 10px;
-    }
+        .title {
+            text-align: center;
+            margin-bottom: 35px;
+        }
 
-    .subtitle {
-      text-align: center;
-      font-size: 20px;
-      color: #638aa3;
-      margin-bottom: 35px;
-    }
+        .title h1 {
+            font-size: 48px;
+            color: #2f7198;
+            margin: 0;
+        }
 
-    .card {
-      background: rgba(255, 255, 255, 0.9);
-      padding: 40px;
-      border-radius: 25px;
-      box-shadow: 0 8px 25px rgba(65, 130, 170, 0.18);
-      line-height: 1.9;
-      font-size: 20px;
-    }
+        .title p {
+            font-size: 21px;
+            margin-top: 10px;
+        }
 
-    .card p {
-      margin-bottom: 22px;
-      text-indent: 2em;
-    }
+        .sparkle {
+            text-align: center;
+            font-size: 25px;
+            color: #4c91b8;
+            margin-bottom: 20px;
+        }
 
-    .goal-box {
-      background: #e6f5ff;
-      border-left: 6px solid #6aaed3;
-      padding: 20px 25px;
-      border-radius: 15px;
-      margin: 25px 0;
-    }
+        .card {
+            background: rgba(255, 255, 255, 0.78);
+            border-radius: 25px;
+            padding: 35px;
+            margin-bottom: 25px;
+            box-shadow: 0 8px 25px rgba(49, 86, 109, 0.15);
+            line-height: 1.9;
+            font-size: 19px;
+        }
 
-    .goal-box h2 {
-      color: #367da8;
-      margin-top: 0;
-    }
+        .card h2 {
+            color: #2f7198;
+            font-size: 28px;
+            margin-top: 0;
+        }
 
-    .sparkle {
-      text-align: center;
-      color: #4d99c2;
-      font-size: 28px;
-      margin-bottom: 15px;
-    }
+        .goal {
+            background: rgba(215, 239, 252, 0.85);
+            border-radius: 20px;
+            padding: 25px;
+            margin-top: 20px;
+        }
 
-    footer {
-      text-align: center;
-      padding: 25px;
-      color: #52758b;
-      font-size: 16px;
-    }
+        .goal h3 {
+            color: #2f7198;
+            font-size: 25px;
+            margin-top: 0;
+        }
 
-    @media (max-width: 700px) {
-      nav {
-        flex-direction: column;
-        gap: 10px;
-      }
+        .goal p {
+            margin-bottom: 0;
+        }
 
-      nav a {
-        margin-left: 8px;
-        margin-right: 8px;
-      }
+        footer {
+            text-align: center;
+            padding: 25px;
+            margin-top: 50px;
+            background: rgba(255, 255, 255, 0.55);
+            font-size: 16px;
+        }
 
-      .title {
-        font-size: 34px;
-      }
+        @media (max-width: 700px) {
+            nav {
+                justify-content: center;
+            }
 
-      .card {
-        padding: 25px;
-        font-size: 18px;
-      }
-    }
-  </style>
+            .logo {
+                width: 100%;
+                text-align: center;
+            }
+
+            .menu a {
+                font-size: 14px;
+                padding: 7px 9px;
+            }
+
+            .title h1 {
+                font-size: 38px;
+            }
+
+            .card {
+                padding: 25px;
+                font-size: 17px;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-  <nav>
+<nav>
     <div class="logo">Portfolio | อิงฟ้า</div>
 
-    <div>
-      <a href="index.html">หน้าแรก</a>
-      <a href="preface.html">คำนำ</a>
-      <a href="profile.html">ประวัติส่วนตัว</a>
+    <div class="menu">
+        <a href="index.html">หน้าหลัก</a>
+        <a href="preface.html">คำนำ</a>
+        <a href="profile.html">ประวัติส่วนตัว</a>
+        <a href="education.html">ประวัติการศึกษา</a>
+        <a href="achievements.html">ผลงานและการแข่งขัน</a>
+        <a href="activities.html">กิจกรรม</a>
+        <a href="inspiration.html">แรงบันดาลใจ</a>
+        <a href="future.html">เป้าหมายในอนาคต</a>
     </div>
-  </nav>
+</nav>
 
-  <div class="container">
+<div class="container">
 
-    <div class="sparkle">✦ ✧ ✦</div>
-
-    <h1 class="title">เป้าหมายในอนาคต</h1>
-
-    <p class="subtitle">
-      เส้นทางสู่ความฝันในการเป็นครูคณิตศาสตร์
-    </p>
+    <div class="title">
+        <div class="sparkle">✦ ✧ ✦</div>
+        <h1>เป้าหมายในอนาคต</h1>
+        <p>เส้นทางสู่ความฝันในการเป็นครูคณิตศาสตร์</p>
+    </div>
 
     <div class="card">
 
-      <p>
-        เป้าหมายในอนาคตของดิฉันคือการเข้าศึกษาต่อใน
-        จุฬาลงกรณ์มหาวิทยาลัย คณะครุศาสตร์
-        สาขาวิชามัธยมศึกษา(วิทยาศาสตร์) วิชาเอกคณิตศาสตร์
-        เพื่อพัฒนาความรู้และทักษะด้านคณิตศาสตร์และการสอน
-        และนำความรู้ที่ได้รับไปใช้ในการประกอบอาชีพครู
-      </p>
+        <h2>เป้าหมายด้านการศึกษา</h2>
 
-      <div class="goal-box">
-        <h2>🎓 เป้าหมายด้านการศึกษา</h2>
-        <p>
-          ตั้งใจเรียนและพัฒนาความสามารถด้านคณิตศาสตร์อย่างต่อเนื่อง
-          เพื่อเตรียมความพร้อมสำหรับการศึกษาต่อในระดับมหาวิทยาลัย
-        </p>
-      </div>
+        <div class="goal">
+            <h3>🎓 มหาวิทยาลัยที่ตั้งใจศึกษาต่อ</h3>
+            <p>
+                จุฬาลงกรณ์มหาวิทยาลัย
+                คณะครุศาสตร์
+                สาขาวิชามัธยมศึกษา(วิทยาศาสตร์)
+                วิชาเอกคณิตศาสตร์
+            </p>
+        </div>
 
-      <div class="goal-box">
-        <h2>📚 เป้าหมายด้านอาชีพ</h2>
-        <p>
-          อยากเป็นครูคณิตศาสตร์ที่สามารถถ่ายทอดความรู้ให้นักเรียนเข้าใจง่าย
-          คอยให้คำแนะนำและสร้างแรงบันดาลใจให้นักเรียนรักและสนุกกับการเรียนคณิตศาสตร์
-        </p>
-      </div>
+        <div class="goal">
+            <h3>📚 เป้าหมายในการเรียน</h3>
+            <p>
+                ตั้งใจพัฒนาความรู้ด้านคณิตศาสตร์และทักษะด้านการสอน
+                รวมถึงเรียนรู้วิธีการถ่ายทอดความรู้ให้นักเรียนเข้าใจง่าย
+                และสามารถนำความรู้ไปใช้ได้จริง
+            </p>
+        </div>
 
-      <div class="goal-box">
-        <h2>🌟 ความฝันในอนาคต</h2>
-        <p>
-          ดิฉันหวังว่าจะได้เป็นครูที่มีความรู้ ความเข้าใจ และพร้อมสนับสนุนนักเรียน
-          ให้สามารถพัฒนาตนเองและเติบโตไปตามเป้าหมายของแต่ละคน
-        </p>
-      </div>
+        <div class="goal">
+            <h3>👩‍🏫 เป้าหมายด้านอาชีพ</h3>
+            <p>
+                ในอนาคตดิฉันตั้งใจเป็นครูคณิตศาสตร์
+                ที่สามารถถ่ายทอดความรู้ ให้คำแนะนำ
+                และสร้างแรงบันดาลใจให้นักเรียนเกิดความสนใจในการเรียนคณิตศาสตร์
+            </p>
+        </div>
+
+        <div class="goal">
+            <h3>🌟 ความฝันของฉัน</h3>
+            <p>
+                ดิฉันอยากเติบโตเป็นครูที่นักเรียนสามารถเข้ามาปรึกษาได้
+                เป็นครูที่คอยสนับสนุนและเชื่อมั่นในตัวนักเรียน
+                พร้อมทั้งทำให้ห้องเรียนคณิตศาสตร์เป็นพื้นที่ที่นักเรียนกล้าที่จะคิด
+                กล้าที่จะถาม และสนุกกับการเรียนรู้
+            </p>
+        </div>
 
     </div>
 
-  </div>
+</div>
 
-  <footer>
+<footer>
     © 2026 Portfolio | นางสาวภลดา แสนศรี
-  </footer>
+</footer>
 
 </body>
 </html>
