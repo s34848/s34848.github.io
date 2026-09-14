@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>กิจกรรม | Portfolio อิงฟ้า</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "Itim", cursive;
+            min-height: 100vh;
+            color: #31516b;
+
+            background: linear-gradient(
+                135deg,
+                #eaf8ff 0%,
+                #cfeeff 35%,
+                #a9d9f5 65%,
+                #79b9df 100%
+            );
+        }
+
+        /* Navigation */
+
+        nav {
+            width: 100%;
+            padding: 18px 7%;
+
+            background: rgba(255, 255, 255, 0.72);
+            backdrop-filter: blur(10px);
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            box-shadow: 0 3px 15px rgba(70, 130, 170, 0.15);
+        }
+
+        .logo {
+            font-size: 28px;
+            color: #3c7fa8;
+        }
+
+        .menu {
+            display: flex;
+            gap: 25px;
+            list-style: none;
+        }
+
+        .menu a {
+            text-decoration: none;
+            color: #416b85;
+            font-size: 18px;
+        }
+
+        .menu a:hover {
+            color: #2373a5;
+        }
+
+        /* Main */
+
+        main {
+            padding: 60px 20px;
+        }
+
+        .activity-card {
+            width: 92%;
+            max-width: 1100px;
+
+            margin: auto;
+            padding: 50px;
+
+            background: rgba(255, 255, 255, 0.82);
+
+            border: 2px solid rgba(255, 255, 255, 0.85);
+            border-radius: 30px;
+
+            box-shadow: 0 15px 40px rgba(53, 112, 150, 0.18);
+        }
+
+        .page-title {
+            text-align: center;
+
+            font-size: 45px;
+            color: #32749c;
+
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            text-align: center;
+
+            font-size: 21px;
+            color: #6798b5;
+
+            margin-bottom: 30px;
+        }
+
+        .line {
+            width: 80px;
+            height: 4px;
+
+            margin: 0 auto 45px;
+
+            background: linear-gradient(
+                to right,
+                #b8e4f8,
+                #5b9fc5
+            );
+
+            border-radius: 10px;
+        }
+
+        /* Activity */
+
+        .activity-item {
+            margin-bottom: 45px;
+            padding: 30px;
+
+            background: rgba(225, 244, 253, 0.72);
+
+            border-radius: 25px;
+
+            border-left: 6px solid #69a9cb;
+
+            box-shadow: 0 6px 18px rgba(70, 130, 165, 0.08);
+        }
+
+        .activity-content {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .activity-image {
+            width: 330px;
+            height: 230px;
+
+            object-fit: cover;
+
+            border-radius: 18px;
+
+            border: 5px solid white;
+
+            box-shadow: 0 7px 20px rgba(60, 120, 155, 0.18);
+        }
+
+        .activity-text {
+            flex: 1;
+        }
+
+        .activity-title {
+            font-size: 25px;
+            color: #397da4;
+
+            margin-bottom: 12px;
+        }
+
+        .activity-description {
+            font-size: 19px;
+            color: #526f82;
+
+            line-height: 1.8;
+        }
+
+        /* Certificate */
+
+        .certificate-title {
+            margin-top: 25px;
+
+            font-size: 21px;
+            color: #5790ae;
+        }
+
+        .certificate-image {
+            width: 100%;
+            max-width: 500px;
+
+            margin-top: 12px;
+
+            border-radius: 18px;
+            border: 5px solid white;
+
+            box-shadow: 0 7px 20px rgba(60, 120, 155, 0.18);
+        }
+
+        /* Sparkles */
+
+        .sparkle {
+            text-align: center;
+
+            font-size: 25px;
+
+            color: #76afd0;
+
+            margin: 15px 0;
+        }
+
+        /* Back Button */
+
+        .back-button {
+            display: block;
+            width: fit-content;
+
+            margin: 20px auto 0;
+
+            padding: 11px 30px;
+
+            background: linear-gradient(
+                135deg,
+                #9ed7f1,
+                #579ac3
+            );
+
+            color: white;
+            text-decoration: none;
+
+            font-size: 19px;
+
+            border-radius: 30px;
+
+            transition: 0.3s;
+        }
+
+        .back-button:hover {
+            transform: translateY(-3px);
+        }
+
+        /* Responsive */
+
+        @media (max-width: 800px) {
+
+            nav {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .menu {
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .activity-card {
+                padding: 35px 22px;
+            }
+
+            .page-title {
+                font-size: 36px;
+            }
+
+            .activity-content {
+                flex-direction: column;
+            }
+
+            .activity-image {
+                width: 100%;
+                height: auto;
+            }
+
+            .activity-description {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+
+    <nav>
+
+        <div class="logo">
+            Portfolio
+        </div>
+
+        <ul class="menu">
+            <li><a href="index.html">หน้าแรก</a></li>
+            <li><a href="preface.html">คำนำ</a></li>
+            <li><a href="profile.html">ประวัติส่วนตัว</a></li>
+            <li><a href="education.html">ประวัติการศึกษา</a></li>
+            <li><a href="achievements.html">ผลงานและการแข่งขัน</a></li>
+            <li><a href="activities.html">กิจกรรม</a></li>
+        </ul>
+
+    </nav>
+
+
+    <!-- Activities -->
+
+    <main>
+
+        <section class="activity-card">
+
+            <h1 class="page-title">
+                กิจกรรม
+            </h1>
+
+            <p class="subtitle">
+                Activities
+            </p>
+
+            <div class="line"></div>
+
+
+            <!-- กิจกรรมที่ 1 -->
+
+            <div class="activity-item">
+
+                <div class="activity-content">
+
+                    <img
+                        src="activity1.jpg"
+                        alt="กิจกรรมฝึกประสบการณ์"
+                        class="activity-image"
+                    >
+
+                    <div class="activity-text">
+
+                        <h2 class="activity-title">
+                            ฝึกประสบการณ์ ณ เทศบาลเมืองลำปลายมาศ
+                        </h2>
+
+                        <p class="activity-description">
+                            เข้าร่วมฝึกประสบการณ์ ณ เทศบาลเมืองลำปลายมาศ
+                            ระหว่างวันที่ 17–30 เมษายน 2569
+                            ได้เรียนรู้การทำงานในหน่วยงานและการทำงานร่วมกับผู้อื่น
+                            รวมถึงมีส่วนช่วยในการรวบรวมและจัดทำข้อมูลสถิติสำหรับ อสม.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <p class="certificate-title">
+                    เกียรติบัตร
+                </p>
+
+                <img
+                    src="certificate4.jpg"
+                    alt="เกียรติบัตรกิจกรรม"
+                    class="certificate-image"
+                >
+
+            </div>
+
+
+            <div class="sparkle">
+                ✦　✧　✦
+            </div>
+
+
+            <!-- กิจกรรมที่ 2 -->
+
+            <div class="activity-item">
+
+                <div class="activity-content">
+
+                    <img
+                        src="activity2.jpg"
+                        alt="กิจกรรมโรงเรียนผู้สูงอายุ"
+                        class="activity-image"
+                    >
+
+                    <div class="activity-text">
+
+                        <h2 class="activity-title">
+                            กิจกรรมโรงเรียนผู้สูงอายุ
+                        </h2>
+
+                        <p class="activity-description">
+                            มีส่วนร่วมในกิจกรรมของโรงเรียนผู้สูงอายุ
+                            และศูนย์ดูแลผู้สูงอายุ
+                            ได้เรียนรู้การทำงานร่วมกับชุมชน
+                            และการดูแลช่วยเหลือผู้สูงอายุ
+                            พร้อมทั้งฝึกทักษะการสื่อสารและการทำงานร่วมกับผู้อื่น
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <p class="certificate-title">
+                    เกียรติบัตร
+                </p>
+
+                <img
+                    src="certificate5.jpg"
+                    alt="เกียรติบัตรกิจกรรม"
+                    class="certificate-image"
+                >
+
+            </div>
+
+
+            <div class="sparkle">
+                ✦　✧　✦
+            </div>
+
+
+            <!-- กิจกรรมที่ 3 -->
+
+            <div class="activity-item">
+
+                <div class="activity-content">
+
+                    <img
+                        src="activity3.jpg"
+                        alt="กิจกรรมอนุรักษ์สิ่งแวดล้อม"
+                        class="activity-image"
+                    >
+
+                    <div class="activity-text">
+
+                        <h2 class="activity-title">
+                            กิจกรรมอนุรักษ์และพัฒนาชุมชน
+                        </h2>
+
+                        <p class="activity-description">
+                            เข้าร่วมกิจกรรมปลูกป่าเพื่ออนุรักษ์ทรัพยากรธรรมชาติ
+                            และร่วมสำรวจหลักเขตพื้นที่และข้อมูลพันธุกรรมพืช
+                            ในโครงการ อพ.สธ.
+                            ร่วมกับชุมชนและผู้เชี่ยวชาญ
+                            ได้เรียนรู้การทำงานเป็นทีมและการมีส่วนร่วมในการอนุรักษ์สิ่งแวดล้อม
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <p class="certificate-title">
+                    เกียรติบัตร
+                </p>
+
+                <img
+                    src="certificate6.jpg"
+                    alt="เกียรติบัตรกิจกรรม"
+                    class="certificate-image"
+                >
+
+            </div>
+
+
+            <div class="sparkle">
+                ✦　✧　✦
+            </div>
+
+
+            <a href="index.html" class="back-button">
+                ← กลับหน้าแรก
+            </a>
+
+        </section>
+
+    </main>
+
+</body>
+</html>
