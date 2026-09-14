@@ -1,393 +1,306 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>ประวัติส่วนตัว | Portfolio อิงฟ้า</title>
-
-    <!-- Google Font : Itim -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
-
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            font-family: "Itim", cursive;
-            min-height: 100vh;
-            color: #31516b;
-
-            background: linear-gradient(
-                135deg,
-                #eaf8ff 0%,
-                #cfeeff 35%,
-                #a9d9f5 65%,
-                #79b9df 100%
-            );
-        }
-
-        /* Navigation */
-
-        nav {
-            width: 100%;
-            padding: 18px 7%;
-
-            background: rgba(255, 255, 255, 0.72);
-            backdrop-filter: blur(10px);
-
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-
-            box-shadow: 0 3px 15px rgba(70, 130, 170, 0.15);
-        }
-
-        .logo {
-            font-size: 28px;
-            color: #3c7fa8;
-        }
-
-        .menu {
-            display: flex;
-            gap: 25px;
-            list-style: none;
-        }
-
-        .menu a {
-            text-decoration: none;
-            color: #416b85;
-            font-size: 18px;
-        }
-
-        .menu a:hover {
-            color: #2373a5;
-        }
-
-        /* Main */
-
-        main {
-            min-height: calc(100vh - 80px);
-
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            padding: 60px 20px;
-        }
-
-        .profile-card {
-            width: 90%;
-            max-width: 950px;
-
-            padding: 50px;
-
-            background: rgba(255, 255, 255, 0.82);
-
-            border: 2px solid rgba(255, 255, 255, 0.85);
-            border-radius: 30px;
-
-            box-shadow: 0 15px 40px rgba(53, 112, 150, 0.18);
-        }
-
-        .page-title {
-            text-align: center;
-
-            font-size: 45px;
-            color: #32749c;
-
-            margin-bottom: 10px;
-        }
-
-        .subtitle {
-            text-align: center;
-
-            font-size: 21px;
-            color: #6798b5;
-
-            margin-bottom: 30px;
-        }
-
-        .line {
-            width: 80px;
-            height: 4px;
-
-            margin: 0 auto 40px;
-
-            background: linear-gradient(
-                to right,
-                #b8e4f8,
-                #5b9fc5
-            );
-
-            border-radius: 10px;
-        }
-
-        /* Profile Content */
-
-        .profile-content {
-            display: flex;
-            align-items: center;
-            gap: 50px;
-        }
-
-        .profile-image {
-            width: 230px;
-            height: 280px;
-
-            object-fit: cover;
-
-            border-radius: 25px;
-
-            border: 6px solid white;
-
-            box-shadow: 0 8px 25px rgba(60, 120, 155, 0.2);
-        }
-
-        .profile-info {
-            flex: 1;
-        }
-
-        .info-row {
-            display: flex;
-            margin-bottom: 16px;
-
-            font-size: 20px;
-            line-height: 1.6;
-        }
-
-        .info-title {
-            min-width: 145px;
-
-            color: #397da4;
-        }
-
-        .info-text {
-            color: #526f82;
-        }
-
-        /* Interest */
-
-        .interest-box {
-            margin-top: 35px;
-            padding: 25px;
-
-            background: rgba(218, 241, 252, 0.7);
-
-            border-radius: 20px;
-
-            border-left: 5px solid #6baed0;
-        }
-
-        .interest-title {
-            font-size: 23px;
-            color: #397da4;
-
-            margin-bottom: 8px;
-        }
-
-        .interest-text {
-            font-size: 19px;
-            color: #526f82;
-            line-height: 1.7;
-        }
-
-        /* Back Button */
-
-        .back-button {
-            display: block;
-            width: fit-content;
-
-            margin: 35px auto 0;
-
-            padding: 11px 30px;
-
-            background: linear-gradient(
-                135deg,
-                #9ed7f1,
-                #579ac3
-            );
-
-            color: white;
-            text-decoration: none;
-
-            font-size: 19px;
-
-            border-radius: 30px;
-
-            transition: 0.3s;
-        }
-
-        .back-button:hover {
-            transform: translateY(-3px);
-        }
-
-        /* Responsive */
-
-        @media (max-width: 750px) {
-
-            nav {
-                flex-direction: column;
-                gap: 10px;
-            }
-
-            .menu {
-                gap: 15px;
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-
-            .profile-card {
-                padding: 35px 25px;
-            }
-
-            .page-title {
-                font-size: 36px;
-            }
-
-            .profile-content {
-                flex-direction: column;
-                gap: 30px;
-            }
-
-            .profile-image {
-                width: 210px;
-                height: 260px;
-            }
-
-            .info-row {
-                font-size: 18px;
-            }
-
-            .info-title {
-                min-width: 120px;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>ประวัติส่วนตัว | Portfolio</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Itim', cursive;
+      background: linear-gradient(
+        135deg,
+        #eaf8ff,
+        #cfeeff,
+        #a9d9f5,
+        #79b9df
+      );
+      color: #31566d;
+      min-height: 100vh;
+    }
+
+    nav {
+      background: rgba(255, 255, 255, 0.85);
+      padding: 18px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 15px rgba(70, 130, 170, 0.15);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .logo {
+      font-size: 26px;
+      color: #4384ad;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #4c7895;
+      margin-left: 20px;
+      font-size: 18px;
+    }
+
+    nav a:hover {
+      color: #23658d;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 60px auto;
+      padding: 20px;
+    }
+
+    .sparkle {
+      text-align: center;
+      color: #4d99c2;
+      font-size: 28px;
+      margin-bottom: 15px;
+    }
+
+    .title {
+      text-align: center;
+      font-size: 42px;
+      color: #367da8;
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      text-align: center;
+      font-size: 20px;
+      color: #638aa3;
+      margin-bottom: 35px;
+    }
+
+    .profile-card {
+      background: rgba(255, 255, 255, 0.9);
+      padding: 40px;
+      border-radius: 28px;
+      box-shadow: 0 8px 25px rgba(65, 130, 170, 0.18);
+      display: flex;
+      gap: 45px;
+      align-items: center;
+    }
+
+    .profile-image {
+      width: 280px;
+      height: 280px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 8px solid #dff3ff;
+      box-shadow: 0 5px 18px rgba(65, 130, 170, 0.2);
+      flex-shrink: 0;
+    }
+
+    .info {
+      flex: 1;
+    }
+
+    .info h2 {
+      color: #367da8;
+      font-size: 30px;
+      margin-top: 0;
+      margin-bottom: 20px;
+    }
+
+    .info p {
+      font-size: 20px;
+      line-height: 1.8;
+      margin: 8px 0;
+    }
+
+    .label {
+      color: #4384ad;
+    }
+
+    .interest {
+      margin-top: 25px;
+      background: #e6f5ff;
+      border-left: 6px solid #6aaed3;
+      padding: 20px 25px;
+      border-radius: 15px;
+    }
+
+    .interest h3 {
+      margin-top: 0;
+      color: #367da8;
+      font-size: 24px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      color: #52758b;
+      font-size: 16px;
+    }
+
+    @media (max-width: 900px) {
+      nav {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      nav div:last-child {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      nav a {
+        margin: 5px 8px;
+      }
+
+      .profile-card {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .profile-image {
+        width: 240px;
+        height: 240px;
+      }
+
+      .interest {
+        text-align: left;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .title {
+        font-size: 34px;
+      }
+
+      .profile-card {
+        padding: 25px;
+      }
+
+      .profile-image {
+        width: 200px;
+        height: 200px;
+      }
+
+      .info h2 {
+        font-size: 26px;
+      }
+
+      .info p {
+        font-size: 18px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-    <!-- Navigation -->
+  <nav>
 
-    <nav>
+    <div class="logo">
+      Portfolio | อิงฟ้า
+    </div>
 
-        <div class="logo">
-            Portfolio
+    <div>
+      <a href="index.html">หน้าแรก</a>
+      <a href="preface.html">คำนำ</a>
+      <a href="profile.html">ประวัติส่วนตัว</a>
+      <a href="education.html">ประวัติการศึกษา</a>
+      <a href="achievements.html">ผลงานและการแข่งขัน</a>
+      <a href="activities.html">กิจกรรม</a>
+      <a href="inspiration.html">แรงบันดาลใจ</a>
+      <a href="future.html">เป้าหมายในอนาคต</a>
+    </div>
+
+  </nav>
+
+
+  <div class="container">
+
+    <div class="sparkle">✦ ✧ ✦</div>
+
+    <h1 class="title">ประวัติส่วนตัว</h1>
+
+    <p class="subtitle">
+      ข้อมูลส่วนตัวและความสนใจ
+    </p>
+
+
+    <div class="profile-card">
+
+      <img
+        src="profile.jpg"
+        alt="รูปโปรไฟล์ของอิงฟ้า"
+        class="profile-image"
+      >
+
+      <div class="info">
+
+        <h2>นางสาวภลดา แสนศรี</h2>
+
+        <p>
+          <span class="label">ชื่อเล่น :</span>
+          อิงฟ้า
+        </p>
+
+        <p>
+          <span class="label">วันเกิด :</span>
+          1 ธันวาคม 2551
+        </p>
+
+        <p>
+          <span class="label">กำลังศึกษา :</span>
+          ชั้นมัธยมศึกษาปีที่ 6/2
+        </p>
+
+        <p>
+          <span class="label">เลขที่ :</span>
+          22
+        </p>
+
+        <p>
+          <span class="label">โรงเรียน :</span>
+          โรงเรียนบ้านบึง"อุตสาหกรรมนุเคราะห์"
+        </p>
+
+        <p>
+          <span class="label">จังหวัด :</span>
+          ชลบุรี
+        </p>
+
+
+        <div class="interest">
+
+          <h3>ความสามารถและความสนใจ</h3>
+
+          <p>
+            ดิฉันมีความสนใจในวิชาคณิตศาสตร์
+            ชอบการแก้โจทย์ปัญหาและการคิดวิเคราะห์
+            รวมถึงมีความสนใจในการเล่น Sudoku
+            ซึ่งช่วยฝึกการคิดอย่างเป็นระบบและการแก้ปัญหา
+          </p>
+
         </div>
 
-        <ul class="menu">
-            <li><a href="index.html">หน้าแรก</a></li>
-            <li><a href="preface.html">คำนำ</a></li>
-            <li><a href="profile.html">ประวัติส่วนตัว</a></li>
-        </ul>
+      </div>
 
-    </nav>
+    </div>
+
+  </div>
 
 
-    <!-- Profile -->
-
-    <main>
-
-        <section class="profile-card">
-
-            <h1 class="page-title">
-                ประวัติส่วนตัว
-            </h1>
-
-            <p class="subtitle">
-                About Me
-            </p>
-
-            <div class="line"></div>
-
-
-            <div class="profile-content">
-
-                <!-- รูปโปรไฟล์ -->
-                <img
-                    src="profile.jpg"
-                    alt="รูปโปรไฟล์ของนางสาวภลดา แสนศรี"
-                    class="profile-image"
-                >
-
-
-                <!-- ข้อมูลส่วนตัว -->
-
-                <div class="profile-info">
-
-                    <div class="info-row">
-                        <span class="info-title">ชื่อ - นามสกุล</span>
-                        <span class="info-text">นางสาวภลดา แสนศรี</span>
-                    </div>
-
-                    <div class="info-row">
-                        <span class="info-title">ชื่อเล่น</span>
-                        <span class="info-text">อิงฟ้า</span>
-                    </div>
-
-                    <div class="info-row">
-                        <span class="info-title">วันเกิด</span>
-                        <span class="info-text">1 ธันวาคม 2551</span>
-                    </div>
-
-                    <div class="info-row">
-                        <span class="info-title">กำลังศึกษาอยู่</span>
-                        <span class="info-text">ชั้นมัธยมศึกษาปีที่ 6/2</span>
-                    </div>
-
-                    <div class="info-row">
-                        <span class="info-title">เลขที่</span>
-                        <span class="info-text">22</span>
-                    </div>
-
-                    <div class="info-row">
-                        <span class="info-title">โรงเรียน</span>
-                        <span class="info-text">
-                            โรงเรียนบ้านบึง"อุตสาหกรรมนุเคราะห์"
-                        </span>
-                    </div>
-
-                    <div class="info-row">
-                        <span class="info-title">จังหวัด</span>
-                        <span class="info-text">ชลบุรี</span>
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <!-- ความสนใจ -->
-
-            <div class="interest-box">
-
-                <h2 class="interest-title">
-                    ความสามารถและความสนใจ
-                </h2>
-
-                <p class="interest-text">
-                    ดิฉันมีความสนใจในวิชาคณิตศาสตร์ ชอบการแก้โจทย์ปัญหา
-                    และสนุกกับการค้นหาวิธีการแก้โจทย์ที่หลากหลาย
-                    นอกจากนี้ยังมีความสามารถด้าน Sudoku
-                    ซึ่งช่วยฝึกการคิดวิเคราะห์และการแก้ปัญหาอย่างเป็นระบบ
-                </p>
-
-            </div>
-
-
-            <a href="index.html" class="back-button">
-                ← กลับหน้าแรก
-            </a>
-
-        </section>
-
-    </main>
+  <footer>
+    © 2026 Portfolio | นางสาวภลดา แสนศรี
+  </footer>
 
 </body>
 </html>
