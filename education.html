@@ -1,369 +1,283 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>ประวัติการศึกษา | Portfolio อิงฟ้า</title>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
-
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            font-family: "Itim", cursive;
-            min-height: 100vh;
-            color: #31516b;
-
-            background: linear-gradient(
-                135deg,
-                #eaf8ff 0%,
-                #cfeeff 35%,
-                #a9d9f5 65%,
-                #79b9df 100%
-            );
-        }
-
-        /* Navigation */
-
-        nav {
-            width: 100%;
-            padding: 18px 7%;
-
-            background: rgba(255, 255, 255, 0.72);
-            backdrop-filter: blur(10px);
-
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-
-            box-shadow: 0 3px 15px rgba(70, 130, 170, 0.15);
-        }
-
-        .logo {
-            font-size: 28px;
-            color: #3c7fa8;
-        }
-
-        .menu {
-            display: flex;
-            gap: 25px;
-            list-style: none;
-        }
-
-        .menu a {
-            text-decoration: none;
-            color: #416b85;
-            font-size: 18px;
-        }
-
-        .menu a:hover {
-            color: #2373a5;
-        }
-
-        /* Main */
-
-        main {
-            min-height: calc(100vh - 80px);
-
-            padding: 60px 20px;
-        }
-
-        .education-card {
-            width: 90%;
-            max-width: 950px;
-
-            margin: auto;
-            padding: 50px;
-
-            background: rgba(255, 255, 255, 0.82);
-
-            border: 2px solid rgba(255, 255, 255, 0.85);
-            border-radius: 30px;
-
-            box-shadow: 0 15px 40px rgba(53, 112, 150, 0.18);
-        }
-
-        .page-title {
-            text-align: center;
-
-            font-size: 45px;
-            color: #32749c;
-
-            margin-bottom: 10px;
-        }
-
-        .subtitle {
-            text-align: center;
-
-            font-size: 21px;
-            color: #6798b5;
-
-            margin-bottom: 30px;
-        }
-
-        .line {
-            width: 80px;
-            height: 4px;
-
-            margin: 0 auto 45px;
-
-            background: linear-gradient(
-                to right,
-                #b8e4f8,
-                #5b9fc5
-            );
-
-            border-radius: 10px;
-        }
-
-        /* Education Timeline */
-
-        .education-list {
-            display: flex;
-            flex-direction: column;
-            gap: 25px;
-        }
-
-        .education-item {
-            position: relative;
-
-            padding: 28px 30px;
-
-            background: rgba(224, 244, 253, 0.72);
-
-            border-radius: 22px;
-
-            border-left: 6px solid #69a9cb;
-
-            box-shadow: 0 5px 15px rgba(70, 130, 165, 0.08);
-        }
-
-        .level {
-            font-size: 27px;
-            color: #397da4;
-
-            margin-bottom: 8px;
-        }
-
-        .school {
-            font-size: 21px;
-            color: #4d7185;
-
-            line-height: 1.6;
-        }
-
-        .detail {
-            margin-top: 10px;
-
-            font-size: 19px;
-            color: #668596;
-
-            line-height: 1.7;
-        }
-
-        /* GPAX */
-
-        .gpax-box {
-            margin-top: 35px;
-            padding: 25px;
-
-            text-align: center;
-
-            background: linear-gradient(
-                135deg,
-                rgba(197, 232, 249, 0.8),
-                rgba(224, 244, 253, 0.8)
-            );
-
-            border-radius: 22px;
-        }
-
-        .gpax-title {
-            font-size: 23px;
-            color: #397da4;
-        }
-
-        .gpax-number {
-            margin-top: 5px;
-
-            font-size: 38px;
-            color: #32749c;
-        }
-
-        /* Back Button */
-
-        .back-button {
-            display: block;
-            width: fit-content;
-
-            margin: 35px auto 0;
-
-            padding: 11px 30px;
-
-            background: linear-gradient(
-                135deg,
-                #9ed7f1,
-                #579ac3
-            );
-
-            color: white;
-            text-decoration: none;
-
-            font-size: 19px;
-
-            border-radius: 30px;
-
-            transition: 0.3s;
-        }
-
-        .back-button:hover {
-            transform: translateY(-3px);
-        }
-
-        /* Responsive */
-
-        @media (max-width: 700px) {
-
-            nav {
-                flex-direction: column;
-                gap: 10px;
-            }
-
-            .menu {
-                gap: 15px;
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-
-            .education-card {
-                padding: 35px 25px;
-            }
-
-            .page-title {
-                font-size: 36px;
-            }
-
-            .level {
-                font-size: 24px;
-            }
-
-            .school {
-                font-size: 19px;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>ประวัติการศึกษา | Portfolio</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Itim', cursive;
+      background: linear-gradient(
+        135deg,
+        #eaf8ff,
+        #cfeeff,
+        #a9d9f5,
+        #79b9df
+      );
+      color: #31566d;
+      min-height: 100vh;
+    }
+
+    nav {
+      background: rgba(255, 255, 255, 0.85);
+      padding: 18px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 15px rgba(70, 130, 170, 0.15);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .logo {
+      font-size: 26px;
+      color: #4384ad;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #4c7895;
+      margin-left: 20px;
+      font-size: 18px;
+    }
+
+    nav a:hover {
+      color: #23658d;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 60px auto;
+      padding: 20px;
+    }
+
+    .sparkle {
+      text-align: center;
+      color: #4d99c2;
+      font-size: 28px;
+      margin-bottom: 15px;
+    }
+
+    .title {
+      text-align: center;
+      font-size: 42px;
+      color: #367da8;
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      text-align: center;
+      font-size: 20px;
+      color: #638aa3;
+      margin-bottom: 35px;
+    }
+
+    .education-card {
+      background: rgba(255, 255, 255, 0.9);
+      padding: 35px;
+      border-radius: 25px;
+      box-shadow: 0 8px 25px rgba(65, 130, 170, 0.18);
+      margin-bottom: 25px;
+    }
+
+    .education-card h2 {
+      color: #367da8;
+      font-size: 28px;
+      margin-top: 0;
+      margin-bottom: 15px;
+    }
+
+    .education-card p {
+      font-size: 20px;
+      line-height: 1.8;
+      margin: 8px 0;
+    }
+
+    .school-name {
+      color: #4384ad;
+      font-size: 23px;
+    }
+
+    .current {
+      background: #e6f5ff;
+      border-left: 6px solid #6aaed3;
+      padding: 20px 25px;
+      border-radius: 15px;
+    }
+
+    .gpax {
+      text-align: center;
+      background: linear-gradient(
+        135deg,
+        #f1faff,
+        #d9f0fc
+      );
+      padding: 30px;
+      border-radius: 20px;
+      margin-top: 25px;
+    }
+
+    .gpax-title {
+      color: #4384ad;
+      font-size: 24px;
+      margin-bottom: 5px;
+    }
+
+    .gpax-number {
+      color: #367da8;
+      font-size: 52px;
+      margin: 0;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      color: #52758b;
+      font-size: 16px;
+    }
+
+    @media (max-width: 900px) {
+      nav {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      nav div:last-child {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      nav a {
+        margin: 5px 8px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .title {
+        font-size: 34px;
+      }
+
+      .education-card {
+        padding: 25px;
+      }
+
+      .education-card p {
+        font-size: 18px;
+      }
+
+      .gpax-number {
+        font-size: 44px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-    <!-- Navigation -->
+  <nav>
 
-    <nav>
+    <div class="logo">
+      Portfolio | อิงฟ้า
+    </div>
 
-        <div class="logo">
-            Portfolio
+    <div>
+      <a href="index.html">หน้าแรก</a>
+      <a href="preface.html">คำนำ</a>
+      <a href="profile.html">ประวัติส่วนตัว</a>
+      <a href="education.html">ประวัติการศึกษา</a>
+      <a href="achievements.html">ผลงานและการแข่งขัน</a>
+      <a href="activities.html">กิจกรรม</a>
+      <a href="inspiration.html">แรงบันดาลใจ</a>
+      <a href="future.html">เป้าหมายในอนาคต</a>
+    </div>
+
+  </nav>
+
+
+  <div class="container">
+
+    <div class="sparkle">✦ ✧ ✦</div>
+
+    <h1 class="title">ประวัติการศึกษา</h1>
+
+    <p class="subtitle">
+      เส้นทางการเรียนรู้และการศึกษา
+    </p>
+
+
+    <div class="education-card">
+
+      <h2>ระดับประถมศึกษา</h2>
+
+      <p class="school-name">
+        โรงเรียนกุญแจคริสเตียนวิทยา
+      </p>
+
+    </div>
+
+
+    <div class="education-card">
+
+      <h2>ระดับมัธยมศึกษา</h2>
+
+      <p class="school-name">
+        โรงเรียนบ้านบึง"อุตสาหกรรมนุเคราะห์"
+      </p>
+
+      <div class="current">
+
+        <p>
+          <strong>ระดับชั้นปัจจุบัน :</strong>
+          มัธยมศึกษาปีที่ 6/2
+        </p>
+
+        <p>
+          <strong>เลขที่ :</strong>
+          22
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <div class="education-card">
+
+      <h2>ผลการเรียน</h2>
+
+      <div class="gpax">
+
+        <div class="gpax-title">
+          GPAX 4 ภาคเรียน
         </div>
 
-        <ul class="menu">
-            <li><a href="index.html">หน้าแรก</a></li>
-            <li><a href="preface.html">คำนำ</a></li>
-            <li><a href="profile.html">ประวัติส่วนตัว</a></li>
-            <li><a href="education.html">ประวัติการศึกษา</a></li>
-        </ul>
+        <p class="gpax-number">
+          3.91
+        </p>
 
-    </nav>
+      </div>
 
+    </div>
 
-    <!-- Education -->
-
-    <main>
-
-        <section class="education-card">
-
-            <h1 class="page-title">
-                ประวัติการศึกษา
-            </h1>
-
-            <p class="subtitle">
-                Education
-            </p>
-
-            <div class="line"></div>
+  </div>
 
 
-            <div class="education-list">
-
-                <!-- Primary -->
-
-                <div class="education-item">
-
-                    <h2 class="level">
-                        ระดับประถมศึกษา
-                    </h2>
-
-                    <p class="school">
-                        โรงเรียนกุญแจคริสเตียนวิทยา
-                    </p>
-
-                    <p class="detail">
-                        ระดับการศึกษาขั้นพื้นฐานในระดับประถมศึกษา
-                    </p>
-
-                </div>
-
-
-                <!-- Secondary -->
-
-                <div class="education-item">
-
-                    <h2 class="level">
-                        ระดับมัธยมศึกษา
-                    </h2>
-
-                    <p class="school">
-                        โรงเรียนบ้านบึง"อุตสาหกรรมนุเคราะห์"
-                    </p>
-
-                    <p class="detail">
-                        กำลังศึกษาอยู่ชั้นมัธยมศึกษาปีที่ 6/2
-                        เลขที่ 22
-                    </p>
-
-                </div>
-
-            </div>
-
-
-            <!-- GPAX -->
-
-            <div class="gpax-box">
-
-                <p class="gpax-title">
-                    ผลการเรียนเฉลี่ยสะสม 4 ภาคเรียน
-                </p>
-
-                <p class="gpax-number">
-                    3.91
-                </p>
-
-            </div>
-
-
-            <a href="index.html" class="back-button">
-                ← กลับหน้าแรก
-            </a>
-
-        </section>
-
-    </main>
+  <footer>
+    © 2026 Portfolio | นางสาวภลดา แสนศรี
+  </footer>
 
 </body>
 </html>
