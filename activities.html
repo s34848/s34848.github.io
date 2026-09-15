@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>กิจกรรม | Portfolio อิงฟ้า</title>
 
-  <title>กิจกรรม | Portfolio</title>
-
+  <!-- Google Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
@@ -18,167 +18,173 @@
     body {
       margin: 0;
       font-family: 'Itim', cursive;
-      background: linear-gradient(
-        135deg,
-        #eaf8ff,
-        #cfeeff,
-        #a9d9f5,
-        #79b9df
-      );
-      color: #31566d;
+      background: linear-gradient(135deg, #e8f6ff, #cfeeff, #b9e3ff);
+      color: #35566b;
       min-height: 100vh;
     }
 
+    /* Navbar */
     nav {
-      background: rgba(255, 255, 255, 0.85);
-      padding: 18px 30px;
+      background: rgba(255, 255, 255, 0.88);
+      backdrop-filter: blur(10px);
+      padding: 15px 25px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      box-shadow: 0 4px 15px rgba(70, 130, 170, 0.15);
       position: sticky;
       top: 0;
-      z-index: 10;
+      z-index: 1000;
+      box-shadow: 0 3px 15px rgba(49, 86, 109, 0.12);
     }
 
     .logo {
-      font-size: 26px;
-      color: #4384ad;
+      font-size: 25px;
+      font-weight: bold;
+      color: #4b86a8;
     }
 
-    nav a {
+    .menu {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .menu a {
       text-decoration: none;
-      color: #4c7895;
-      margin-left: 20px;
-      font-size: 18px;
-    }
-
-    nav a:hover {
-      color: #23658d;
-    }
-
-    .container {
-      max-width: 1100px;
-      margin: 60px auto;
-      padding: 20px;
-    }
-
-    .sparkle {
-      text-align: center;
-      color: #4d99c2;
-      font-size: 30px;
-      margin-bottom: 10px;
-    }
-
-    .title {
-      text-align: center;
-      font-size: 42px;
-      color: #367da8;
-      margin-bottom: 10px;
-    }
-
-    .subtitle {
-      text-align: center;
-      font-size: 20px;
-      color: #638aa3;
-      margin-bottom: 40px;
-    }
-
-    .activity-card {
-      background: rgba(255, 255, 255, 0.92);
-      padding: 30px;
-      border-radius: 25px;
-      box-shadow: 0 8px 25px rgba(65, 130, 170, 0.18);
-      margin-bottom: 35px;
-    }
-
-    .activity-card h2 {
-      color: #367da8;
-      font-size: 28px;
-      margin-top: 0;
-      margin-bottom: 20px;
-    }
-
-    .image-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 25px;
-      align-items: start;
-    }
-
-    .image-box {
-      text-align: center;
-    }
-
-    .image-box h3 {
-      color: #4384ad;
-      font-size: 22px;
-      margin: 0 0 12px;
-    }
-
-    .image-box img {
-      width: 100%;
-      max-height: 500px;
-      object-fit: contain;
-      border-radius: 18px;
-      background: #f5fbff;
-      padding: 8px;
-      box-shadow: 0 5px 15px rgba(65, 130, 170, 0.15);
-    }
-
-    .description {
-      margin-top: 25px;
-      background: #e6f5ff;
-      border-left: 6px solid #6aaed3;
-      padding: 20px 25px;
-      border-radius: 15px;
-      font-size: 19px;
-      line-height: 1.8;
-    }
-
-    footer {
-      text-align: center;
-      padding: 25px;
-      color: #52758b;
+      color: #4d6f82;
+      padding: 7px 12px;
+      border-radius: 20px;
+      transition: 0.3s;
       font-size: 16px;
     }
 
-    @media (max-width: 900px) {
+    .menu a:hover,
+    .menu a.active {
+      background: #b9e3ff;
+      color: #285b78;
+    }
+
+    /* Header */
+    header {
+      text-align: center;
+      padding: 55px 20px 35px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 42px;
+      color: #39769a;
+    }
+
+    header p {
+      margin-top: 8px;
+      font-size: 20px;
+      color: #62879b;
+    }
+
+    /* Activities */
+    .activities {
+      width: 90%;
+      max-width: 1100px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+      padding-bottom: 60px;
+    }
+
+    .activity-card {
+      background: rgba(255, 255, 255, 0.88);
+      border-radius: 25px;
+      padding: 20px;
+      box-shadow: 0 8px 25px rgba(49, 86, 109, 0.12);
+      transition: 0.3s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .activity-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 30px rgba(49, 86, 109, 0.18);
+    }
+
+    .activity-card img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 18px;
+      display: block;
+      margin-bottom: 18px;
+    }
+
+    .activity-card h2 {
+      color: #39769a;
+      font-size: 25px;
+      margin: 10px 0 12px;
+    }
+
+    .activity-card p {
+      font-family: 'Itim', cursive;
+      font-size: 18px;
+      line-height: 1.75;
+      color: #4d6572;
+      margin: 0;
+      text-align: justify;
+    }
+
+    /* Floating stars */
+    .star {
+      position: absolute;
+      color: #79b9d8;
+      font-size: 22px;
+      animation: float 3s ease-in-out infinite;
+      opacity: 0.8;
+    }
+
+    .star1 {
+      top: 15px;
+      right: 18px;
+    }
+
+    .star2 {
+      bottom: 15px;
+      left: 18px;
+      animation-delay: 1s;
+    }
+
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-7px);
+      }
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 25px;
+      background: rgba(255, 255, 255, 0.75);
+      color: #5d7c8d;
+      font-size: 16px;
+    }
+
+    /* Responsive */
+    @media (max-width: 800px) {
       nav {
         flex-direction: column;
         gap: 10px;
       }
 
-      nav div:last-child {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-      }
-
-      nav a {
-        margin: 5px 8px;
-      }
-
-      .image-grid {
+      .activities {
         grid-template-columns: 1fr;
       }
-    }
 
-    @media (max-width: 600px) {
-      .title {
+      header h1 {
         font-size: 34px;
-      }
-
-      .activity-card {
-        padding: 22px;
-      }
-
-      .activity-card h2 {
-        font-size: 24px;
-      }
-
-      .description {
-        font-size: 18px;
       }
     }
   </style>
@@ -186,186 +192,130 @@
 
 <body>
 
+  <!-- Navbar -->
   <nav>
+    <div class="logo">Portfolio | อิงฟ้า</div>
 
-    <div class="logo">
-      Portfolio | อิงฟ้า
-    </div>
-
-    <div>
+    <div class="menu">
       <a href="index.html">หน้าแรก</a>
       <a href="preface.html">คำนำ</a>
       <a href="profile.html">ประวัติส่วนตัว</a>
       <a href="education.html">ประวัติการศึกษา</a>
       <a href="achievements.html">ผลงานและการแข่งขัน</a>
-      <a href="activities.html">กิจกรรม</a>
+      <a href="activities.html" class="active">กิจกรรม</a>
       <a href="inspiration.html">แรงบันดาลใจ</a>
       <a href="future.html">เป้าหมายในอนาคต</a>
     </div>
-
   </nav>
 
 
-  <div class="container">
-
-    <div class="sparkle">✦ ✧ ✦</div>
-
-    <h1 class="title">กิจกรรม</h1>
-
-    <p class="subtitle">
-      กิจกรรมและประสบการณ์ที่ได้เรียนรู้
-    </p>
+  <!-- Header -->
+  <header>
+    <h1>🌷 กิจกรรม</h1>
+    <p>ประสบการณ์และกิจกรรมที่ได้เข้าร่วม</p>
+  </header>
 
 
-    <!-- กิจกรรมที่ 1 -->
+  <!-- Activities -->
+  <section class="activities">
 
+    <!-- Activity 1 -->
     <div class="activity-card">
 
-      <h2>
-        ฝึกประสบการณ์อาชีพ ณ เทศบาลเมืองลำปลายมาศ
-      </h2>
+      <span class="star star1">✦</span>
+      <span class="star star2">✧</span>
 
-      <div class="image-grid">
+      <img src="activity1.jpg" alt="ฝึกประสบการณ์อาชีพ ณ เทศบาลเมืองลำปลายมาศ">
 
-        <div class="image-box">
-          <h3>กิจกรรม</h3>
+      <h2>ฝึกประสบการณ์อาชีพ ณ เทศบาลเมืองลำปลายมาศ</h2>
 
-          <img
-            src="activity1.jpg"
-            alt="กิจกรรมฝึกประสบการณ์อาชีพ ณ เทศบาลเมืองลำปลายมาศ"
-          >
-        </div>
-
-        <div class="image-box">
-          <h3>เกียรติบัตร</h3>
-
-          <img
-            src="certificate4.jpg"
-            alt="เกียรติบัตรฝึกประสบการณ์อาชีพ"
-          >
-        </div>
-
-      </div>
-
-      <div class="description">
-        การฝึกประสบการณ์การทำงาน ณ กองสวัสดิการสังคม
-        เทศบาลเมืองลำปลายมาศ ตลอดระยะเวลา 10 วัน
-        ถือเป็นโอกาสอันมีค่าในการเรียนรู้ระบบการทำงานภาครัฐอย่างแท้จริง
-        ในช่วงแรกของการฝึกงาน ได้มีส่วนร่วมในงานจัดการข้อมูล
-        ด้วยการรวบรวมและจัดเก็บสถิติของอาสาสมัครสาธารณสุขประจำหมู่บ้าน (อสม.)
-        อย่างเป็นระบบ นอกจากนี้ยังได้ร่วมดำเนินกิจกรรมใน
+      <p>
+        การฝึกประสบการณ์การทำงาน ณ กองสวัสดิการสังคม เทศบาลเมืองลำปลายมาศ
+        ตลอดระยะเวลา 10 วัน ถือเป็นโอกาสอันมีค่าในการเรียนรู้ระบบการทำงานภาครัฐอย่างแท้จริง
+        ในช่วงแรกของการฝึกงาน ได้มีส่วนร่วมในงานจัดการข้อมูลด้วยการรวบรวมและจัดเก็บสถิติของ
+        อาสาสมัครสาธารณสุขประจำหมู่บ้าน (อสม.) อย่างเป็นระบบ นอกจากนี้ยังได้ร่วมดำเนินกิจกรรมใน
         "โรงเรียนผู้สูงอายุ" และโครงการศูนย์ดูแลผู้สูงอายุระหว่างวัน (Day Care)
-        ซึ่งเปิดโอกาสให้ได้เข้าไปมีส่วนร่วมในการสร้างรอยยิ้ม ความสุข
-        และส่งเสริมสุขภาวะที่ดีให้แก่ผู้สูงวัยในชุมชน
-        นอกเหนือจากงานในสำนักงานแล้ว ยังได้ลงพื้นที่ปฏิบัติงานภาคสนาม
-        ผ่านกิจกรรมปลูกป่าเพื่ออนุรักษ์ธรรมชาติ
+        ซึ่งเปิดโอกาสให้ได้เข้าไปมีส่วนร่วมในการสร้างรอยยิ้ม ความสุข และส่งเสริมสุขภาวะที่ดีให้แก่ผู้สูงวัยในชุมชน
+        นอกเหนือจากงานในสำนักงานแล้ว ยังได้ลงพื้นที่ปฏิบัติงานภาคสนามผ่านกิจกรรมปลูกป่าเพื่ออนุรักษ์ธรรมชาติ
         รวมถึงร่วมสำรวจปักแนวเขตและจัดเก็บข้อมูลพันธุกรรมพืชในโครงการ อพ.สธ.
-        ร่วมกับชุมชนและผู้เชี่ยวชาญ
-        ประสบการณ์ทั้งหมดนี้ไม่เพียงแต่ช่วยพัฒนาทักษะการทำงาน
-        ความรับผิดชอบ และการทำงานร่วมกับผู้อื่น
-        แต่ยังสร้างจิตสาธารณะในการมุ่งมั่นพัฒนาท้องถิ่น
-        จนได้รับมอบเกียรติบัตรรับรองจากท่านนายกเทศมนตรีเมืองลำปลายมาศ
-        ด้วยความภาคภูมิใจ
-      </div>
+        ร่วมกับชุมชนและผู้เชี่ยวชาญ ประสบการณ์ทั้งหมดนี้ไม่เพียงแต่ช่วยพัฒนาทักษะการทำงาน
+        ความรับผิดชอบ และการทำงานร่วมกับผู้อื่น แต่ยังสร้างจิตสาธารณะในการมุ่งมั่นพัฒนาท้องถิ่น
+        จนได้รับมอบเกียรติบัตรรับรองจากท่านนายกเทศมนตรีเมืองลำปลายมาศ ด้วยความภาคภูมิใจ
+      </p>
 
     </div>
 
 
-    <!-- กิจกรรมที่ 2 -->
-
+    <!-- Activity 2 -->
     <div class="activity-card">
 
-      <h2>
-        นักเรียนจิตอาสาในงานมหกรรมวิชาการ
-      </h2>
+      <span class="star star1">✦</span>
+      <span class="star star2">✧</span>
 
-      <div class="image-grid">
+      <img src="activity2.jpg" alt="นักเรียนจิตอาสาในงานมหกรรมวิชาการ">
 
-        <div class="image-box">
-          <h3>กิจกรรม</h3>
+      <h2>นักเรียนจิตอาสาในงานมหกรรมวิชาการ</h2>
 
-          <img
-            src="activity2.jpg"
-            alt="นักเรียนจิตอาสาในงานมหกรรมวิชาการ"
-          >
-        </div>
-
-        <div class="image-box">
-          <h3>เกียรติบัตร</h3>
-
-          <img
-            src="certificate5.jpg"
-            alt="เกียรติบัตรนักเรียนจิตอาสาในงานมหกรรมวิชาการ"
-          >
-        </div>
-
-      </div>
-
-      <div class="description">
+      <p>
         ในการทำหน้าที่จิตอาสาประจำบูธแผนการเรียนวิทยาศาสตร์-คณิตศาสตร์
-        (Gifted Program) ฐานเกม 24 ดิฉันมีความตั้งใจที่จะส่งต่อความรู้
-        และสร้างบรรยากาศที่สนุกสนานให้แก่ผู้เข้าร่วมงาน
-        โดยรับผิดชอบการต้อนรับ อธิบายกติกา และสาธิตวิธีการเล่นอย่างใกล้ชิด
-        การทำงานเพื่อส่วนรวมในครั้งนี้ ไม่เพียงแต่ทำให้ดิฉันภูมิใจ
-        ที่ได้เป็นผู้ให้และอำนวยความสะดวกแก่ผู้อื่น
-        แต่ยังสอนให้ดิฉันได้เรียนรู้ทักษะที่สำคัญ
-        ทั้งความกล้าแสดงออกในการพูดคุยกับผู้คนหลากหลาย
-        และการฝึกทักษะการสื่อสารเพื่อถ่ายทอดข้อมูลที่ซับซ้อน
-        ให้เข้าใจง่ายและเป็นกันเอง
-      </div>
+        (Gifted Program) ฐานเกม 24 ดิฉันมีความตั้งใจที่จะส่งต่อความรู้และสร้างบรรยากาศที่สนุกสนาน
+        ให้แก่ผู้เข้าร่วมงาน โดยรับผิดชอบการต้อนรับ อธิบายกติกา และสาธิตวิธีการเล่นอย่างใกล้ชิด
+        การทำงานเพื่อส่วนรวมในครั้งนี้ ไม่เพียงแต่ทำให้ดิฉันภูมิใจที่ได้เป็นผู้ให้และอำนวยความสะดวกแก่ผู้อื่น
+        แต่ยังสอนให้ดิฉันได้เรียนรู้ทักษะที่สำคัญ ทั้งความกล้าแสดงออกในการพูดคุยกับผู้คนหลากหลาย
+        และการฝึกทักษะการสื่อสารเพื่อถ่ายทอดข้อมูลที่ซับซ้อนให้เข้าใจง่ายและเป็นกันเอง
+      </p>
 
     </div>
 
 
-    <!-- กิจกรรมที่ 3 -->
-
+    <!-- Activity 3 -->
     <div class="activity-card">
 
-      <h2>
-        อบรมค่ายพัฒนาคุณธรรม จริยธรรมนักเรียน
-      </h2>
+      <span class="star star1">✦</span>
+      <span class="star star2">✧</span>
 
-      <div class="image-grid">
+      <img src="activity3.jpg" alt="อบรมค่ายพัฒนาคุณธรรม จริยธรรมนักเรียน">
 
-        <div class="image-box">
-          <h3>กิจกรรม</h3>
+      <h2>อบรมค่ายพัฒนาคุณธรรม จริยธรรมนักเรียน</h2>
 
-          <img
-            src="activity3.jpg"
-            alt="อบรมค่ายพัฒนาคุณธรรม จริยธรรมนักเรียน"
-          >
-        </div>
-
-        <div class="image-box">
-          <h3>เกียรติบัตร</h3>
-
-          <img
-            src="certificate6.jpg"
-            alt="เกียรติบัตรอบรมค่ายพัฒนาคุณธรรม จริยธรรมนักเรียน"
-          >
-        </div>
-
-      </div>
-
-      <div class="description">
-        การเข้าร่วมกิจกรรมในครั้งนี้ทำให้ดิฉันได้เรียนรู้และตระหนักถึงความสำคัญ
-        ของคุณธรรม จริยธรรม ระเบียบวินัย ความรับผิดชอบ
-        และการอยู่ร่วมกับผู้อื่นในสังคม
+      <p>
+        การเข้าร่วมกิจกรรมในครั้งนี้ทำให้ดิฉันได้เรียนรู้และตระหนักถึงความสำคัญของคุณธรรม
+        จริยธรรม ระเบียบวินัย ความรับผิดชอบ และการอยู่ร่วมกับผู้อื่นในสังคม
         ผ่านกิจกรรมที่ช่วยส่งเสริมการพัฒนาทั้งด้านความคิด จิตใจ และพฤติกรรม
         นอกจากนี้ยังได้ฝึกการมีสมาธิ การควบคุมตนเอง การเคารพผู้อื่น
-        และการนำหลักคุณธรรมมาปรับใช้ในชีวิตประจำวัน
-        ประสบการณ์จากกิจกรรมครั้งนี้ช่วยให้ดิฉันได้พัฒนาตนเอง
-        ให้เป็นผู้ที่มีความรับผิดชอบ มีจิตสาธารณะ รู้จักเสียสละและช่วยเหลือผู้อื่น
-        รวมถึงสามารถนำข้อคิดและประสบการณ์ที่ได้รับไปประยุกต์ใช้
-        ทั้งในการเรียน การทำงานร่วมกับผู้อื่น
-        และการดำเนินชีวิตอย่างเหมาะสม
-      </div>
+        และการนำหลักคุณธรรมมาปรับใช้ในชีวิตประจำวัน ประสบการณ์จากกิจกรรมครั้งนี้ช่วยให้ดิฉัน
+        ได้พัฒนาตนเองให้เป็นผู้ที่มีความรับผิดชอบ มีจิตสาธารณะ รู้จักเสียสละและช่วยเหลือผู้อื่น
+        รวมถึงสามารถนำข้อคิดและประสบการณ์ที่ได้รับไปประยุกต์ใช้ทั้งในการเรียน
+        การทำงานร่วมกับผู้อื่น และการดำเนินชีวิตอย่างเหมาะสม
+      </p>
 
     </div>
 
-  </div>
+
+    <!-- Activity 4 -->
+    <div class="activity-card">
+
+      <span class="star star1">✦</span>
+      <span class="star star2">✧</span>
+
+      <img src="activity4.jpg" alt="เข้าร่วมงาน Open House มหาวิทยาลัยบูรพา">
+
+      <h2>🌊 เข้าร่วมงาน Open House มหาวิทยาลัยบูรพา</h2>
+
+      <p>
+        ดิฉันมีความสนใจที่จะศึกษาต่อที่มหาวิทยาลัยบูรพา จึงได้เข้าร่วมงาน Open House
+        เพื่อรับฟังข้อมูลและคำแนะนำเกี่ยวกับคณะศึกษาศาสตร์ สาขาวิชาคณิตศาสตร์
+        รวมถึงได้เรียนรู้เกี่ยวกับแนวทางการศึกษาและการเตรียมตัวสำหรับการเข้าศึกษาต่อ
+        ประสบการณ์ครั้งนี้ทำให้ดิฉันได้รู้จักสาขาที่สนใจมากขึ้น
+        และยิ่งทำให้มีความตั้งใจที่จะพัฒนาตนเองเพื่อก้าวไปสู่เป้าหมายในการเป็นครูคณิตศาสตร์ในอนาคต
+      </p>
+
+    </div>
+
+  </section>
 
 
+  <!-- Footer -->
   <footer>
     © 2026 Portfolio | นางสาวภลดา แสนศรี
   </footer>
