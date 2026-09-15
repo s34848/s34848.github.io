@@ -11,148 +11,119 @@
   <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
 
   <style>
-    * {
-      box-sizing: border-box;
-    }
-
     body {
       margin: 0;
       font-family: 'Itim', cursive;
-      background: linear-gradient(
-        135deg,
-        #eaf8ff,
-        #cfeeff,
-        #a9d9f5,
-        #79b9df
-      );
+      background: linear-gradient(135deg, #eaf8ff, #cfeeff, #a9d9f5, #79b9df);
       color: #31566d;
       min-height: 100vh;
     }
 
     nav {
-      background: rgba(255, 255, 255, 0.85);
+      background: rgba(255, 255, 255, 0.75);
       padding: 18px 30px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      box-shadow: 0 4px 15px rgba(70, 130, 170, 0.15);
-      position: sticky;
-      top: 0;
-      z-index: 10;
+      flex-wrap: wrap;
+      gap: 15px;
+      box-shadow: 0 3px 15px rgba(49, 86, 109, 0.15);
     }
 
     .logo {
-      font-size: 26px;
-      color: #4384ad;
+      font-size: 28px;
+      color: #2f7198;
     }
 
-    nav a {
+    .menu {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .menu a {
       text-decoration: none;
-      color: #4c7895;
-      margin-left: 20px;
-      font-size: 18px;
+      color: #31566d;
+      padding: 8px 13px;
+      border-radius: 20px;
+      transition: 0.3s;
+      font-size: 16px;
     }
 
-    nav a:hover {
-      color: #23658d;
+    .menu a:hover {
+      background: #d7effc;
+      color: #23658b;
     }
 
     .container {
-      max-width: 950px;
-      margin: 70px auto;
-      padding: 20px;
+      max-width: 1000px;
+      margin: 60px auto;
+      padding: 0 20px;
     }
 
-    .hero {
-      background: rgba(255, 255, 255, 0.9);
-      padding: 55px 40px;
+    .card {
+      background: rgba(255, 255, 255, 0.82);
       border-radius: 30px;
+      padding: 55px 50px;
       text-align: center;
-      box-shadow: 0 10px 30px rgba(65, 130, 170, 0.2);
+      box-shadow: 0 8px 25px rgba(49, 86, 109, 0.15);
     }
 
-    .hero h1 {
-      margin: 0;
+    h1 {
       font-size: 52px;
-      color: #367da8;
+      color: #2f7198;
+      margin: 0 0 15px;
     }
 
-    .hero h2 {
+    h2 {
       font-size: 30px;
-      color: #4384ad;
-      margin: 15px 0 5px;
+      color: #2f7198;
+      margin: 0 0 8px;
     }
 
     .school {
       font-size: 21px;
-      color: #416d86;
-      margin-bottom: 25px;
+      color: #31566d;
+      margin-bottom: 8px;
+    }
+
+    .program {
+      font-size: 20px;
+      color: #3f7899;
+      margin-bottom: 30px;
     }
 
     .description {
-      max-width: 720px;
+      max-width: 850px;
       margin: 0 auto 30px;
-      line-height: 1.8;
       font-size: 20px;
+      line-height: 1.9;
     }
 
     .button {
       display: inline-block;
-      padding: 13px 30px;
-      background: #6aaed3;
-      color: white;
       text-decoration: none;
+      background: #67afd4;
+      color: white;
+      padding: 14px 35px;
       border-radius: 30px;
       font-size: 20px;
-      box-shadow: 0 5px 15px rgba(65, 130, 170, 0.2);
+      box-shadow: 0 6px 15px rgba(49, 86, 109, 0.18);
       transition: 0.3s;
     }
 
     .button:hover {
-      background: #4384ad;
+      background: #4e9bc4;
       transform: translateY(-2px);
     }
 
     footer {
       text-align: center;
       padding: 25px;
-      color: #52758b;
+      margin-top: 50px;
+      background: rgba(255, 255, 255, 0.55);
       font-size: 16px;
-    }
-
-    @media (max-width: 900px) {
-      nav {
-        flex-direction: column;
-        gap: 10px;
-      }
-
-      nav div:last-child {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-      }
-
-      nav a {
-        margin: 5px 8px;
-      }
-    }
-
-    @media (max-width: 600px) {
-      .hero {
-        padding: 40px 20px;
-      }
-
-      .hero h1 {
-        font-size: 40px;
-      }
-
-      .hero h2 {
-        font-size: 25px;
-      }
-
-      .description {
-        font-size: 18px;
-      }
     }
   </style>
 </head>
@@ -160,12 +131,11 @@
 <body>
 
   <nav>
-
     <div class="logo">
       Portfolio | อิงฟ้า
     </div>
 
-    <div>
+    <div class="menu">
       <a href="index.html">หน้าแรก</a>
       <a href="preface.html">คำนำ</a>
       <a href="profile.html">ประวัติส่วนตัว</a>
@@ -175,13 +145,11 @@
       <a href="inspiration.html">แรงบันดาลใจ</a>
       <a href="future.html">เป้าหมายในอนาคต</a>
     </div>
-
   </nav>
-
 
   <div class="container">
 
-    <div class="hero">
+    <div class="card">
 
       <h1>PORTFOLIO</h1>
 
@@ -191,8 +159,12 @@
         โรงเรียนบ้านบึง"อุตสาหกรรมนุเคราะห์"
       </div>
 
+      <div class="program">
+        แผนการเรียนวิทยาศาสตร์-คณิตศาสตร์ (Gifted Program)
+      </div>
+
       <div class="description">
-        เว็บไซต์นี้จะทำขึ้นเพื่อนำเสนอตัวตน ผลงานที่ผ่านมา
+        เว็บไซต์นี้จัดทำขึ้นเพื่อนำเสนอตัวตน ผลงานที่ผ่านมา
         ตลอดจนเป้าหมายการเรียนและการประกอบอาชีพในอนาคต
         โดยมีเป้าหมายในการศึกษาต่อและพัฒนาตนเอง
         เพื่อก้าวไปสู่การเป็นครูคณิตศาสตร์ในอนาคต
@@ -206,9 +178,8 @@
 
   </div>
 
-
   <footer>
-    © 2026 Portfolio | นางสาวภลดา แสนศรี
+    Portfolio | อิงฟ้า
   </footer>
 
 </body>
