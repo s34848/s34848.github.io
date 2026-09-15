@@ -109,7 +109,7 @@
       box-shadow: 0 12px 30px rgba(49, 86, 109, 0.18);
     }
 
-    .activity-card img {
+    .activity-card img.activity-img {
       width: 100%;
       height: 300px;
       object-fit: cover;
@@ -133,6 +133,24 @@
       text-align: justify;
     }
 
+    /* Certificate */
+    .certificate-title {
+      color: #39769a;
+      font-size: 21px;
+      margin: 25px 0 12px;
+      text-align: center;
+    }
+
+    .certificate-img {
+      width: 100%;
+      max-height: 420px;
+      object-fit: contain;
+      border-radius: 15px;
+      display: block;
+      background: #f8fcff;
+      padding: 8px;
+    }
+
     /* Floating stars */
     .star {
       position: absolute;
@@ -140,6 +158,7 @@
       font-size: 22px;
       animation: float 3s ease-in-out infinite;
       opacity: 0.8;
+      z-index: 2;
     }
 
     .star1 {
@@ -225,7 +244,9 @@
       <span class="star star1">✦</span>
       <span class="star star2">✧</span>
 
-      <img src="activity1.jpg" alt="ฝึกประสบการณ์อาชีพ ณ เทศบาลเมืองลำปลายมาศ">
+      <img class="activity-img"
+           src="activity1.jpg"
+           alt="ฝึกประสบการณ์อาชีพ ณ เทศบาลเมืองลำปลายมาศ">
 
       <h2>ฝึกประสบการณ์อาชีพ ณ เทศบาลเมืองลำปลายมาศ</h2>
 
@@ -243,6 +264,12 @@
         จนได้รับมอบเกียรติบัตรรับรองจากท่านนายกเทศมนตรีเมืองลำปลายมาศ ด้วยความภาคภูมิใจ
       </p>
 
+      <div class="certificate-title">เกียรติบัตร</div>
+
+      <img class="certificate-img"
+           src="certificate4.jpg"
+           alt="เกียรติบัตรฝึกประสบการณ์อาชีพ">
+
     </div>
 
 
@@ -252,7 +279,9 @@
       <span class="star star1">✦</span>
       <span class="star star2">✧</span>
 
-      <img src="activity2.jpg" alt="นักเรียนจิตอาสาในงานมหกรรมวิชาการ">
+      <img class="activity-img"
+           src="activity2.jpg"
+           alt="นักเรียนจิตอาสาในงานมหกรรมวิชาการ">
 
       <h2>นักเรียนจิตอาสาในงานมหกรรมวิชาการ</h2>
 
@@ -265,6 +294,12 @@
         และการฝึกทักษะการสื่อสารเพื่อถ่ายทอดข้อมูลที่ซับซ้อนให้เข้าใจง่ายและเป็นกันเอง
       </p>
 
+      <div class="certificate-title">เกียรติบัตร</div>
+
+      <img class="certificate-img"
+           src="certificate5.jpg"
+           alt="เกียรติบัตรนักเรียนจิตอาสา">
+
     </div>
 
 
@@ -274,7 +309,9 @@
       <span class="star star1">✦</span>
       <span class="star star2">✧</span>
 
-      <img src="activity3.jpg" alt="อบรมค่ายพัฒนาคุณธรรม จริยธรรมนักเรียน">
+      <img class="activity-img"
+           src="activity3.jpg"
+           alt="อบรมค่ายพัฒนาคุณธรรม จริยธรรมนักเรียน">
 
       <h2>อบรมค่ายพัฒนาคุณธรรม จริยธรรมนักเรียน</h2>
 
@@ -289,6 +326,12 @@
         การทำงานร่วมกับผู้อื่น และการดำเนินชีวิตอย่างเหมาะสม
       </p>
 
+      <div class="certificate-title">เกียรติบัตร</div>
+
+      <img class="certificate-img"
+           src="certificate6.jpg"
+           alt="เกียรติบัตรอบรมค่ายพัฒนาคุณธรรม จริยธรรมนักเรียน">
+
     </div>
 
 
@@ -298,7 +341,9 @@
       <span class="star star1">✦</span>
       <span class="star star2">✧</span>
 
-      <img src="activity4.jpg" alt="เข้าร่วมงาน Open House มหาวิทยาลัยบูรพา">
+      <img class="activity-img"
+           src="activity4.jpg"
+           alt="เข้าร่วมงาน Open House มหาวิทยาลัยบูรพา">
 
       <h2>🌊 เข้าร่วมงาน Open House มหาวิทยาลัยบูรพา</h2>
 
@@ -307,7 +352,7 @@
         เพื่อรับฟังข้อมูลและคำแนะนำเกี่ยวกับคณะศึกษาศาสตร์ สาขาวิชาคณิตศาสตร์
         รวมถึงได้เรียนรู้เกี่ยวกับแนวทางการศึกษาและการเตรียมตัวสำหรับการเข้าศึกษาต่อ
         ประสบการณ์ครั้งนี้ทำให้ดิฉันได้รู้จักสาขาที่สนใจมากขึ้น
-        และยิ่งทำให้มีความตั้งใจที่จะพัฒนาตนเองเพื่อก้าวไปสู่เป้าหมายในการเป็นครูคณิตศาสตร์ในอนาคต
+        และยิ่งทำให้มีความตั้งใจที่จะพัฒนาตนเองเพื่อก้าวไปสู่เป้าหมายในการเป็นครูคณิตศาสตร์ในอนาคตค่ะ
       </p>
 
     </div>
