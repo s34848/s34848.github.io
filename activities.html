@@ -76,17 +76,17 @@
 
 
     /* =========================
-       HEADER
+       หัวข้อหลัก
     ========================= */
 
     header {
       text-align: center;
-      padding: 55px 20px 35px;
+      padding: 45px 20px 30px;
     }
 
     header h1 {
       margin: 0;
-      font-size: 42px;
+      font-size: 45px;
       color: #39769a;
     }
 
@@ -98,130 +98,188 @@
 
 
     /* =========================
-       ACTIVITIES
+       กล่องกิจกรรม
     ========================= */
 
     .activities {
       width: 90%;
       max-width: 1100px;
       margin: auto;
-
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 30px;
-
       padding-bottom: 60px;
     }
 
-
-    /* =========================
-       ACTIVITY CARD
-    ========================= */
-
     .activity-card {
-      background: rgba(255, 255, 255, 0.88);
+      background: rgba(255, 255, 255, 0.92);
 
-      border-radius: 25px;
-      padding: 20px;
+      border-radius: 28px;
+      padding: 35px 38px;
+
+      margin-bottom: 35px;
 
       box-shadow: 0 8px 25px rgba(49, 86, 109, 0.12);
 
-      transition: 0.3s;
-
       position: relative;
       overflow: hidden;
+
+      transition: 0.3s;
     }
 
     .activity-card:hover {
-      transform: translateY(-5px);
-
-      box-shadow:
-        0 12px 30px rgba(49, 86, 109, 0.18);
+      transform: translateY(-4px);
+      box-shadow: 0 12px 30px rgba(49, 86, 109, 0.18);
     }
 
 
     /* =========================
-       รูปกิจกรรม + เกียรติบัตร
+       ชื่อกิจกรรม
+    ========================= */
+
+    .activity-card h2 {
+      text-align: left;
+
+      margin: 0 0 25px;
+
+      font-size: 29px;
+
+      color: #39769a;
+    }
+
+
+    /* =========================
+       หัวข้อ ผลงาน / เกียรติบัตร
+    ========================= */
+
+    .image-headings {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+
+      gap: 25px;
+
+      text-align: center;
+
+      margin-bottom: 12px;
+    }
+
+    .image-headings h3 {
+      margin: 0;
+
+      font-size: 23px;
+
+      color: #39769a;
+    }
+
+
+    /* =========================
+       รูปผลงาน + เกียรติบัตร
     ========================= */
 
     .image-row {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 12px;
 
-      margin-bottom: 18px;
+      grid-template-columns: 1fr 1fr;
+
+      gap: 25px;
+
+      margin-bottom: 25px;
     }
 
-    .image-row img {
+    .image-box {
       width: 100%;
-      height: 260px;
+      height: 330px;
 
-      object-fit: cover;
+      background: #f5fbff;
 
       border-radius: 18px;
 
-      display: block;
+      padding: 8px;
 
-      background: #f5fbff;
+      box-shadow: 0 4px 12px rgba(49, 86, 109, 0.08);
+    }
+
+    .image-box img {
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+
+      border-radius: 13px;
+
+      display: block;
     }
 
 
     /* =========================
-       กิจกรรมที่ไม่มีเกียรติบัตร
+       รูปเดียว
     ========================= */
 
+    .single-heading {
+      text-align: center;
+
+      margin-bottom: 12px;
+    }
+
+    .single-heading h3 {
+      margin: 0;
+
+      font-size: 23px;
+
+      color: #39769a;
+    }
+
     .single-image {
-      margin-bottom: 18px;
+      width: 70%;
+      max-width: 650px;
+
+      height: 350px;
+
+      margin: 0 auto 25px;
+
+      background: #f5fbff;
+
+      border-radius: 18px;
+
+      padding: 8px;
+
+      box-shadow: 0 4px 12px rgba(49, 86, 109, 0.08);
     }
 
     .single-image img {
       width: 100%;
-      height: 300px;
+      height: 100%;
 
       object-fit: cover;
 
-      border-radius: 18px;
+      border-radius: 13px;
 
       display: block;
-
-      background: #f5fbff;
     }
 
 
     /* =========================
-       TITLE
+       กล่องคำบรรยาย
     ========================= */
 
-    .activity-card h2 {
-      color: #39769a;
+    .description {
+      background: #e2f4ff;
 
-      font-size: 25px;
+      border-left: 7px solid #70b4d5;
 
-      margin: 10px 0 12px;
-    }
+      border-radius: 18px;
 
+      padding: 22px 28px;
 
-    /* =========================
-       DESCRIPTION
-    ========================= */
-
-    .activity-card p {
-      font-family: 'Itim', cursive;
+      color: #3f6173;
 
       font-size: 18px;
 
-      line-height: 1.75;
-
-      color: #4d6572;
-
-      margin: 0;
+      line-height: 1.8;
 
       text-align: justify;
     }
 
 
     /* =========================
-       FLOATING STARS
+       ดาวตกแต่ง
     ========================= */
 
     .star {
@@ -229,7 +287,7 @@
 
       color: #79b9d8;
 
-      font-size: 22px;
+      font-size: 25px;
 
       animation: float 3s ease-in-out infinite;
 
@@ -240,12 +298,12 @@
 
     .star1 {
       top: 15px;
-      right: 18px;
+      right: 20px;
     }
 
     .star2 {
       bottom: 15px;
-      left: 18px;
+      left: 20px;
 
       animation-delay: 1s;
     }
@@ -291,31 +349,22 @@
         gap: 10px;
       }
 
-      .activities {
+      .image-row,
+      .image-headings {
         grid-template-columns: 1fr;
       }
 
-    }
-
-
-    @media (max-width: 550px) {
-
-      .image-row {
-        grid-template-columns: 1fr;
+      .activity-card {
+        padding: 25px 20px;
       }
 
-      .image-row img {
-        height: auto;
-        max-height: 400px;
-      }
-
-      .single-image img {
-        height: auto;
-        max-height: 400px;
+      .single-image {
+        width: 100%;
+        height: 300px;
       }
 
       header h1 {
-        font-size: 34px;
+        font-size: 36px;
       }
 
     }
@@ -339,37 +388,21 @@
 
     <div class="menu">
 
-      <a href="index.html">
-        หน้าแรก
-      </a>
+      <a href="index.html">หน้าแรก</a>
 
-      <a href="preface.html">
-        คำนำ
-      </a>
+      <a href="preface.html">คำนำ</a>
 
-      <a href="profile.html">
-        ประวัติส่วนตัว
-      </a>
+      <a href="profile.html">ประวัติส่วนตัว</a>
 
-      <a href="education.html">
-        ประวัติการศึกษา
-      </a>
+      <a href="education.html">ประวัติการศึกษา</a>
 
-      <a href="achievements.html">
-        ผลงานและการแข่งขัน
-      </a>
+      <a href="achievements.html">ผลงานและการแข่งขัน</a>
 
-      <a href="activities.html" class="active">
-        กิจกรรม
-      </a>
+      <a href="activities.html" class="active">กิจกรรม</a>
 
-      <a href="inspiration.html">
-        แรงบันดาลใจ
-      </a>
+      <a href="inspiration.html">แรงบันดาลใจ</a>
 
-      <a href="future.html">
-        เป้าหมายในอนาคต
-      </a>
+      <a href="future.html">เป้าหมายในอนาคต</a>
 
     </div>
 
@@ -378,14 +411,12 @@
 
 
   <!-- =========================
-       HEADER
+       หัวข้อกิจกรรม
   ========================= -->
 
   <header>
 
-    <h1>
-      🌷 กิจกรรม
-    </h1>
+    <h1>🌷 กิจกรรม</h1>
 
     <p>
       ประสบการณ์และกิจกรรมที่ได้เข้าร่วม
@@ -396,15 +427,15 @@
 
 
   <!-- =========================
-       ACTIVITIES
+       กิจกรรมทั้งหมด
   ========================= -->
 
   <section class="activities">
 
 
-    <!-- =================================
-         ACTIVITY 1
-    ================================= -->
+    <!-- ==========================================
+         กิจกรรมที่ 1
+    ========================================== -->
 
     <div class="activity-card">
 
@@ -412,29 +443,52 @@
       <span class="star star2">✧</span>
 
 
-      <!-- รูปกิจกรรม + เกียรติบัตร -->
-
-      <div class="image-row">
-
-        <img
-          src="activity1.jpg"
-          alt="ฝึกประสบการณ์อาชีพ ณ เทศบาลเมืองลำปลายมาศ"
-        >
-
-        <img
-          src="certificate4.jpg"
-          alt="เกียรติบัตรฝึกประสบการณ์อาชีพ"
-        >
-
-      </div>
-
-
       <h2>
         ฝึกประสบการณ์อาชีพ ณ เทศบาลเมืองลำปลายมาศ
       </h2>
 
 
-      <p>
+      <!-- หัวข้อรูป -->
+
+      <div class="image-headings">
+
+        <h3>ผลงาน</h3>
+
+        <h3>เกียรติบัตร</h3>
+
+      </div>
+
+
+      <!-- รูป -->
+
+      <div class="image-row">
+
+        <div class="image-box">
+
+          <img
+            src="activity1.jpg"
+            alt="ฝึกประสบการณ์อาชีพ ณ เทศบาลเมืองลำปลายมาศ"
+          >
+
+        </div>
+
+
+        <div class="image-box">
+
+          <img
+            src="certificate4.jpg"
+            alt="เกียรติบัตรฝึกประสบการณ์อาชีพ"
+          >
+
+        </div>
+
+      </div>
+
+
+      <!-- คำบรรยาย -->
+
+      <div class="description">
+
         การฝึกประสบการณ์การทำงาน ณ กองสวัสดิการสังคม เทศบาลเมืองลำปลายมาศ
         ตลอดระยะเวลา 10 วัน ถือเป็นโอกาสอันมีค่าในการเรียนรู้ระบบการทำงานภาครัฐอย่างแท้จริง
         ในช่วงแรกของการฝึกงาน ได้มีส่วนร่วมในงานจัดการข้อมูลด้วยการรวบรวมและจัดเก็บสถิติของ
@@ -446,37 +500,21 @@
         ร่วมกับชุมชนและผู้เชี่ยวชาญ ประสบการณ์ทั้งหมดนี้ไม่เพียงแต่ช่วยพัฒนาทักษะการทำงาน
         ความรับผิดชอบ และการทำงานร่วมกับผู้อื่น แต่ยังสร้างจิตสาธารณะในการมุ่งมั่นพัฒนาท้องถิ่น
         จนได้รับมอบเกียรติบัตรรับรองจากท่านนายกเทศมนตรีเมืองลำปลายมาศ ด้วยความภาคภูมิใจ
-      </p>
+
+      </div>
 
     </div>
 
 
 
-    <!-- =================================
-         ACTIVITY 2
-    ================================= -->
+    <!-- ==========================================
+         กิจกรรมที่ 2
+    ========================================== -->
 
     <div class="activity-card">
 
       <span class="star star1">✦</span>
       <span class="star star2">✧</span>
-
-
-      <!-- รูปกิจกรรม + เกียรติบัตร -->
-
-      <div class="image-row">
-
-        <img
-          src="activity2.jpg"
-          alt="นักเรียนจิตอาสาในงานมหกรรมวิชาการ"
-        >
-
-        <img
-          src="certificate5.jpg"
-          alt="เกียรติบัตรนักเรียนจิตอาสา"
-        >
-
-      </div>
 
 
       <h2>
@@ -484,22 +522,63 @@
       </h2>
 
 
-      <p>
+      <!-- หัวข้อรูป -->
+
+      <div class="image-headings">
+
+        <h3>ผลงาน</h3>
+
+        <h3>เกียรติบัตร</h3>
+
+      </div>
+
+
+      <!-- รูป -->
+
+      <div class="image-row">
+
+        <div class="image-box">
+
+          <img
+            src="activity2.jpg"
+            alt="นักเรียนจิตอาสาในงานมหกรรมวิชาการ"
+          >
+
+        </div>
+
+
+        <div class="image-box">
+
+          <img
+            src="certificate5.jpg"
+            alt="เกียรติบัตรนักเรียนจิตอาสา"
+          >
+
+        </div>
+
+      </div>
+
+
+      <!-- คำบรรยาย -->
+
+      <div class="description">
+
         ในการทำหน้าที่จิตอาสาประจำบูธแผนการเรียนวิทยาศาสตร์-คณิตศาสตร์
         (Gifted Program) ฐานเกม 24 ดิฉันมีความตั้งใจที่จะส่งต่อความรู้และสร้างบรรยากาศที่สนุกสนาน
         ให้แก่ผู้เข้าร่วมงาน โดยรับผิดชอบการต้อนรับ อธิบายกติกา และสาธิตวิธีการเล่นอย่างใกล้ชิด
         การทำงานเพื่อส่วนรวมในครั้งนี้ ไม่เพียงแต่ทำให้ดิฉันภูมิใจที่ได้เป็นผู้ให้และอำนวยความสะดวกแก่ผู้อื่น
         แต่ยังสอนให้ดิฉันได้เรียนรู้ทักษะที่สำคัญ ทั้งความกล้าแสดงออกในการพูดคุยกับผู้คนหลากหลาย
         และการฝึกทักษะการสื่อสารเพื่อถ่ายทอดข้อมูลที่ซับซ้อนให้เข้าใจง่ายและเป็นกันเอง
-      </p>
+
+      </div>
 
     </div>
 
 
 
-    <!-- =================================
-         ACTIVITY 3
-    ================================= -->
+    <!-- ==========================================
+         กิจกรรมที่ 3
+    ========================================== -->
 
     <div class="activity-card">
 
@@ -507,29 +586,52 @@
       <span class="star star2">✧</span>
 
 
-      <!-- รูปกิจกรรม + เกียรติบัตร -->
-
-      <div class="image-row">
-
-        <img
-          src="activity3.jpg"
-          alt="อบรมค่ายพัฒนาคุณธรรม จริยธรรมนักเรียน"
-        >
-
-        <img
-          src="certificate6.jpg"
-          alt="เกียรติบัตรอบรมค่ายพัฒนาคุณธรรม จริยธรรมนักเรียน"
-        >
-
-      </div>
-
-
       <h2>
         อบรมค่ายพัฒนาคุณธรรม จริยธรรมนักเรียน
       </h2>
 
 
-      <p>
+      <!-- หัวข้อรูป -->
+
+      <div class="image-headings">
+
+        <h3>ผลงาน</h3>
+
+        <h3>เกียรติบัตร</h3>
+
+      </div>
+
+
+      <!-- รูป -->
+
+      <div class="image-row">
+
+        <div class="image-box">
+
+          <img
+            src="activity3.jpg"
+            alt="อบรมค่ายพัฒนาคุณธรรม จริยธรรมนักเรียน"
+          >
+
+        </div>
+
+
+        <div class="image-box">
+
+          <img
+            src="certificate6.jpg"
+            alt="เกียรติบัตรอบรมค่ายพัฒนาคุณธรรม จริยธรรมนักเรียน"
+          >
+
+        </div>
+
+      </div>
+
+
+      <!-- คำบรรยาย -->
+
+      <div class="description">
+
         การเข้าร่วมกิจกรรมในครั้งนี้ทำให้ดิฉันได้เรียนรู้และตระหนักถึงความสำคัญของคุณธรรม
         จริยธรรม ระเบียบวินัย ความรับผิดชอบ และการอยู่ร่วมกับผู้อื่นในสังคม
         ผ่านกิจกรรมที่ช่วยส่งเสริมการพัฒนาทั้งด้านความคิด จิตใจ และพฤติกรรม
@@ -538,16 +640,17 @@
         ได้พัฒนาตนเองให้เป็นผู้ที่มีความรับผิดชอบ มีจิตสาธารณะ รู้จักเสียสละและช่วยเหลือผู้อื่น
         รวมถึงสามารถนำข้อคิดและประสบการณ์ที่ได้รับไปประยุกต์ใช้ทั้งในการเรียน
         การทำงานร่วมกับผู้อื่น และการดำเนินชีวิตอย่างเหมาะสม
-      </p>
+
+      </div>
 
     </div>
 
 
 
-    <!-- =================================
-         ACTIVITY 4
+    <!-- ==========================================
+         กิจกรรมที่ 4
          ไม่มีเกียรติบัตร
-    ================================= -->
+    ========================================== -->
 
     <div class="activity-card">
 
@@ -555,7 +658,21 @@
       <span class="star star2">✧</span>
 
 
-      <!-- มีเฉพาะรูปกิจกรรม -->
+      <h2>
+        🌊 เข้าร่วมงาน Open House มหาวิทยาลัยบูรพา
+      </h2>
+
+
+      <!-- หัวข้อรูป -->
+
+      <div class="single-heading">
+
+        <h3>ผลงาน</h3>
+
+      </div>
+
+
+      <!-- รูปกิจกรรม -->
 
       <div class="single-image">
 
@@ -567,18 +684,17 @@
       </div>
 
 
-      <h2>
-        🌊 เข้าร่วมงาน Open House มหาวิทยาลัยบูรพา
-      </h2>
+      <!-- คำบรรยาย -->
 
+      <div class="description">
 
-      <p>
         ดิฉันมีความสนใจที่จะศึกษาต่อที่มหาวิทยาลัยบูรพา
         จึงได้เข้าร่วมงาน Open House เพื่อรับฟังข้อมูลและคำแนะนำเกี่ยวกับคณะศึกษาศาสตร์
         สาขาวิชาคณิตศาสตร์ รวมถึงได้เรียนรู้เกี่ยวกับแนวทางการศึกษาและการเตรียมตัวสำหรับการเข้าศึกษาต่อ
         ประสบการณ์ครั้งนี้ทำให้ดิฉันได้รู้จักสาขาที่สนใจมากขึ้น
         และยิ่งทำให้มีความตั้งใจที่จะพัฒนาตนเองเพื่อก้าวไปสู่เป้าหมายในการเป็นครูคณิตศาสตร์ในอนาคตค่ะ
-      </p>
+
+      </div>
 
     </div>
 
