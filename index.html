@@ -6,158 +6,247 @@
 
   <title>Portfolio | อิงฟ้า</title>
 
+  <!-- Google Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
 
   <style>
+    :root {
+      --main-title: #397EA8;
+      --sub-title: #4F86A6;
+      --text: #405D6D;
+      --blue: #68B4D8;
+    }
+
     * {
       box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
 
     body {
-      margin: 0;
       font-family: 'Itim', cursive;
       background: linear-gradient(
         135deg,
-        #eaf8ff,
-        #cfeeff,
-        #a9d9f5,
-        #79b9df
+        #EAF8FF,
+        #D9F2FF,
+        #BFE5F7
       );
-      color: #31566d;
+      color: var(--text);
       min-height: 100vh;
     }
 
+    /* ================= NAVBAR ================= */
+
     nav {
-      background: rgba(255, 255, 255, 0.85);
-      padding: 18px 30px;
+      background: rgba(255, 255, 255, 0.95);
+      padding: 18px 35px;
       display: flex;
-      justify-content: space-between;
       align-items: center;
-      box-shadow: 0 4px 15px rgba(70, 130, 170, 0.15);
+      justify-content: space-between;
+      box-shadow: 0 2px 10px rgba(70, 130, 160, 0.12);
       position: sticky;
       top: 0;
-      z-index: 10;
+      z-index: 100;
     }
 
     .logo {
-      font-size: 26px;
-      color: #4384ad;
+      font-size: 28px;
+      color: var(--main-title);
+      white-space: nowrap;
     }
 
-    nav a {
+    .menu {
+      display: flex;
+      gap: 28px;
+      list-style: none;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .menu a {
       text-decoration: none;
-      color: #4c7895;
-      margin-left: 20px;
+      color: #47728A;
       font-size: 18px;
+      transition: 0.3s;
     }
 
-    nav a:hover {
-      color: #23658d;
+    .menu a:hover {
+      color: #2475A3;
     }
 
-    .container {
-      max-width: 950px;
-      margin: 70px auto;
-      padding: 20px;
+    /* ================= HOME ================= */
+
+    .home {
+      min-height: calc(100vh - 80px);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 50px 20px;
     }
 
-    .hero {
-      background: rgba(255, 255, 255, 0.9);
-      padding: 55px 40px;
-      border-radius: 30px;
+    .home-card {
+      width: 100%;
+      max-width: 1150px;
+      background: rgba(255, 255, 255, 0.94);
+      border-radius: 35px;
+      padding: 55px;
+      display: flex;
+      align-items: center;
+      gap: 55px;
+      box-shadow: 0 15px 40px rgba(75, 135, 165, 0.15);
+    }
+
+    /* ================= PROFILE IMAGE ================= */
+
+    .profile-box {
+      flex: 0 0 340px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .profile-img {
+      width: 310px;
+      height: 310px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 8px solid #B9E3F5;
+      box-shadow: 0 8px 25px rgba(70, 140, 175, 0.2);
+    }
+
+    /* ================= TEXT ================= */
+
+    .home-text {
+      flex: 1;
       text-align: center;
-      box-shadow: 0 10px 30px rgba(65, 130, 170, 0.2);
     }
 
-    .hero h1 {
-      margin: 0;
-      font-size: 52px;
-      color: #367da8;
+    .home-text h1 {
+      color: var(--main-title);
+      font-size: 58px;
+      margin-bottom: 12px;
+      letter-spacing: 1px;
     }
 
-    .hero h2 {
+    .name {
+      color: #397EA8;
       font-size: 30px;
-      color: #4384ad;
-      margin: 15px 0 5px;
-    }
-
-    .nickname {
-      font-size: 23px;
-      color: #638aa3;
-      margin-bottom: 25px;
+      margin-bottom: 12px;
     }
 
     .school {
       font-size: 21px;
-      color: #416d86;
-      margin-bottom: 25px;
+      color: #52768A;
+      margin-bottom: 28px;
+    }
+
+    .line {
+      width: 120px;
+      height: 3px;
+      background: #7FC4E2;
+      margin: 0 auto 28px;
+      border-radius: 10px;
     }
 
     .description {
-      max-width: 720px;
-      margin: 0 auto 30px;
-      line-height: 1.8;
-      font-size: 20px;
+      font-size: 21px;
+      line-height: 1.9;
+      max-width: 680px;
+      margin: auto;
+      color: var(--text);
     }
 
-    .button {
+    /* ================= BUTTON ================= */
+
+    .btn {
       display: inline-block;
-      padding: 13px 30px;
-      background: #6aaed3;
+      margin-top: 30px;
+      padding: 14px 32px;
+      background: #68B4D8;
       color: white;
       text-decoration: none;
-      border-radius: 30px;
       font-size: 20px;
-      box-shadow: 0 5px 15px rgba(65, 130, 170, 0.2);
+      border-radius: 30px;
+      box-shadow: 0 6px 15px rgba(70, 150, 190, 0.25);
       transition: 0.3s;
     }
 
-    .button:hover {
-      background: #4384ad;
-      transform: translateY(-2px);
+    .btn:hover {
+      transform: translateY(-3px);
+      background: #4E9FC7;
     }
 
-    footer {
-      text-align: center;
-      padding: 25px;
-      color: #52758b;
-      font-size: 16px;
-    }
+    /* ================= RESPONSIVE ================= */
 
     @media (max-width: 900px) {
+
       nav {
         flex-direction: column;
-        gap: 10px;
+        gap: 12px;
       }
 
-      nav div:last-child {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
+      .menu {
+        gap: 15px;
       }
 
-      nav a {
-        margin: 5px 8px;
+      .home-card {
+        flex-direction: column;
+        padding: 40px 25px;
+      }
+
+      .profile-box {
+        flex: none;
+      }
+
+      .profile-img {
+        width: 250px;
+        height: 250px;
+      }
+
+      .home-text h1 {
+        font-size: 45px;
+      }
+
+      .name {
+        font-size: 26px;
+      }
+
+      .description {
+        font-size: 19px;
       }
     }
 
     @media (max-width: 600px) {
-      .hero {
-        padding: 40px 20px;
+
+      .logo {
+        font-size: 24px;
       }
 
-      .hero h1 {
-        font-size: 40px;
+      .menu a {
+        font-size: 16px;
       }
 
-      .hero h2 {
-        font-size: 25px;
+      .profile-img {
+        width: 210px;
+        height: 210px;
+      }
+
+      .home-text h1 {
+        font-size: 38px;
+      }
+
+      .name {
+        font-size: 23px;
+      }
+
+      .school {
+        font-size: 18px;
       }
 
       .description {
-        font-size: 18px;
+        font-size: 17px;
+        line-height: 1.8;
       }
     }
   </style>
@@ -165,61 +254,78 @@
 
 <body>
 
+  <!-- ================= NAVBAR ================= -->
+
   <nav>
 
     <div class="logo">
       Portfolio | อิงฟ้า
     </div>
 
-    <div>
-      <a href="index.html">หน้าแรก</a>
-      <a href="preface.html">คำนำ</a>
-      <a href="profile.html">ประวัติส่วนตัว</a>
-      <a href="education.html">ประวัติการศึกษา</a>
-      <a href="achievements.html">ผลงานและการแข่งขัน</a>
-      <a href="activities.html">กิจกรรม</a>
-      <a href="inspiration.html">แรงบันดาลใจ</a>
-      <a href="future.html">เป้าหมายในอนาคต</a>
-    </div>
+    <ul class="menu">
+      <li><a href="index.html">หน้าหลัก</a></li>
+      <li><a href="pages/preface.html">คำนำ</a></li>
+      <li><a href="pages/profile.html">ประวัติส่วนตัว</a></li>
+      <li><a href="pages/education.html">ประวัติการศึกษา</a></li>
+      <li><a href="pages/competition.html">ผลงานและการแข่งขัน</a></li>
+      <li><a href="pages/activity.html">กิจกรรม</a></li>
+      <li><a href="pages/certificate.html">เกียรติบัตร</a></li>
+      <li><a href="pages/inspiration.html">แรงบันดาลใจ</a></li>
+      <li><a href="pages/future.html">เป้าหมายในอนาคต</a></li>
+    </ul>
 
   </nav>
 
 
-  <div class="container">
+  <!-- ================= HOME ================= -->
 
-    <div class="hero">
+  <section class="home">
 
-      <h1>PORTFOLIO</h1>
+    <div class="home-card">
 
-      <h2>นางสาวภลดา แสนศรี</h2>
+      <!-- รูปของเรา -->
+      <div class="profile-box">
 
-      <div class="nickname">
-        ชื่อเล่น : อิงฟ้า
+        <img
+          src="profile.jpg"
+          alt="รูปโปรไฟล์ นางสาวภลดา แสนศรี"
+          class="profile-img"
+        >
+
       </div>
 
-      <div class="school">
-        โรงเรียนบ้านบึง"อุตสาหกรรมนุเคราะห์" จังหวัดชลบุรี
-      </div>
 
-      <div class="description">
-        เว็บไซต์นี้จะทำขึ้นเพื่อนำเสนอตัวตน ผลงานที่ผ่านมา
-        ตลอดจนเป้าหมายการเรียนและการประกอบอาชีพในอนาคต
-        โดยมีเป้าหมายในการศึกษาต่อและพัฒนาตนเอง
-        เพื่อก้าวไปสู่การเป็นครูคณิตศาสตร์ในอนาคต
-      </div>
+      <!-- ข้อมูล -->
+      <div class="home-text">
 
-      <a href="preface.html" class="button">
-        เข้าสู่ Portfolio
-      </a>
+        <h1>PORTFOLIO</h1>
+
+        <div class="name">
+          นางสาวภลดา แสนศรี
+        </div>
+
+        <div class="school">
+          โรงเรียนบ้านบึง"อุตสาหกรรมนุเคราะห์" จังหวัดชลบุรี
+        </div>
+
+        <div class="line"></div>
+
+        <p class="description">
+          เว็บไซต์นี้จัดทำขึ้นเพื่อนำเสนอตัวตน ผลงานที่ผ่านมา
+          ตลอดจนเป้าหมายการเรียนและการประกอบอาชีพในอนาคต
+          โดยมีเป้าหมายในการศึกษาต่อและพัฒนาตนเอง
+          เพื่อก้าวไปสู่การเป็นครูคณิตศาสตร์ในอนาคต
+        </p>
+
+        <a href="pages/preface.html" class="btn">
+          เข้าสู่ Portfolio →
+        </a>
+
+      </div>
 
     </div>
 
-  </div>
-
-
-  <footer>
-    © 2026 Portfolio | นางสาวภลดา แสนศรี
-  </footer>
+  </section>
 
 </body>
 </html>
